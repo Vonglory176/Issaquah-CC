@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// Components
+@import './components/header/_header.scss';
+@import './components/footer/_footer.scss';
+@import './components/hamburgerCross/_hamburgerCross.scss';
+
+// Pages
+
+* {
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
