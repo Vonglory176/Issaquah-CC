@@ -10,6 +10,7 @@
         &-welcome-text {
             z-index: 1;
             color: #333333;
+            border-color: var(--border-color-1);
             
             // Use for top-right positioning
             // position: absolute;
@@ -20,11 +21,12 @@
 
         &-video-container {
             position: relative;
-
+            border-color: var(--border-color-1);
+            
             // max-width: 608px;
             width: 100%;
 
-            aspect-ratio: 16/9;
+            aspect-ratio: 16/10; // 16/9;
             // padding-top: 56.25%; /* 16:9 Aspect Ratio */
             overflow: hidden;
 
