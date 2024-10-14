@@ -1,10 +1,10 @@
 // frontend/src/components/header/HamburgerCross.jsx
 import React from 'react'
 import { FaBars } from 'react-icons/fa'
-import { useLocation } from 'react-router-dom'
+// import { useLocation } from 'react-router-dom'
 
 const HamburgerCross = ({ isOpen, toggleMenu }) => {
-  const location = useLocation()  
+  // const location = useLocation()  
 
   return (
     <button className={`h-full lg:hidden text-white p-4 mr-[-16px] ${isOpen ? 'active' : ''}`} onClick={toggleMenu}>
