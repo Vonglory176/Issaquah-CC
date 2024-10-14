@@ -1,17 +1,123 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+:root {
+  --font-color-1: #333333;
+  --font-color-2: #D9D9D9;
+  --background-color-1: #F7F7F7;
+  --background-color-2: #6A1B2A;
+  --dropdown-background-color: #7D1E2C;
+  --font-active-color: #C62828;
+  --border-color-1: #D4AF37;
+  --border-color-2: #C62828;
+}
+
+.header {
+  background-color: var(--background-color-2);
+  border-bottom: 2px solid var(--border-color-2);
+  color: var(--font-color-2);
+}
+.header nav ul li {
+  position: relative;
+}
 .header nav ul li button, .header nav ul li a {
   display: flex;
   align-items: center;
-  height: 60px;
-  padding: 25px 10px 5px 10px;
   gap: 5px;
+  background-color: transparent;
+}
+.header nav ul li button:not(:hover), .header nav ul li a:not(:hover) {
+  color: white;
 }
 .header nav ul li button svg, .header nav ul li a svg {
   margin: auto auto;
 }
+.header nav ul li:focus > button, .header nav ul li:focus > a, .header nav ul li:focus-within > button, .header nav ul li:focus-within > a {
+  color: var(--font-active-color);
+}
+.header nav ul li:focus > button svg, .header nav ul li:focus > a svg, .header nav ul li:focus-within > button svg, .header nav ul li:focus-within > a svg {
+  transform: rotate(180deg);
+}
+.header nav ul li:focus .nav-sub-menu, .header nav ul li:focus-within .nav-sub-menu {
+  max-height: calc(100svh - 60px);
+}
+.header .nav-sub-menu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+  background-color: var(--dropdown-background-color);
+}
+@media (max-width: 1023px) {
+  .header .nav-menu {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+  }
+  .header .nav-menu.open {
+    max-height: calc(100svh - 60px);
+  }
+  .header .nav-menu > ul {
+    padding: 0px 32px;
+    padding-bottom: 32px;
+    background-color: var(--dropdown-background-color);
+    border-bottom: 2px solid var(--border-color-2);
+  }
+  .header .nav-menu > ul li {
+    border-bottom: 1px solid var(--border-color-2);
+  }
+  .header .nav-menu > ul li button, .header .nav-menu > ul li a {
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 12px 8px 4px 8px;
+  }
+  .header .nav-menu .nav-sub-menu {
+    padding-left: 32px;
+    background-color: var(--background-color-2);
+    color: var(--font-color-2);
+    overflow-y: auto;
+  }
+  .header .nav-menu .nav-sub-menu ul li:last-of-type {
+    border-bottom: none;
+  }
+}
+@media (min-width: 1024px) {
+  .header .nav-menu > ul > li > button, .header .nav-menu > ul > li > a {
+    height: 58px;
+    padding: 20px 10px 10px 10px;
+  }
+  .header .nav-sub-menu {
+    position: absolute;
+    top: 58px;
+    right: 0;
+    width: -moz-max-content;
+    width: max-content;
+    border-radius: 0 0 10px 10px;
+  }
+  .header .nav-sub-menu ul {
+    border: 2px solid var(--border-color-2);
+  }
+  .header .nav-sub-menu ul li button, .header .nav-sub-menu ul li a {
+    margin: 0 8px;
+    padding: 12px 8px;
+  }
+  .header .nav-sub-menu ul li:not(:last-of-type) button, .header .nav-sub-menu ul li:not(:last-of-type) a {
+    border-bottom: 1px solid var(--border-color-2);
+  }
+}
 
+.footer {
+  background-color: var(--background-color-2);
+  color: var(--font-color-2);
+  border-top: 2px solid var(--border-color-2);
+}
+.footer hr {
+  border-top-width: 2px;
+  border-color: var(--border-color-2);
+}
 .footer li {
   display: flex;
   align-items: center;
@@ -48,15 +154,60 @@
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
+.home .landing {
+  height: calc(100svh - 60px);
+}
+.home .landing-welcome-text {
+  z-index: 1;
+  color: #333333;
+}
+.home .landing-video-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+.home .landing-video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
 * {
   font-family: "Open Sans", sans-serif;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #F7F7F7;
+  color: #333333;
+}
+
+.App {
+  min-height: 100vh;
+  min-height: 100svh;
+}
+
+.page {
+  padding-top: 60px;
 }
 
 a {
   text-decoration: none;
-  color: inherit;
   cursor: pointer;
+}
+
+button, a {
+  transition: all 0.3s ease-in-out;
+}
+button:hover, button.active, a:hover, a.active {
+  color: #C62828;
 }/*# sourceMappingURL=index.css.map */
