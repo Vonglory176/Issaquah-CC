@@ -25,8 +25,8 @@ const Home = () => {
                 <div className="landing-content flex flex-col flex-1 justify-center gap-8 h-full mx-auto max-w-[608px] lg:ml-[50%] lg:max-w-[708px]">
 
                     {/* Welcome Text */}
-                    <div className="landing-welcome-text text-white text-center flex flex-col gap-4 rounded-lg bg-white/50 p-4">
-                        <h1 className="text-3xl font-bold lg:text-4xl">Welcome to Issaquah Christian Church</h1>
+                    <div className="landing-welcome-text text-white text-center flex flex-col gap-4 rounded-lg bg-[#F7F7F7]/50 p-4 shadow-lg border-2">
+                        <h1 className="text-3xl font-bold lg:text-4xl"><span>Welcome to Issaquah</span> <span className='whitespace-nowrap'>Christian Church</span></h1>
                         <h2 className="text-xl flex flex-col lg:text-2xl">
                             <span>Teaching Biblical life applications</span>
                             <span>as you learn to follow Jesus.</span>
@@ -34,7 +34,7 @@ const Home = () => {
                     </div>
 
                     {/* Video */}
-                    <div className="landing-video-container rounded-lg overflow-hidden bg-white/50">
+                    <div className="landing-video-container rounded-lg overflow-hidden bg-[#F7F7F7]/50 shadow-lg border-2">
 
                         <iframe
                             width="560"
