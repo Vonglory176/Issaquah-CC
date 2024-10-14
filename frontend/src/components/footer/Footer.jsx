@@ -47,6 +47,7 @@ const Footer = () => {
                 aria-label="view on google maps"
                 href={process.env.REACT_APP_ADDRESS_URL}
                 target='_blank'
+                rel='noopener noreferrer'
                 className='flex items-center gap-2'
               >
                 <FaMapMarkerAlt size={18} />
