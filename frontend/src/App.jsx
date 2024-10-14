@@ -9,9 +9,13 @@ function App() {
 
       <Header />
 
-      <Routes>
-        <Route path="/" element={<Home />} />
-      </Routes>
+      <main>
+
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+
+      </main>
 
       <Footer />
       
@@ -20,3 +24,10 @@ function App() {
 }
 
 export default App;
+
+
+/* TODO ---------------------------------------
+
+  Figure out what to do with Video wrapper
+
+*/
