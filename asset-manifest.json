@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/Issaquah-CC/static/css/main.faf26bd7.css",
-    "main.js": "/Issaquah-CC/static/js/main.5132fe16.js",
-    "static/media/woman-with-hands-up.webp": "/Issaquah-CC/static/media/woman-with-hands-up.a8b12e310d323cb428a0.webp",
-    "static/media/logo5.webp": "/Issaquah-CC/static/media/logo5.7f5f4912a5e0db544bbb.webp",
-    "static/media/woman-with-hands-up-small.webp": "/Issaquah-CC/static/media/woman-with-hands-up-small.83faba2ec7812328bced.webp",
-    "index.html": "/Issaquah-CC/index.html",
-    "main.faf26bd7.css.map": "/Issaquah-CC/static/css/main.faf26bd7.css.map",
-    "main.5132fe16.js.map": "/Issaquah-CC/static/js/main.5132fe16.js.map"
+    "main.css": "/static/css/main.faf26bd7.css",
+    "main.js": "/static/js/main.80fb5814.js",
+    "static/media/woman-with-hands-up.webp": "/static/media/woman-with-hands-up.a8b12e310d323cb428a0.webp",
+    "static/media/logo5.webp": "/static/media/logo5.7f5f4912a5e0db544bbb.webp",
+    "static/media/woman-with-hands-up-small.webp": "/static/media/woman-with-hands-up-small.83faba2ec7812328bced.webp",
+    "index.html": "/index.html",
+    "main.faf26bd7.css.map": "/static/css/main.faf26bd7.css.map",
+    "main.80fb5814.js.map": "/static/js/main.80fb5814.js.map"
   },
   "entrypoints": [
     "static/css/main.faf26bd7.css",
-    "static/js/main.5132fe16.js"
+    "static/js/main.80fb5814.js"
   ]
 }
