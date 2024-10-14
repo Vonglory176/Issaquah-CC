@@ -121,7 +121,7 @@ const Header = () => {
               <nav className="nav-sub-menu">
                 <ul>
                   <li>
-                    <a href={'https://giving.servantkeeper.com/issaquahcc'} target='_blank'>
+                    <a href={'https://giving.servantkeeper.com/issaquahcc'} target='_blank' rel='noopener noreferrer'>
                       Tithes and Offerings
                     </a>
                   </li>

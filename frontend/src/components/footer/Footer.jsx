@@ -29,9 +29,9 @@ const Footer = () => {
 
           {/* Social Media Icons */}
           <ul className='flex gap-4'>
-            <li><a href={process.env.REACT_APP_FACEBOOK} target='_blank'><FaFacebookSquare size={32} /></a></li>
-            <li><a href={process.env.REACT_APP_INSTAGRAM} target='_blank'><FaInstagramSquare size={32} /></a></li>
-            <li><a href={process.env.REACT_APP_YOUTUBE} target='_blank'><FaYoutubeSquare size={32} /></a></li>
+            <li><a href={process.env.REACT_APP_FACEBOOK} target='_blank' rel='noopener noreferrer'><FaFacebookSquare size={32} /></a></li>
+            <li><a href={process.env.REACT_APP_INSTAGRAM} target='_blank' rel='noopener noreferrer'><FaInstagramSquare size={32} /></a></li>
+            <li><a href={process.env.REACT_APP_YOUTUBE} target='_blank' rel='noopener noreferrer'><FaYoutubeSquare size={32} /></a></li>
           </ul>
 
         </div>
