@@ -8,7 +8,7 @@
 // Components
 @import './components/header/_header.scss';
 @import './components/footer/_footer.scss';
-@import './components/hamburgerCross/_hamburgerCross.scss';
+@import './components/hamburgerMenu/_hamburgerMenu.scss';
 
 // Pages
 @import './pages/home/_home.scss';
@@ -25,6 +25,27 @@
 body {
     background-color: #F7F7F7;
     color: #333333;
+}
+
+*, body {
+    // scrollbar-width: var(--scrollbar-width);
+    scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-bg);
+  
+    &::-webkit-scrollbar {
+      width: var(--scrollbar-width);
+      // border-radius: 10px !important;
+    }
+    
+    &::-webkit-scrollbar-track {
+      background: var(--scrollbar-bg);
+      // border-radius: 10px !important;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--scrollbar-thumb);
+      border-radius: 6px;
+      border: 3px solid var(--scrollbar-bg);
+    }
 }
 
 .App {
@@ -51,9 +72,9 @@ a {
 // }
 
 button, a {
-    transition: all 0.3s ease-in-out;
+    transition: all 0.2s ease-in-out;
     &:hover, &.active {
         // background-color: #D4AF37;
-        color: #C62828;
+        color: var(--font-active-color);
     }
 }
