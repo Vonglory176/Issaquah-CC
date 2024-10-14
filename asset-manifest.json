@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/Issaquah-CC/static/css/main.faf26bd7.css",
+    "main.js": "/Issaquah-CC/static/js/main.be2c10ea.js",
+    "static/media/woman-with-hands-up.webp": "/Issaquah-CC/static/media/woman-with-hands-up.a8b12e310d323cb428a0.webp",
+    "static/media/logo5.webp": "/Issaquah-CC/static/media/logo5.7f5f4912a5e0db544bbb.webp",
+    "static/media/woman-with-hands-up-small.webp": "/Issaquah-CC/static/media/woman-with-hands-up-small.83faba2ec7812328bced.webp",
+    "index.html": "/Issaquah-CC/index.html",
+    "main.faf26bd7.css.map": "/Issaquah-CC/static/css/main.faf26bd7.css.map",
+    "main.be2c10ea.js.map": "/Issaquah-CC/static/js/main.be2c10ea.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.faf26bd7.css",
+    "static/js/main.be2c10ea.js"
+  ]
+}
