@@ -1,4 +1,14 @@
 .footer {
+    background-color: var(--background-color-2);
+    color: var(--font-color-2);
+
+    border-top: 2px solid var(--border-color-2);
+
+    hr {
+        border-top-width: 2px;
+        border-color: var(--border-color-2);
+    }
+
     li {
         display: flex;
         align-items: center;
