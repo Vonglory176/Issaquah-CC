@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from '../../assets/images/logos/logo5.webp'
+import logo from '../../assets/images/logos/logo7.webp'
 import ProgressiveImage from 'react-progressive-graceful-image'
 import { Link } from 'react-router-dom'
 import { FaEnvelope, FaFacebookSquare, FaInstagramSquare, FaMapMarkerAlt, FaPhone, FaYoutubeSquare } from 'react-icons/fa'
@@ -86,7 +86,7 @@ const Footer = () => {
       <hr className='col-span-2' />
 
       {/* Copyright Container ------------------------------ */}
-      <div className="footer-copyright flex flex-wrap justify-center items-center col-span-2">
+      <div className="footer-copyright flex flex-wrap justify-center items-center col-span-2 text-[#D4AF37]">
         <p>&copy; {new Date().getFullYear()} Issaquah Christian Church. </p>
         &nbsp;
         <p>All rights reserved.</p>
