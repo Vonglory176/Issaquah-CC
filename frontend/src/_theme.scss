@@ -1,18 +1,23 @@
 :root {
     --font-color-1: #333333; // Text on page
-    --font-color-2: #D9D9D9; // Text on header and footer
+    --font-color-2: #D9D9D9;
+    --font-color-3: #F7F7F7; // Text on header and footer
 
     --background-color-1: #F7F7F7; // Page background
     --background-color-2: #6A1B2A; // #7D1E2C; // Header and footer background
 
     --dropdown-background-color: #7D1E2C;
 
-    --font-active-color: #C62828; // Button and link background
+    --font-active-color: #D4AF37; // #C62828; // Button and link background
     
     --border-color-1: #D4AF37; // Border in page
     --border-color-2: #C62828; // Border on header and footer
 
     // --background-color-3: #D4AF37; // Button and link background
+
+    --scrollbar-width: 12px;
+    --scrollbar-bg: #7D1E2C;
+    --scrollbar-thumb: #D9D9D9;
 
 }
 
