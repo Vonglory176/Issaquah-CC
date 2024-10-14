@@ -1,21 +1,36 @@
 import React, { useState, useEffect } from 'react'
 import ProgressiveImage from 'react-progressive-graceful-image'
 import { FaCaretDown } from 'react-icons/fa'
-import logo from '../../assets/images/logos/logo5.webp'
+import logo from '../../assets/images/logos/logo7.webp'
 import { Link, useLocation } from 'react-router-dom'
-import HamburgerCross from '../hamburgerCross/HamburgerCross'
+import HamburgerMenu from '../hamburgerMenu/HamburgerMenu'
+import Dropdown from '../dropdown/Dropdown'
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false)
+  const [openDropdown, setOpenDropdown] = useState(null)
   const location = useLocation()
 
+  // Close menu when location changes
   useEffect(() => {
     setIsOpen(false)
-  }, [location])  
+    setOpenDropdown(null)
+  }, [location])
 
+  // Toggle menu (Hamburger)
   const toggleMenu = () => {
     setIsOpen(!isOpen)
   }
+
+  // Toggle dropdown (Sub-Menu)
+  const toggleDropdown = (title) => {
+    console.log(title)
+    setOpenDropdown(title === openDropdown ? null : title)
+  }
+
+  useEffect(() => {
+    console.log(openDropdown)
+  }, [openDropdown])
 
   return (
     <header className='header h-[60px] fixed top-0 left-0 right-0 z-50 shadow-lg'>
@@ -36,7 +51,7 @@ const Header = () => {
         </Link>
 
         {/* Hamburger Menu */}
-        <HamburgerCross isOpen={isOpen} toggleMenu={toggleMenu} />
+        <HamburgerMenu isOpen={isOpen} toggleMenu={toggleMenu} />
 
         {/* Navigation */}
         <nav className={`nav-menu shadow-lg lg:shadow-none ${isOpen ? 'open' : ''}`}>
@@ -45,179 +60,133 @@ const Header = () => {
 
             {/* About Us */}
             <li>
-              <button>
-                About Us <FaCaretDown />
-              </button>
-              <nav className='nav-sub-menu'>
-                <ul>
-                  <li>
-                    <Link to={'/about-us/beliefs'}>
-                      What We Believe
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to={'/about-us/what-to-expect'}>
-                      What to Expect
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to={'/about-us/vision-mission-and-values'}>
-                      Vision, Mission, and Values
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to={'/about-us/staff'}>
-                      Meet Our Leadership
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to={'/about-us/elder'}>
-                      Elder Nominations
-                    </Link>
-                  </li>
-                </ul>
-              </nav>
+              <Dropdown title="About Us" openDropdown={openDropdown} toggleDropdown={toggleDropdown}>
+                <li>
+                  <Link to={'/about-us/beliefs'}>What We Believe</Link>
+                </li>
+                <li>
+                  <Link to={'/about-us/what-to-expect'}>What to Expect</Link>
+                </li>
+                <li>
+                  <Link to={'/about-us/vision-mission-and-values'}>Vision, Mission, and Values</Link>
+                </li>
+                <li>
+                  <Link to={'/about-us/staff'}>Meet Our Leadership</Link>
+                </li>
+                <li>
+                  <Link to={'/about-us/elder'}>Elder Nominations</Link>
+                </li>
+              </Dropdown>
             </li>
 
-            {/* Event Info */}
+            {/* Event Info Dropdown */}
             <li>
-              <button>
-                Event Info <FaCaretDown />
-              </button>
-              <nav className="nav-sub-menu">
-                <ul>
-                  <li>
-                    <Link to={'/event-info/women-s-sign-up'}>
-                      Women's Retreat Sign Up
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to={'/event-info/calendar'}>
-                      Calendar
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to={'/event-info/bulletin'}>
-                      Church Bulletin
-                    </Link>
-                  </li>
-                </ul>
-              </nav>
+              <Dropdown title="Event Info" openDropdown={openDropdown} toggleDropdown={toggleDropdown}>
+                <li>
+                  <Link to={'/event-info/women-s-sign-up'}>Women's Retreat Sign Up</Link>
+                </li>
+                <li>
+                  <Link to={'/event-info/calendar'}>Calendar</Link>
+                </li>
+                <li>
+                  <Link to={'/event-info/bulletin'}>Church Bulletin</Link>
+                </li>
+              </Dropdown>
             </li>
 
-            {/* Sermons */}
+            {/* Other Menu Items */}
             <li>
-              <Link to={'/sermons'}>
-                Sermons
-              </Link>
+              <Link to={'/sermons'} className='nav-link'>Sermons</Link>
             </li>
 
             {/* Giving */}
             <li>
-              <button>
-                Giving <FaCaretDown />
-              </button>
-
-              <nav className="nav-sub-menu">
-                <ul>
-                  <li>
-                    <a href={'https://giving.servantkeeper.com/issaquahcc'} target='_blank' rel='noopener noreferrer'>
-                      Tithes and Offerings
-                    </a>
-                  </li>
-                  <li>
-                    <Link to={'/giving/stocks-and-crypto'}>
-                      Stocks and Crypto
-                    </Link>
-                  </li>
-                </ul>
-              </nav>
+              <Dropdown title="Giving" openDropdown={openDropdown} toggleDropdown={toggleDropdown}>
+                <li>
+                  <a href={'https://giving.servantkeeper.com/issaquahcc'} target='_blank' rel='noopener noreferrer'>
+                    Tithes and Offerings
+                  </a>
+                </li>
+                <li>
+                  <Link to={'/giving/stocks-and-crypto'}>
+                    Stocks and Crypto
+                  </Link>
+                </li>
+              </Dropdown>
             </li>
 
             {/* Connect */}
             <li>
-              <button>
-                Connect <FaCaretDown />
-              </button>
-
-              <nav className="nav-sub-menu">
-                <ul>
-                  <li>
-                    <Link to={'/connect/prayer-requests'}>
-                      Prayer Requests
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to={'/connect/membership'}>
-                      Membership
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to={'/connect/kids'}>
-                      Kids
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to={'/connect/teens'}>
-                      Teens
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to={'/connect/women'}>
-                      Women
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to={'/connect/men'}>
-                      Men
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to={'/connect/outreach'}>
-                      Outreach
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to={'/connect/haiti'}>
-                      Haiti
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to={'/connect/recommended-bible-apps'}>
-                      Recommended Bible Apps
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to={'/connect/employment'}>
-                      Employment
-                    </Link>
-                  </li>
-                </ul>
-              </nav>
+              <Dropdown title="Connect" openDropdown={openDropdown} toggleDropdown={toggleDropdown}>
+                <li>
+                  <Link to={'/connect/prayer-requests'}>
+                    Prayer Requests
+                  </Link>
+                </li>
+                <li>
+                  <Link to={'/connect/membership'}>
+                    Membership
+                  </Link>
+                </li>
+                <li>
+                  <Link to={'/connect/kids'}>
+                    Kids
+                  </Link>
+                </li>
+                <li>
+                  <Link to={'/connect/teens'}>
+                    Teens
+                  </Link>
+                </li>
+                <li>
+                  <Link to={'/connect/women'}>
+                    Women
+                  </Link>
+                </li>
+                <li>
+                  <Link to={'/connect/men'}>
+                    Men
+                  </Link>
+                </li>
+                <li>
+                  <Link to={'/connect/outreach'}>
+                    Outreach
+                  </Link>
+                </li>
+                <li>
+                  <Link to={'/connect/haiti'}>
+                    Haiti
+                  </Link>
+                </li>
+                <li>
+                  <Link to={'/connect/recommended-bible-apps'}>
+                    Recommended Bible Apps
+                  </Link>
+                </li>
+                <li>
+                  <Link to={'/connect/employment'}>
+                    Employment
+                  </Link>
+                </li>
+              </Dropdown>
             </li>
 
             {/* Contact */}
             <li>
-              <Link to={'/contact'}>
+              <Link to={'/contact'} className='nav-link'>
                 Contact
               </Link>
             </li>
 
             {/* Care */}
             <li>
-              <button>
-                Care <FaCaretDown />
-              </button>
-
-              <nav className="nav-sub-menu">
-                <ul>
-                  <li>
-                    <Link to={'/care/helpful-resources'}>
-                      Helpful Resources
-                    </Link>
-                  </li>
-                </ul>
-              </nav>
+              <Dropdown title="Care" openDropdown={openDropdown} toggleDropdown={toggleDropdown}>
+                <li>
+                  <Link to={'/care/helpful-resources'}>
+                    Helpful Resources
+                  </Link>
+                </li>
+              </Dropdown>
             </li>
           </ul>
         </nav>
