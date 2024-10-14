@@ -2,22 +2,58 @@
 @tailwind components;
 @tailwind utilities;
 
+// Variables
+@import './_theme.scss';
+
 // Components
 @import './components/header/_header.scss';
 @import './components/footer/_footer.scss';
 @import './components/hamburgerCross/_hamburgerCross.scss';
 
 // Pages
+@import './pages/home/_home.scss';
 
 * {
     font-family: 'Open Sans', sans-serif;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #F7F7F7;
+    color: #333333;
+}
+
+.App {
+    min-height: 100vh;
+    min-height: 100svh;
+}
+
+.page {
+    padding-top: 60px;
 }
 
 a {
     text-decoration: none;
-    color: inherit;
+    // color: inherit;
     cursor: pointer;
+
+    //  GOLD
+    // color: #D4AF37;
+}
+
+// button {
+    // background-color: #D4AF37;
+    // color: #333333;
+// }
+
+button, a {
+    transition: all 0.3s ease-in-out;
+    &:hover, &.active {
+        // background-color: #D4AF37;
+        color: #C62828;
+    }
 }
