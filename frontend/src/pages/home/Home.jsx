@@ -2,10 +2,11 @@ import React from 'react'
 import ProgressiveImage from 'react-progressive-graceful-image'
 import backgroundImage from '../../assets/images/backgrounds/woman-with-hands-up.webp'
 import backgroundImageSmall from '../../assets/images/backgrounds/woman-with-hands-up-small.webp'
+import PageWrapper from '../../components/pageWrapper/PageWrapper'
 
 const Home = () => {
     return (
-        <div className='home page'>
+        <PageWrapper name='home' className='' >
 
             {/* Landing Section */}
             <section className="landing relative p-4">
@@ -34,24 +35,22 @@ const Home = () => {
                     </div>
 
                     {/* Video */}
-                    <div className="landing-video-container rounded-lg overflow-hidden bg-[#F7F7F7]/50 shadow-lg border-2">
+                    <div className="video-container rounded-lg overflow-hidden bg-[#F7F7F7]/50 shadow-lg border-2">
 
                         <iframe
-                            width="560"
-                            height="682" // "315"
-                            src="https://www.issaquah.cc/api/v1/page-sections/ca2283a0-3ae7-11ee-af78-2b9e2ed93972/iframe"
+                            style={{ width: '100%', height: '100%' }}
+                            src="https://www.canva.com/design/DAD2KnH2kKQ/watch?embed"
                             title="Embedded Video"
-                            frameBorder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowFullScreen
                         ></iframe>
                     </div>
 
-                </div>                
+                </div>
 
             </section>
 
-        </div>
+        </PageWrapper>
     )
 }
 
