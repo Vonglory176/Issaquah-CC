@@ -7,7 +7,7 @@ const Vision = () => {
 
             <section>
 
-                <h1 className='text-3xl font-bold'>Love Your Neighbor.</h1>
+                <h1 className='text-3xl font-bold'>Love God and Love Your Neighbor</h1>
 
                 <p className='sm:text-lg md:text-xl'>Jesus has created a Family of Missionary Servants and we exist to Love God and Love our Neighbor. Our Mission is to help others Follow Jesus in the everyday stuff of life through our Gatherings and Groups.</p>
 
