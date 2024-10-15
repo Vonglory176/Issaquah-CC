@@ -5,12 +5,14 @@
   --font-color-1: #333333;
   --font-color-2: #D9D9D9;
   --font-color-3: #F7F7F7;
+  --font-color-4: #6B7280;
   --background-color-1: #F7F7F7;
   --background-color-2: #6A1B2A;
   --dropdown-background-color: #7D1E2C;
   --font-active-color: #D4AF37;
   --border-color-1: #D4AF37;
   --border-color-2: #C62828;
+  --border-color-3: #A5D6A7;
   --scrollbar-width: 12px;
   --scrollbar-bg: #7D1E2C;
   --scrollbar-thumb: #D9D9D9;
@@ -22,7 +24,7 @@
   color: var(--font-color-2);
 }
 .header nav.open {
-  max-height: calc(100svh - 60px);
+  max-height: var(--page-height);
 }
 .header nav ul li {
   position: relative;
@@ -60,12 +62,12 @@
 }
 .header .dropdown.open .dropdown-nav {
   z-index: 1;
-  max-height: calc(100svh - 60px);
+  max-height: var(--page-height);
 }
 @media (max-width: 1023px) {
   .header .nav-menu {
     position: absolute;
-    top: 60px;
+    top: var(--header-height);
     left: 0;
     right: 0;
     max-height: 0;
@@ -77,7 +79,7 @@
     padding-bottom: 32px;
     background-color: var(--dropdown-background-color);
     border-bottom: 2px solid var(--border-color-2);
-    max-height: calc(100svh - 60px);
+    max-height: var();
     overflow-y: auto;
   }
   .header .nav-menu > ul li {
@@ -210,22 +212,49 @@
   left: 0px;
 }
 
-.home .landing {
-  height: calc(100svh - 60px);
+.page-wrapper {
+  margin-top: var(--header-height);
+  min-height: var(--page-height);
 }
-.home .landing-welcome-text {
+
+.page-content {
+  padding: 75px 0;
+  margin: 0 auto;
+  width: 95%;
+  max-width: 1090px;
+}
+@media (min-width: 769px) {
+  .page-content {
+    width: 90%;
+  }
+}
+@media (min-width: 1025px) {
+  .page-content {
+    width: 80%;
+  }
+}
+
+.home-content {
+  padding: 0px;
+  width: 100%;
+  max-width: none;
+}
+.home-content .landing {
+  height: var(--page-height);
+}
+.home-content .landing-welcome-text {
   z-index: 1;
   color: #333333;
   border-color: var(--border-color-1);
 }
-.home .landing-video-container {
+.home-content .landing .video-container {
   position: relative;
   border-color: var(--border-color-1);
   width: 100%;
-  aspect-ratio: 16/10;
+  aspect-ratio: 16/9;
   overflow: hidden;
 }
-.home .landing-video-container iframe {
+.home-content .landing .video-container iframe {
   position: absolute;
   top: 0;
   left: 0;
@@ -234,6 +263,56 @@
   width: 100%;
   height: 100%;
   border: none;
+}
+
+.beliefs-content section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.beliefs-content section ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.beliefs-content section li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.what-to-expect-content section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.vision-content section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.vision-content .video-container {
+  position: relative;
+  border-color: var(--border-color-1);
+  width: 100%;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+.vision-content .video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+:root {
+  --header-height: 60px;
+  --page-height: calc(100svh - var(--header-height));
 }
 
 * {
@@ -246,6 +325,7 @@
 
 body {
   background-color: #F7F7F7;
+  background-image: url("./assets/images/textures/handmade-paper.png");
   color: #333333;
 }
 
@@ -264,15 +344,6 @@ body {
   border: 3px solid var(--scrollbar-bg);
 }
 
-.App {
-  min-height: 100vh;
-  min-height: 100svh;
-}
-
-.page {
-  padding-top: 60px;
-}
-
 a {
   text-decoration: none;
   cursor: pointer;
@@ -283,4 +354,27 @@ button, a {
 }
 button:hover, button.active, a:hover, a.active {
   color: var(--font-active-color);
+}
+button.disabled, a.disabled {
+  color: gray !important;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+.video-container {
+  position: relative;
+  border-color: var(--border-color-1);
+  width: 100%;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
 }/*# sourceMappingURL=index.css.map */
