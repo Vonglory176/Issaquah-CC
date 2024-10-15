@@ -79,7 +79,7 @@
     padding-bottom: 32px;
     background-color: var(--dropdown-background-color);
     border-bottom: 2px solid var(--border-color-2);
-    max-height: var();
+    max-height: var(--page-height);
     overflow-y: auto;
   }
   .header .nav-menu > ul li {
