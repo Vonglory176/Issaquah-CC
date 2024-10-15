@@ -33,7 +33,7 @@ const Header = () => {
   }, [openDropdown])
 
   return (
-    <header className='header h-[60px] fixed top-0 left-0 right-0 z-50 shadow-lg'>
+    <header className='header h-[var(--header-height)] fixed top-0 left-0 right-0 z-50 shadow-lg'>
 
       <div className="header-wrapper relative flex items-center justify-between h-full px-8 xl:px-[8vw]">
 
@@ -71,10 +71,10 @@ const Header = () => {
                   <Link to={'/about-us/vision-mission-and-values'}>Vision, Mission, and Values</Link>
                 </li>
                 <li>
-                  <Link to={'/about-us/staff'}>Meet Our Leadership</Link>
+                  <Link to={'/about-us/leadership'}>Meet Our Leadership</Link>
                 </li>
                 <li>
-                  <Link to={'/about-us/elder'}>Elder Nominations</Link>
+                  <Link to={'/about-us/elder'} className='disabled' disabled>Elder Nominations</Link>
                 </li>
               </Dropdown>
             </li>
@@ -83,20 +83,21 @@ const Header = () => {
             <li>
               <Dropdown title="Event Info" openDropdown={openDropdown} toggleDropdown={toggleDropdown}>
                 <li>
-                  <Link to={'/event-info/women-s-sign-up'}>Women's Retreat Sign Up</Link>
+                  <Link to={'/event-info/women-s-sign-up'} className='disabled' disabled >Women's Retreat Sign Up</Link>
                 </li>
                 <li>
-                  <Link to={'/event-info/calendar'}>Calendar</Link>
+                  <Link to={'/event-info/calendar'} className='disabled' disabled >Calendar</Link>
                 </li>
                 <li>
-                  <Link to={'/event-info/bulletin'}>Church Bulletin</Link>
+                  <Link to={'/event-info/bulletin'} className='disabled' disabled >Church Bulletin</Link>
                 </li>
               </Dropdown>
             </li>
 
             {/* Other Menu Items */}
             <li>
-              <Link to={'/sermons'} className='nav-link'>Sermons</Link>
+              {/* <Link to={'/sermons'} className='nav-link'>Sermons</Link> */}
+              <a className='nav-link' href="https://www.issaquah.cc/sermons" target='_blank' rel='noopener noreferrer'>Sermons</a>
             </li>
 
             {/* Giving */}
@@ -108,7 +109,7 @@ const Header = () => {
                   </a>
                 </li>
                 <li>
-                  <Link to={'/giving/stocks-and-crypto'}>
+                  <Link to={'/giving/stocks-and-crypto'} className='disabled' disabled >
                     Stocks and Crypto
                   </Link>
                 </li>
@@ -119,52 +120,52 @@ const Header = () => {
             <li>
               <Dropdown title="Connect" openDropdown={openDropdown} toggleDropdown={toggleDropdown}>
                 <li>
-                  <Link to={'/connect/prayer-requests'}>
+                  <Link to={'/connect/prayer-requests'} className='disabled' disabled >
                     Prayer Requests
                   </Link>
                 </li>
                 <li>
-                  <Link to={'/connect/membership'}>
+                  <Link to={'/connect/membership'} className='disabled' disabled >
                     Membership
                   </Link>
                 </li>
                 <li>
-                  <Link to={'/connect/kids'}>
+                  <Link to={'/connect/kids'} className='disabled' disabled >
                     Kids
                   </Link>
                 </li>
                 <li>
-                  <Link to={'/connect/teens'}>
+                  <Link to={'/connect/teens'} className='disabled' disabled >
                     Teens
                   </Link>
                 </li>
                 <li>
-                  <Link to={'/connect/women'}>
+                  <Link to={'/connect/women'} className='disabled' disabled >
                     Women
                   </Link>
                 </li>
                 <li>
-                  <Link to={'/connect/men'}>
+                  <Link to={'/connect/men'} className='disabled' disabled >
                     Men
                   </Link>
                 </li>
                 <li>
-                  <Link to={'/connect/outreach'}>
+                  <Link to={'/connect/outreach'} className='disabled' disabled >
                     Outreach
                   </Link>
                 </li>
                 <li>
-                  <Link to={'/connect/haiti'}>
+                  <Link to={'/connect/haiti'} className='disabled' disabled >
                     Haiti
                   </Link>
                 </li>
                 <li>
-                  <Link to={'/connect/recommended-bible-apps'}>
+                  <Link to={'/connect/recommended-bible-apps'} className='disabled' disabled >
                     Recommended Bible Apps
                   </Link>
                 </li>
                 <li>
-                  <Link to={'/connect/employment'}>
+                  <Link to={'/connect/employment'} className='disabled' disabled >
                     Employment
                   </Link>
                 </li>
@@ -173,16 +174,17 @@ const Header = () => {
 
             {/* Contact */}
             <li>
-              <Link to={'/contact'} className='nav-link'>
+              {/* <Link to={'/contact'} className='nav-link'>
                 Contact
-              </Link>
+              </Link> */}
+              <a className='nav-link' href="https://www.issaquah.cc/contact" target='_blank' rel='noopener noreferrer'>Contact</a>
             </li>
 
             {/* Care */}
             <li>
               <Dropdown title="Care" openDropdown={openDropdown} toggleDropdown={toggleDropdown}>
                 <li>
-                  <Link to={'/care/helpful-resources'}>
+                  <Link to={'/care/helpful-resources'} className='disabled' disabled >
                     Helpful Resources
                   </Link>
                 </li>

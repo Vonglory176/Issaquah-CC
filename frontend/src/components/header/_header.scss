@@ -7,7 +7,7 @@
     nav {
 
         &.open {
-            max-height: calc(100svh - 60px);
+            max-height: var(--page-height);
         }
         
         ul li {
@@ -75,7 +75,7 @@
 
             .dropdown-nav {
                 z-index: 1;
-                max-height: calc(100svh - 60px);
+                max-height: var(--page-height);
             } 
         }
     }
@@ -83,7 +83,7 @@
     @media (max-width: 1023px) {
         .nav-menu {
             position: absolute;
-            top: 60px;
+            top: var(--header-height);
             left: 0;
             right: 0;
             
@@ -100,7 +100,7 @@
                 background-color: var(--dropdown-background-color);
                 border-bottom: 2px solid var(--border-color-2);
 
-                max-height: calc(100svh - 60px);
+                max-height: var();
                 overflow-y: auto;
 
                 li {
