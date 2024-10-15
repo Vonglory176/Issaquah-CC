@@ -100,7 +100,7 @@
                 background-color: var(--dropdown-background-color);
                 border-bottom: 2px solid var(--border-color-2);
 
-                max-height: var();
+                max-height: var(--page-height);
                 overflow-y: auto;
 
                 li {
