@@ -1,0 +1,20 @@
+.beliefs-content {
+
+    section {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        li {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+    }
+}
