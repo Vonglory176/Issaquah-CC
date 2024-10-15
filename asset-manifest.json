@@ -1,16 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.e893376e.css",
-    "main.js": "/static/js/main.b617cba6.js",
+    "main.css": "/static/css/main.12a9e7a1.css",
+    "main.js": "/static/js/main.b576bb8d.js",
     "static/media/woman-with-hands-up.webp": "/static/media/woman-with-hands-up.a8b12e310d323cb428a0.webp",
+    "static/media/aaron.webp": "/static/media/aaron.bbd82421e21209c67c99.webp",
+    "static/media/patrick.webp": "/static/media/patrick.56dd1b865dc8c4108fda.webp",
     "static/media/logo7.webp": "/static/media/logo7.8e6f03bea5d294a637ea.webp",
+    "static/media/mike.webp": "/static/media/mike.0ff93d15d0a2d2031580.webp",
+    "static/media/doug.webp": "/static/media/doug.35a0a6da2f6c4784621f.webp",
     "static/media/woman-with-hands-up-small.webp": "/static/media/woman-with-hands-up-small.83faba2ec7812328bced.webp",
     "index.html": "/index.html",
-    "main.e893376e.css.map": "/static/css/main.e893376e.css.map",
-    "main.b617cba6.js.map": "/static/js/main.b617cba6.js.map"
+    "main.12a9e7a1.css.map": "/static/css/main.12a9e7a1.css.map",
+    "main.b576bb8d.js.map": "/static/js/main.b576bb8d.js.map"
   },
   "entrypoints": [
-    "static/css/main.e893376e.css",
-    "static/js/main.b617cba6.js"
+    "static/css/main.12a9e7a1.css",
+    "static/js/main.b576bb8d.js"
   ]
 }
