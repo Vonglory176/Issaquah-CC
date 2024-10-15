@@ -9,9 +9,19 @@
 @import './components/header/_header.scss';
 @import './components/footer/_footer.scss';
 @import './components/hamburgerMenu/_hamburgerMenu.scss';
+@import './components/pageWrapper/_pageWrapper.scss';
 
 // Pages
 @import './pages/home/_home.scss';
+@import './pages/aboutUs/beliefs/_beliefs.scss';
+@import './pages/aboutUs/whatToExpect/_whatToExpect.scss';
+@import './pages/aboutUs/vision/_vision.scss';
+@import './pages/aboutUs/leadership/_leadership.scss';
+
+:root {
+    --header-height: 60px;
+    --page-height: calc(100svh - var(--header-height));
+}
 
 * {
     font-family: 'Open Sans', sans-serif;
@@ -24,6 +34,20 @@
 
 body {
     background-color: #F7F7F7;
+    // background-image: url('./assets/images/textures/60-lines.png');
+    // background-image: url('./assets/images/textures/az-subtle.png');
+
+    // background-image: url('./assets/images/textures/binding-light.png');
+
+    // background-image: url('./assets/images/textures/clean-gray-paper.png');
+    // background-image: url('./assets/images/textures/cream-paper.png');
+
+    background-image: url('./assets/images/textures/handmade-paper.png');
+
+    // background-image: url('./assets/images/textures/light-paper-fibers.png');
+    // background-image: url('./assets/images/textures/natural-paper.png');
+    // background-image: url('./assets/images/textures/textured-paper.png');
+    // background-image: url('./assets/images/textures/white-paperboard.png');
     color: #333333;
 }
 
@@ -48,14 +72,14 @@ body {
     }
 }
 
-.App {
-    min-height: 100vh;
-    min-height: 100svh;
-}
+// .App {
+//     min-height: 100vh;
+//     min-height: 100svh;
+// }
 
-.page {
-    padding-top: 60px;
-}
+// main {
+//     padding-top: var(--header-height);
+// }
 
 a {
     text-decoration: none;
@@ -73,8 +97,38 @@ a {
 
 button, a {
     transition: all 0.2s ease-in-out;
+
     &:hover, &.active {
         // background-color: #D4AF37;
         color: var(--font-active-color);
+    }
+
+    &.disabled {
+        color: gray !important;
+        pointer-events: none;
+        cursor: not-allowed;
+    }
+}
+
+.video-container {
+    position: relative;
+    border-color: var(--border-color-1);
+
+    // max-width: 608px;
+    width: 100%;
+
+    aspect-ratio: 16/9; // 16/9;
+    // padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    overflow: hidden;
+
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
     }
 }
