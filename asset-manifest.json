@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.52645b59.css",
-    "main.js": "/static/js/main.49b24903.js",
+    "main.css": "/static/css/main.b1e96eba.css",
+    "main.js": "/static/js/main.8ca5b101.js",
     "static/media/guyTime.webp": "/static/media/guyTime.1188a251010e87d09d53.webp",
     "static/media/whale.webp": "/static/media/whale.3eafcd14c868d49e368d.webp",
     "static/media/sponsor.webp": "/static/media/sponsor.e7b2a164cf1c4ae31d32.webp",
@@ -9,6 +9,7 @@
     "static/media/aaron.webp": "/static/media/aaron.bbd82421e21209c67c99.webp",
     "static/media/NIOBRG.TTF": "/static/media/NIOBRG.3cc940999c2ca9618815.TTF",
     "static/media/patrick.webp": "/static/media/patrick.56dd1b865dc8c4108fda.webp",
+    "static/media/helpingHand.webp": "/static/media/helpingHand.516525083b1212ce52bc.webp",
     "static/media/logo7.webp": "/static/media/logo7.8e6f03bea5d294a637ea.webp",
     "static/media/mike.webp": "/static/media/mike.0ff93d15d0a2d2031580.webp",
     "static/media/doug.webp": "/static/media/doug.35a0a6da2f6c4784621f.webp",
@@ -16,11 +17,11 @@
     "static/media/pestle.webp": "/static/media/pestle.aa6ec1bafa4388943a13.webp",
     "static/media/woman-with-hands-up-small.webp": "/static/media/woman-with-hands-up-small.83faba2ec7812328bced.webp",
     "index.html": "/index.html",
-    "main.52645b59.css.map": "/static/css/main.52645b59.css.map",
-    "main.49b24903.js.map": "/static/js/main.49b24903.js.map"
+    "main.b1e96eba.css.map": "/static/css/main.b1e96eba.css.map",
+    "main.8ca5b101.js.map": "/static/js/main.8ca5b101.js.map"
   },
   "entrypoints": [
-    "static/css/main.52645b59.css",
-    "static/js/main.49b24903.js"
+    "static/css/main.b1e96eba.css",
+    "static/js/main.8ca5b101.js"
   ]
 }
