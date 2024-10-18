@@ -6,6 +6,7 @@ import arronImage from '../../../assets/images/people/aaron.webp'
 import dougImage from '../../../assets/images/people/doug.webp'
 import patrickImage from '../../../assets/images/people/patrick.webp'
 import mikeImage from '../../../assets/images/people/mike.webp'
+import placeholderImage from '../../../assets/images/people/placeholder.webp'
 
 const leadershipData = [
     {
@@ -60,16 +61,18 @@ const Leadership = () => {
                     <div key={index} className='staff-member flex flex-col items-center mt-8 gap-2 max-w-[320px] mx-auto'> {/*  md:h-[304px]  border-b border-[var(--border-color-3)] */}
 
                         {/* Top */}
-                        <div className="staff-member-image flex justify-center items-center gap-2">
-                            <ProgressiveImage src={person.image} placeholder={person.image}>
-                                {(src, loading) => (
-                                    <img
-                                        src={src}
-                                        alt={'Staff Member'}
-                                        className={`staff-member-image max-w-[120px] w-full h-full duration-300 ${loading ? 'blur-sm' : 'blur-0'}`}
-                                    />
-                                )}
-                            </ProgressiveImage>
+                        <div className="staff-member-image flex justify-center items-center gap-2 min-h-[120px]">
+                            <div className='w-[120px] h-[120px]'>
+                                <ProgressiveImage src={person.image} placeholder={placeholderImage}>
+                                    {(src, loading) => (
+                                        <img
+                                            src={src}
+                                            alt={'Staff Member'}
+                                            className={`staff-member-image w-full h-full duration-300 ${loading ? 'opacity-0' : 'opacity-100'}`}
+                                        />
+                                    )}
+                                </ProgressiveImage>
+                            </div>
 
                             <div>
                                 <h2 className='text-2xl font-bold w-[174px]'>{person.name}</h2>
