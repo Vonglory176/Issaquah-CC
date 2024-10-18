@@ -3,6 +3,7 @@ import ProgressiveImage from 'react-progressive-graceful-image'
 import backgroundImage from '../../assets/images/backgrounds/woman-with-hands-up.webp'
 import backgroundImageSmall from '../../assets/images/backgrounds/woman-with-hands-up-small.webp'
 import PageWrapper from '../../components/pageWrapper/PageWrapper'
+import VideoContainer from '../../components/videoContainer/VideoContainer'
 
 const Home = () => {
     return (
@@ -28,23 +29,25 @@ const Home = () => {
                     {/* Welcome Text */}
                     <div className="landing-welcome-text text-white text-center flex flex-col gap-4 rounded-lg bg-[#F7F7F7]/50 p-4 shadow-lg border-2">
                         <h1 className="text-3xl font-bold lg:text-4xl"><span>Welcome to Issaquah</span> <span className='whitespace-nowrap'>Christian Church</span></h1>
-                        <h2 className="text-xl flex flex-col lg:text-2xl">
+                        <p className="text-xl flex flex-col lg:text-2xl">
                             <span>Teaching Biblical life applications</span>
                             <span>as you learn to follow Jesus.</span>
-                        </h2>
+                        </p>
                     </div>
 
                     {/* Video */}
-                    <div className="video-container rounded-lg overflow-hidden bg-[#F7F7F7]/50 shadow-lg border-2">
+                    <VideoContainer src="https://www.canva.com/design/DAD2KnH2kKQ/watch?embed" className='bg-[#F7F7F7]/50' />
+
+                    {/* <div className="video-container rounded-lg overflow-hidden shadow-lg bg-[#F7F7F7]/50">
 
                         <iframe
-                            style={{ width: '100%', height: '100%' }}
+                            style={{ width: '100%', height: '100%', border: 'none' }}
                             src="https://www.canva.com/design/DAD2KnH2kKQ/watch?embed"
                             title="Embedded Video"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowFullScreen
                         ></iframe>
-                    </div>
+                    </div> */}
 
                 </div>
 

@@ -1,5 +1,6 @@
 import React from 'react'
 import PageWrapper from '../../../components/pageWrapper/PageWrapper'
+import VideoContainer from '../../../components/videoContainer/VideoContainer'
 
 const Vision = () => {
     return (
@@ -19,19 +20,7 @@ const Vision = () => {
 
             </section>
 
-
-            {/* <iframe src="/api/v1/page-sections/1d5e8052-f419-11ed-9791-0614187498c1/iframe" id="1d5e8052-f419-11ed-9791-0614187498c1-iframe" style="width: 100%; border: none;" height="341"></iframe> */}
-
-            <div className="video-container rounded-lg overflow-hidden shadow-lg">
-                <iframe
-                    style={{ width: '100%', height: '100%', border: 'none' }}
-                    // height="682" // "315"
-                    src="https://www.youtube.com/embed/99Ago_Y6AUw"
-                    title="Embedded Video"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                ></iframe>
-            </div>
+            <VideoContainer src="https://www.youtube.com/embed/99Ago_Y6AUw" className='' />
 
         </PageWrapper>
     )
