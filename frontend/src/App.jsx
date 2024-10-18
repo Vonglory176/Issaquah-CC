@@ -16,6 +16,7 @@ import Men from "./pages/connect/men/Men";
 import Outreach from "./pages/connect/outreach/Outreach";
 import Haiti from "./pages/connect/haiti/Haiti";
 import Employment from "./pages/connect/employment/Employment";
+import BibleApps from "./pages/connect/bibleApps/BibleApps";
 
 function App() {
   return (
@@ -55,7 +56,7 @@ function App() {
           <Route path="/connect/men" element={<Men />} />
           <Route path="/connect/outreach" element={<Outreach />} />
           <Route path="/connect/haiti" element={<Haiti />} />
-          {/* <Route path="/connect/bible-apps" element={<BibleApps />} /> */}
+          <Route path="/connect/recommended-bible-apps" element={<BibleApps />} />
           <Route path="/connect/employment" element={<Employment />} />
           
           {/* Contact */}
@@ -89,8 +90,6 @@ export default App;
   Research "Animated banners" for pages
 
   Figure out what to do for Leadership page
-
-  Refreshing nested url issue
 
   Replace Gold colors
 
