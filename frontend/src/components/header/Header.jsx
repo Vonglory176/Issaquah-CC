@@ -74,7 +74,7 @@ const Header = () => {
                   <Link to={'/about-us/leadership'}>Meet Our Leadership</Link>
                 </li>
                 <li>
-                  <Link to={'/about-us/elder'} className='disabled' disabled>Elder Nominations</Link>
+                  <Link to={'/about-us/elder'}>Elder Nominations</Link>
                 </li>
               </Dropdown>
             </li>
@@ -89,7 +89,7 @@ const Header = () => {
                   <Link to={'/event-info/calendar'} className='disabled' disabled >Calendar</Link>
                 </li>
                 <li>
-                  <Link to={'/event-info/bulletin'} className='disabled' disabled >Church Bulletin</Link>
+                  <Link to={'/event-info/bulletin'}>Church Bulletin</Link>
                 </li>
               </Dropdown>
             </li>
@@ -109,7 +109,7 @@ const Header = () => {
                   </a>
                 </li>
                 <li>
-                  <Link to={'/giving/stocks-and-crypto'} className='disabled' disabled >
+                  <Link to={'/giving/stocks-and-crypto'}>
                     Stocks and Crypto
                   </Link>
                 </li>
@@ -125,12 +125,12 @@ const Header = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link to={'/connect/membership'} className='disabled' disabled >
+                  <Link to={'/connect/membership'}>
                     Membership
                   </Link>
                 </li>
                 <li>
-                  <Link to={'/connect/kids'} className='disabled' disabled >
+                  <Link to={'/connect/kids'}>
                     Kids
                   </Link>
                 </li>
@@ -140,22 +140,22 @@ const Header = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link to={'/connect/women'} className='disabled' disabled >
+                  <Link to={'/connect/women'}>
                     Women
                   </Link>
                 </li>
                 <li>
-                  <Link to={'/connect/men'} className='disabled' disabled >
+                  <Link to={'/connect/men'}>
                     Men
                   </Link>
                 </li>
                 <li>
-                  <Link to={'/connect/outreach'} className='disabled' disabled >
+                  <Link to={'/connect/outreach'}>
                     Outreach
                   </Link>
                 </li>
                 <li>
-                  <Link to={'/connect/haiti'} className='disabled' disabled >
+                  <Link to={'/connect/haiti'}>
                     Haiti
                   </Link>
                 </li>
@@ -165,7 +165,7 @@ const Header = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link to={'/connect/employment'} className='disabled' disabled >
+                  <Link to={'/connect/employment'}>
                     Employment
                   </Link>
                 </li>
