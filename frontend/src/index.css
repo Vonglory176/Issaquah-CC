@@ -1,6 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* "We have two brand colors that we use. The red fat more than the salmon" 
+    Red = #7D1E2C
+    Salmon = #34A388
+
+    "The font we use for our logo is: NIOBIUM"  
+*/
 :root {
   --font-color-1: #333333;
   --font-color-2: #D9D9D9;
@@ -13,11 +19,20 @@
   --border-color-1: #D4AF37;
   --border-color-2: #C62828;
   --border-color-3: #A5D6A7;
+  --button-background-color: #D4AF37;
+  --button-text-color: #F7F7F7;
+  --button-hover-background-color: #b4942e;
   --scrollbar-width: 12px;
   --scrollbar-bg: #7D1E2C;
   --scrollbar-thumb: #D9D9D9;
+  --font-family-1: "Open Sans", sans-serif;
+  --font-family-2: "Niobium", "Open Sans", sans-serif;
 }
 
+@font-face {
+  font-family: "Niobium";
+  src: url("./assets/fonts/NIOBRG.TTF") format("truetype");
+}
 .header {
   background-color: var(--background-color-2);
   border-bottom: 2px solid var(--border-color-2);
@@ -223,6 +238,21 @@
   width: 95%;
   max-width: 1090px;
 }
+.page-content section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.page-content section ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.page-content section li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
 @media (min-width: 769px) {
   .page-content {
     width: 90%;
@@ -232,6 +262,55 @@
   .page-content {
     width: 80%;
   }
+}
+
+.video-container {
+  position: relative;
+  border-color: var(--border-color-1);
+  width: 100%;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.spinner-circle {
+  width: 30px;
+  height: 30px;
+  border: 5px solid #D9D9D9;
+  border-top-color: var(--font-active-color);
+  border-radius: 50%;
+  animation: rotate 1s linear infinite;
+}
+.spinner-loading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.spinner-message {
+  color: #555555;
+  text-align: center;
+  width: 100%;
 }
 
 .home-content {
@@ -247,67 +326,17 @@
   color: #333333;
   border-color: var(--border-color-1);
 }
-.home-content .landing .video-container {
-  position: relative;
-  border-color: var(--border-color-1);
-  width: 100%;
-  aspect-ratio: 16/9;
-  overflow: hidden;
-}
-.home-content .landing .video-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
-}
 
-.beliefs-content section {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-.beliefs-content section ul {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-.beliefs-content section li {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.what-to-expect-content section {
+.bulletin-content section {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
-.vision-content section {
+.membership-content ul {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-}
-.vision-content .video-container {
-  position: relative;
-  border-color: var(--border-color-1);
-  width: 100%;
-  aspect-ratio: 16/9;
-  overflow: hidden;
-}
-.vision-content .video-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
+  gap: 2rem;
 }
 
 :root {
@@ -316,11 +345,15 @@
 }
 
 * {
-  font-family: "Open Sans", sans-serif;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
+  font-family: var(--font-family-1);
+}
+
+h1, h1 p, h1 span {
+  font-family: var(--font-family-2);
 }
 
 body {
@@ -361,20 +394,8 @@ button.disabled, a.disabled {
   cursor: not-allowed;
 }
 
-.video-container {
-  position: relative;
-  border-color: var(--border-color-1);
-  width: 100%;
-  aspect-ratio: 16/9;
-  overflow: hidden;
-}
-.video-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
 }/*# sourceMappingURL=index.css.map */
