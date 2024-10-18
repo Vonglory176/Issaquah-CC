@@ -13,8 +13,10 @@ const Header = () => {
 
   // Close menu when location changes
   useEffect(() => {
-    setIsOpen(false)
-    setOpenDropdown(null)
+    if (window.innerWidth < 1024) {
+      setIsOpen(false)
+      setOpenDropdown(null)
+    }
   }, [location])
 
   // Toggle menu (Hamburger)
@@ -160,7 +162,7 @@ const Header = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link to={'/connect/recommended-bible-apps'} className='disabled' disabled >
+                  <Link to={'/connect/recommended-bible-apps'}>
                     Recommended Bible Apps
                   </Link>
                 </li>
