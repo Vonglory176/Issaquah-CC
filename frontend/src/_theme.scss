@@ -1,4 +1,12 @@
+/* "We have two brand colors that we use. The red fat more than the salmon" 
+    Red = #7D1E2C
+    Salmon = #34A388
+
+    "The font we use for our logo is: NIOBIUM"  
+*/
+
 :root {
+    // COLORS
     --font-color-1: #333333; // Text on page
     --font-color-2: #D9D9D9;
     --font-color-3: #F7F7F7; // Text on header and footer
@@ -17,10 +25,25 @@
 
     // --background-color-3: #D4AF37; // Button and link background
 
+    // BUTTONS
+    --button-background-color: #D4AF37; // #34A388; // #7D1E2C;
+    --button-text-color: #F7F7F7;
+    --button-hover-background-color: #b4942e; //#34A388; // #A5D6A7;
+
+    // SCROLLBAR
     --scrollbar-width: 12px;
     --scrollbar-bg: #7D1E2C;
     --scrollbar-thumb: #D9D9D9;
 
+    // FONTS
+    --font-family-1: 'Open Sans', sans-serif; // Regular
+    --font-family-2: 'Niobium', 'Open Sans', sans-serif; // Logo / Headers
+}
+
+@font-face {
+    font-family: 'Niobium';
+    src: url('./assets/fonts/NIOBRG.TTF') format('truetype');
+    // src: url('./assets/fonts/NIOBBL.TTF') format('truetype');
 }
 
 // Page #F7F7F7
