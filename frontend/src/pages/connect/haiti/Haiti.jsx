@@ -11,9 +11,6 @@ const Haiti = () => {
 
                 <h1 className='text-3xl font-bold flex gap-2 flex-wrap mx-auto'>Be Part Of The Solution</h1>
 
-                <div className="flex flex-col gap-8 text-lg md:text-xl">
-                    <p>Click  <a href="https://gvcm.reachapp.co/sponsorships?sponsorship_type=child-sponsorship-orphanage&status=unsponsored,partial" target='_blank' rel='noopener noreferrer' className='text-[var(--font-active-color)]'>Here</a> to Become a Sponsor</p>
-                </div>
 
                 {/* <p className='text-lg md:text-xl'>We have a three step process to become a member at Issaquah Christian Church:</p> */}
 
@@ -21,6 +18,9 @@ const Haiti = () => {
 
             </section>
 
+            <div className="flex flex-col gap-8 text-lg md:text-xl text-center">
+                <p>Click  <a href="https://gvcm.reachapp.co/sponsorships?sponsorship_type=child-sponsorship-orphanage&status=unsponsored,partial" target='_blank' rel='noopener noreferrer' className='text-[var(--font-active-color)]'>Here</a> to Become a Sponsor</p>
+            </div>
 
             <ProgressiveImage src={sponsor} placeholder={''}>
                 {(src, loading) => (
