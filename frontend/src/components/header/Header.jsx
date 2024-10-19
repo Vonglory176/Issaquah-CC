@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import ProgressiveImage from 'react-progressive-graceful-image'
-import { FaCaretDown } from 'react-icons/fa'
-import logo from '../../assets/images/logos/logo7.webp'
+// import { FaCaretDown } from 'react-icons/fa'
+import logo from '../../assets/images/logos/logo4.webp'
 import { Link, useLocation } from 'react-router-dom'
 import HamburgerMenu from '../hamburgerMenu/HamburgerMenu'
 import Dropdown from '../dropdown/Dropdown'
@@ -98,8 +98,8 @@ const Header = () => {
 
             {/* Other Menu Items */}
             <li>
-              {/* <Link to={'/sermons'} className='nav-link'>Sermons</Link> */}
-              <a className='nav-link' href="https://www.issaquah.cc/sermons" target='_blank' rel='noopener noreferrer'>Sermons</a>
+              <Link to={'/sermons'} className='nav-link'>Sermons</Link>
+              {/* <a className='nav-link' href="https://www.issaquah.cc/sermons" target='_blank' rel='noopener noreferrer'>Sermons</a> */}
             </li>
 
             {/* Giving */}
@@ -122,7 +122,7 @@ const Header = () => {
             <li>
               <Dropdown title="Connect" openDropdown={openDropdown} toggleDropdown={toggleDropdown}>
                 <li>
-                  <Link to={'/connect/prayer-requests'} className='disabled' disabled >
+                  <Link to={'/connect/prayer-requests'}>
                     Prayer Requests
                   </Link>
                 </li>
@@ -137,7 +137,7 @@ const Header = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link to={'/connect/teens'} className='disabled' disabled >
+                  <Link to={'/connect/teens'}>
                     Teens
                   </Link>
                 </li>
@@ -176,17 +176,17 @@ const Header = () => {
 
             {/* Contact */}
             <li>
-              {/* <Link to={'/contact'} className='nav-link'>
+              <Link to={'/contact'} className='nav-link'>
                 Contact
-              </Link> */}
-              <a className='nav-link' href="https://www.issaquah.cc/contact" target='_blank' rel='noopener noreferrer'>Contact</a>
+              </Link>
+              {/* <a className='nav-link' href="https://www.issaquah.cc/contact" target='_blank' rel='noopener noreferrer'>Contact</a> */}
             </li>
 
             {/* Care */}
             <li>
               <Dropdown title="Care" openDropdown={openDropdown} toggleDropdown={toggleDropdown}>
                 <li>
-                  <Link to={'/care/helpful-resources'} className='disabled' disabled >
+                  <Link to={'/care/helpful-resources'}>
                     Helpful Resources
                   </Link>
                 </li>
