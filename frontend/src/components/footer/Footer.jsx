@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from '../../assets/images/logos/logo7.webp'
+import logo from '../../assets/images/logos/logo4.webp'
 import ProgressiveImage from 'react-progressive-graceful-image'
 import { Link } from 'react-router-dom'
 import { FaEnvelope, FaFacebookSquare, FaInstagramSquare, FaMapMarkerAlt, FaPhone, FaYoutubeSquare } from 'react-icons/fa'
