@@ -1,0 +1,27 @@
+.prayer-requests-content {
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    .form-group, .checkboxes {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .form-row {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    @media (min-width: 769px) {
+        .form-row {
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+    }
+}
