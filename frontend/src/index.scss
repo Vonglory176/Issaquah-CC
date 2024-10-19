@@ -28,6 +28,11 @@
 
 @import './pages/connect/membership/_membership.scss'; // Connect
 @import './pages/connect/kids/_kids.scss';
+@import './pages/connect/prayerRequests/_prayerRequests.scss';
+
+@import './pages/care/helpfulResources/_helpfulResources.scss'; // Care
+@import './pages/care/localResources/_localResources.scss'; // Care
+
 
 :root {
     --header-height: 60px;
