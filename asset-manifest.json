@@ -1,10 +1,11 @@
 {
   "files": {
-    "main.css": "/static/css/main.a4475d90.css",
-    "main.js": "/static/js/main.9c399fcf.js",
+    "main.css": "/static/css/main.17f5591f.css",
+    "main.js": "/static/js/main.fbe4684d.js",
     "static/media/guyTime.webp": "/static/media/guyTime.1188a251010e87d09d53.webp",
     "static/media/whale.webp": "/static/media/whale.3eafcd14c868d49e368d.webp",
     "static/media/sponsor.webp": "/static/media/sponsor.e7b2a164cf1c4ae31d32.webp",
+    "static/media/youtubeChannel.webp": "/static/media/youtubeChannel.fa2223c17bac09720027.webp",
     "static/media/woman-with-hands-up.webp": "/static/media/woman-with-hands-up.a8b12e310d323cb428a0.webp",
     "static/media/logo4.webp": "/static/media/logo4.ab06e82fbb68c8ef6ec5.webp",
     "static/media/aaron.webp": "/static/media/aaron.bbd82421e21209c67c99.webp",
@@ -14,15 +15,18 @@
     "static/media/helpingHand.webp": "/static/media/helpingHand.516525083b1212ce52bc.webp",
     "static/media/mike.webp": "/static/media/mike.0ff93d15d0a2d2031580.webp",
     "static/media/doug.webp": "/static/media/doug.35a0a6da2f6c4784621f.webp",
+    "static/media/applePodcast.webp": "/static/media/applePodcast.9265bb6df72ffada361c.webp",
+    "static/media/amazonMusic.webp": "/static/media/amazonMusic.135a6f622f260a026698.webp",
+    "static/media/podcast.webp": "/static/media/podcast.a1a3e12b51df33c2e229.webp",
     "static/media/placeholder.webp": "/static/media/placeholder.6c138124a1f89c7c1ef1.webp",
     "static/media/pestle.webp": "/static/media/pestle.aa6ec1bafa4388943a13.webp",
     "static/media/woman-with-hands-up-small.webp": "/static/media/woman-with-hands-up-small.83faba2ec7812328bced.webp",
     "index.html": "/index.html",
-    "main.a4475d90.css.map": "/static/css/main.a4475d90.css.map",
-    "main.9c399fcf.js.map": "/static/js/main.9c399fcf.js.map"
+    "main.17f5591f.css.map": "/static/css/main.17f5591f.css.map",
+    "main.fbe4684d.js.map": "/static/js/main.fbe4684d.js.map"
   },
   "entrypoints": [
-    "static/css/main.a4475d90.css",
-    "static/js/main.9c399fcf.js"
+    "static/css/main.17f5591f.css",
+    "static/js/main.fbe4684d.js"
   ]
 }
