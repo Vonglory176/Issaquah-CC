@@ -1,0 +1,18 @@
+.local-resources-content {
+    a {
+        color: var(--font-active-color);
+    }
+
+    ul {
+        gap: 0.5rem !important;
+    }
+
+    .logo-image-container {
+        position: relative;
+        overflow: hidden;
+        max-height: 155.58px;
+        
+        height: calc(151.89px + 0.307 * (100vw - 545px));
+        // height: calc(110px + (200 - 110) * ((100vw - 750px) / (1079 - 750)))
+    }
+}
