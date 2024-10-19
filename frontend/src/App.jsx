@@ -1,4 +1,5 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Navigate } from "react-router-dom";
+
 import Footer from "./components/footer/Footer";
 import Header from "./components/header/Header";
 import Home from "./pages/home/Home";
@@ -17,6 +18,12 @@ import Outreach from "./pages/connect/outreach/Outreach";
 import Haiti from "./pages/connect/haiti/Haiti";
 import Employment from "./pages/connect/employment/Employment";
 import BibleApps from "./pages/connect/bibleApps/BibleApps";
+import HelpfulResources from "./pages/care/helpfulResources/HelpfulResources";
+import LocalResources from "./pages/care/localResources/LocalResources";
+import Contact from "./pages/contact/Contact";
+import Sermons from "./pages/sermons/Sermons";
+import Teens from "./pages/connect/teens/Teens";
+import PrayerRequests from "./pages/connect/prayerRequests/PrayerRequests";
 
 function App() {
   return (
@@ -30,6 +37,7 @@ function App() {
           <Route path="/" element={<Home />} />
 
           {/* About Us */}
+          <Route path="/about-us" element={<Navigate to="/" />} />
           <Route path="/about-us/beliefs" element={<Beliefs />} />
           <Route path="/about-us/what-to-expect" element={<WhatToExpect />} />
           <Route path="/about-us/vision-mission-and-values" element={<Vision />} />
@@ -37,21 +45,24 @@ function App() {
           <Route path="/about-us/elder" element={<Elder />} />
 
           {/* Event Info */}
-          {/* <Route path="/event-info/women-s-sign-up" element={<WomenSignUp />} />
-          <Route path="/event-info/calendar" element={<Calendar />} /> */}
+          <Route path="/event-info" element={<Navigate to="/" />} />
+          {/* <Route path="/event-info/women-s-sign-up" element={<WomenSignUp />} /> */}
+          {/* <Route path="/event-info/calendar" element={<Calendar />} /> */}
           <Route path="/event-info/bulletin" element={<Bulletin />} />
 
           {/* Sermons */}
-          {/* <Route path="/sermons" element={<Sermons />} /> */}
+          <Route path="/sermons" element={<Sermons />} />
 
           {/* Giving */}
+          <Route path="/giving" element={<Navigate to="/" />} />
           <Route path="/giving/stocks-and-crypto" element={<StocksAndCrypto />} />
 
           {/* Connect */}
-          {/* <Route path="/connect/prayer-requests" element={<PrayerRequests />} /> */}
+          <Route path="/connect" element={<Navigate to="/" />} />
+          <Route path="/connect/prayer-requests" element={<PrayerRequests />} />
           <Route path="/connect/membership" element={<Membership />} />
           <Route path="/connect/kids" element={<Kids />} />
-          {/* <Route path="/connect/teens" element={<Teens />} /> */}
+          <Route path="/connect/teens" element={<Teens />} />
           <Route path="/connect/women" element={<Women />} />
           <Route path="/connect/men" element={<Men />} />
           <Route path="/connect/outreach" element={<Outreach />} />
@@ -60,8 +71,12 @@ function App() {
           <Route path="/connect/employment" element={<Employment />} />
           
           {/* Contact */}
+          <Route path="/contact" element={<Contact />} />
 
           {/* Care */}
+          <Route path="/care" element={<Navigate to="/" />} />
+          <Route path="/care/helpful-resources" element={<HelpfulResources />} />
+          <Route path="/care/local-resources" element={<LocalResources />} />
 
         </Routes>
 
@@ -82,8 +97,6 @@ export default App;
     - Sermon Player
     - Calendar
     - Forms
-    - Slideshows (Teens)
-    - Google maps API (Contact)
 
   Move resize event listener (in Dropdown.jsx) to Context
 
@@ -91,8 +104,16 @@ export default App;
 
   Figure out what to do for Leadership page
 
+  Look into centered content with larger text for certain pages
+
   Replace Gold colors
 
   Standardize font sizes
+
+  Get "Impact" font for some headers (h2 only?)
+
+  Weird issue with Canva video ui when scrolling in mobile view
+
+  Finish form in Prayer Requests !!!
 
 */
