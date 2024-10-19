@@ -20,7 +20,7 @@ const BibleApps = () => {
                 <h2 className='text-2xl font-bold'>Faithlife Study Bible</h2>
                 <p className='text-lg md:text-xl'>The Faithlife Study Bible will help you understand the Bible more fully. It contains several layers of notes and many graphics, making it the most advanced digital study Bible anywhere.</p>
 
-                <ul className='text-lg list-disc'>
+                <ul className='text-lg list-disc pl-4 ml-4'>
                     <li>
                         <a className='flex gap-2 items-center text-[var(--font-active-color)]' href='https://itunes.apple.com/us/app/faithlife-study-bible/id485998842' target='_blank' rel='noopener noreferrer'>Download for iOS <FaApple size={24} className='mt-[-5px]' /> </a>
                     </li>
@@ -34,7 +34,7 @@ const BibleApps = () => {
                 <h2 className='text-2xl font-bold'>Logos Bible Software</h2>
                 <p className='text-lg md:text-xl'>The Logos Bible Software app is the mobile version of the world's leading Bible software. This free download comes with several Bible translations and other resources, and there are more than 100,000 books related to the Bible you can buy through the app.</p>
 
-                <ul className='text-lg list-disc'>
+                <ul className='text-lg list-disc pl-4 ml-4'>
                     <li>
                         <a className='flex gap-2 items-center text-[var(--font-active-color)]' href='https://itunes.apple.com/app/apple-store/id336400266' target='_blank' rel='noopener noreferrer'>Download for iOS <FaApple size={24} className='mt-[-5px]' /> </a>
                     </li>
