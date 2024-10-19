@@ -20,7 +20,7 @@ const Elder = () => {
                 {(src, loading) => (
                     <img
                         src={src}
-                        alt={'Staff Member'}
+                        alt={''}
                         className={`w-full h-full duration-300 ${loading ? 'opacity-0' : 'opacity-100'}`}
                     />
                 )}

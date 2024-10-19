@@ -25,8 +25,8 @@ const Men = () => {
                 {(src, loading) => (
                     <img
                         src={src}
-                        alt={'Staff Member'}
-                        className={`w-full h-full duration-300 ${loading ? 'opacity-0' : 'opacity-100'}`}
+                        alt={''}
+                        className={`w-full h-full duration-300 rounded-lg ${loading ? 'opacity-0' : 'opacity-100'}`}
                     />
                 )}
             </ProgressiveImage>

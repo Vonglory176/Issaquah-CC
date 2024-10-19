@@ -34,12 +34,12 @@ const Kids = () => {
                     <p>If you have any questions please contact us at <a href="mailto:office@issaquah.cc" className='text-[var(--font-active-color)]'>office@issaquah.cc</a></p>
                 </div>
 
-                <div className='max-w-[300px] min-w-[300px] h-[300px] mx-auto'>
+                <div className='max-w-[300px] min-w-[300px] h-[300px] mx-auto rounded-lg overflow-hidden'>
                     <ProgressiveImage src={whale} placeholder={''}>
                         {(src, loading) => (
                             <img
                                 src={src}
-                                alt={'Staff Member'}
+                                alt={''}
                                 className={`w-full h-full duration-300 ${loading ? 'opacity-0' : 'opacity-100'}`}
                             />
                         )}
