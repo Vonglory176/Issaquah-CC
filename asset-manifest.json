@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.42024c45.css",
-    "main.js": "/static/js/main.b4b63356.js",
+    "main.css": "/static/css/main.12e0bd3d.css",
+    "main.js": "/static/js/main.d80be714.js",
     "static/media/guyTime.webp": "/static/media/guyTime.1188a251010e87d09d53.webp",
     "static/media/whale.webp": "/static/media/whale.3eafcd14c868d49e368d.webp",
     "static/media/sponsor.webp": "/static/media/sponsor.e7b2a164cf1c4ae31d32.webp",
@@ -9,12 +9,12 @@
     "static/media/dcVsMarvel.webp": "/static/media/dcVsMarvel.fe7b6d743b6bb62d13a7.webp",
     "static/media/youthGroup.webp": "/static/media/youthGroup.b83ae5b4d4c365a368bf.webp",
     "static/media/woman-with-hands-up.webp": "/static/media/woman-with-hands-up.a8b12e310d323cb428a0.webp",
-    "static/media/logo4.webp": "/static/media/logo4.ab06e82fbb68c8ef6ec5.webp",
     "static/media/aaron.webp": "/static/media/aaron.bbd82421e21209c67c99.webp",
     "static/media/logo8.webp": "/static/media/logo8.e40ce094c88902064cb2.webp",
     "static/media/NIOBRG.TTF": "/static/media/NIOBRG.3cc940999c2ca9618815.TTF",
     "static/media/patrick.webp": "/static/media/patrick.56dd1b865dc8c4108fda.webp",
     "static/media/helpingHand.webp": "/static/media/helpingHand.516525083b1212ce52bc.webp",
+    "static/media/logo9.webp": "/static/media/logo9.e7eb170829909d770e07.webp",
     "static/media/mike.webp": "/static/media/mike.0ff93d15d0a2d2031580.webp",
     "static/media/doug.webp": "/static/media/doug.35a0a6da2f6c4784621f.webp",
     "static/media/applePodcast.webp": "/static/media/applePodcast.9265bb6df72ffada361c.webp",
@@ -24,11 +24,11 @@
     "static/media/pestle.webp": "/static/media/pestle.aa6ec1bafa4388943a13.webp",
     "static/media/woman-with-hands-up-small.webp": "/static/media/woman-with-hands-up-small.83faba2ec7812328bced.webp",
     "index.html": "/index.html",
-    "main.42024c45.css.map": "/static/css/main.42024c45.css.map",
-    "main.b4b63356.js.map": "/static/js/main.b4b63356.js.map"
+    "main.12e0bd3d.css.map": "/static/css/main.12e0bd3d.css.map",
+    "main.d80be714.js.map": "/static/js/main.d80be714.js.map"
   },
   "entrypoints": [
-    "static/css/main.42024c45.css",
-    "static/js/main.b4b63356.js"
+    "static/css/main.12e0bd3d.css",
+    "static/js/main.d80be714.js"
   ]
 }
