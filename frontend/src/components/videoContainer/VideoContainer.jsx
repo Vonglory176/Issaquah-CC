@@ -5,7 +5,7 @@ const VideoContainer = ({ src, className }) => {
     const [loading, setLoading] = useState(true)
 
     return (
-        <div className={`video-container rounded-lg overflow-hidden shadow-lg ${className}`}>
+        <div className={`video-container rounded-lg overflow-hidden shadow-lg bg-white ${className}`}>
 
             {loading && <Spinner />}
 
