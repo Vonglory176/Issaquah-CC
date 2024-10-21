@@ -1,9 +1,11 @@
 {
   "files": {
-    "main.css": "/static/css/main.c6364572.css",
-    "main.js": "/static/js/main.2349a3ce.js",
+    "main.css": "/static/css/main.80044f6d.css",
+    "main.js": "/static/js/main.b6309b2c.js",
+    "static/media/mens-group.webp": "/static/media/mens-group.41ab9b3d36d42988e538.webp",
     "static/media/guyTime.webp": "/static/media/guyTime.1188a251010e87d09d53.webp",
     "static/media/whale.webp": "/static/media/whale.3eafcd14c868d49e368d.webp",
+    "static/media/womens-group.webp": "/static/media/womens-group.3361fa2f442415f8f205.webp",
     "static/media/sponsor.webp": "/static/media/sponsor.e7b2a164cf1c4ae31d32.webp",
     "static/media/youtubeChannel.webp": "/static/media/youtubeChannel.fa2223c17bac09720027.webp",
     "static/media/dcVsMarvel.webp": "/static/media/dcVsMarvel.fe7b6d743b6bb62d13a7.webp",
@@ -24,15 +26,17 @@
     "static/media/podcast.webp": "/static/media/podcast.a1a3e12b51df33c2e229.webp",
     "static/media/placeholder.webp": "/static/media/placeholder.6c138124a1f89c7c1ef1.webp",
     "static/media/pestle.webp": "/static/media/pestle.aa6ec1bafa4388943a13.webp",
+    "static/media/womens-group-small.webp": "/static/media/womens-group-small.d5cb1b0543df193e12d7.webp",
+    "static/media/mens-group-small.webp": "/static/media/mens-group-small.1dd466d5281c96be17bd.webp",
     "static/media/woman-with-hands-up-small.webp": "/static/media/woman-with-hands-up-small.83faba2ec7812328bced.webp",
     "index.html": "/index.html",
     "static/media/guy-praying-small.webp": "/static/media/guy-praying-small.8b824aa30c2a84356522.webp",
     "static/media/wheat-field-small.webp": "/static/media/wheat-field-small.1d51c8952bdf77820eae.webp",
-    "main.c6364572.css.map": "/static/css/main.c6364572.css.map",
-    "main.2349a3ce.js.map": "/static/js/main.2349a3ce.js.map"
+    "main.80044f6d.css.map": "/static/css/main.80044f6d.css.map",
+    "main.b6309b2c.js.map": "/static/js/main.b6309b2c.js.map"
   },
   "entrypoints": [
-    "static/css/main.c6364572.css",
-    "static/js/main.2349a3ce.js"
+    "static/css/main.80044f6d.css",
+    "static/js/main.b6309b2c.js"
   ]
 }
