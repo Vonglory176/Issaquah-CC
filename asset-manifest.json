@@ -1,12 +1,13 @@
 {
   "files": {
-    "main.css": "/static/css/main.1599b170.css",
-    "main.js": "/static/js/main.ee9d5f42.js",
+    "main.css": "/static/css/main.b2fc0221.css",
+    "main.js": "/static/js/main.f7432854.js",
     "static/media/guyTime.webp": "/static/media/guyTime.1188a251010e87d09d53.webp",
     "static/media/whale.webp": "/static/media/whale.3eafcd14c868d49e368d.webp",
     "static/media/sponsor.webp": "/static/media/sponsor.e7b2a164cf1c4ae31d32.webp",
     "static/media/youtubeChannel.webp": "/static/media/youtubeChannel.fa2223c17bac09720027.webp",
     "static/media/dcVsMarvel.webp": "/static/media/dcVsMarvel.fe7b6d743b6bb62d13a7.webp",
+    "static/media/guy-praying.webp": "/static/media/guy-praying.71e855b7492ec7051bcd.webp",
     "static/media/youthGroup.webp": "/static/media/youthGroup.b83ae5b4d4c365a368bf.webp",
     "static/media/woman-with-hands-up.webp": "/static/media/woman-with-hands-up.a8b12e310d323cb428a0.webp",
     "static/media/aaron.webp": "/static/media/aaron.bbd82421e21209c67c99.webp",
@@ -24,11 +25,12 @@
     "static/media/pestle.webp": "/static/media/pestle.aa6ec1bafa4388943a13.webp",
     "static/media/woman-with-hands-up-small.webp": "/static/media/woman-with-hands-up-small.83faba2ec7812328bced.webp",
     "index.html": "/index.html",
-    "main.1599b170.css.map": "/static/css/main.1599b170.css.map",
-    "main.ee9d5f42.js.map": "/static/js/main.ee9d5f42.js.map"
+    "static/media/guy-praying-small.webp": "/static/media/guy-praying-small.8b824aa30c2a84356522.webp",
+    "main.b2fc0221.css.map": "/static/css/main.b2fc0221.css.map",
+    "main.f7432854.js.map": "/static/js/main.f7432854.js.map"
   },
   "entrypoints": [
-    "static/css/main.1599b170.css",
-    "static/js/main.ee9d5f42.js"
+    "static/css/main.b2fc0221.css",
+    "static/js/main.f7432854.js"
   ]
 }
