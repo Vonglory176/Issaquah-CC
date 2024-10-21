@@ -27,7 +27,7 @@ import PrayerRequests from "./pages/connect/prayerRequests/PrayerRequests";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App relative">
 
       <Header />
 
@@ -98,6 +98,8 @@ export default App;
     - Calendar
     - Forms
 
+  Hookup links to images in Sermons page
+
   Move resize event listener (in Dropdown.jsx) to Context
 
   Research "Animated banners" for pages
@@ -114,6 +116,15 @@ export default App;
 
   Weird issue with Canva video ui when scrolling in mobile view
 
-  Finish form in Prayer Requests !!!
+  Finish form in Prayer Requests !!! (Use Contact from WebPortfolio for submission logic/styling)
 
+  Separate Head/Footer colors from Body colors
+
+  Implement ReCaptcha for Forms (PrayerRequests/WomensSignUp)
+
+  Move event listener (in Banner.jsx) to Context
+
+  Margin issue in teens slideshow
+
+  Tinker with line-height
 */
