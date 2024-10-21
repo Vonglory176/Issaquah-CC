@@ -4,13 +4,13 @@
   color: var(--font-color-3);
 
   &.active {
-    color: var(--font-active-color);
+    color: var(--font-active-color-2);
 
     .hamburger-icon {
       // transform: translateX(-200px); // -130px
 
       &-bar1, &-bar2, &-bar3 {
-        background-color: var(--font-active-color);
+        background-color: var(--font-active-color-2);
       }
   
       .hamburger-icon-bar1 {
