@@ -1,7 +1,21 @@
 .header {
-    background-color: var(--background-color-2);
-    border-bottom: 2px solid var(--border-color-2);
-    color: var(--font-color-2);
+
+    &-wrapper {
+        background-color: var(--background-color-2);
+        border-bottom: 2px solid var(--border-color-2);
+        color: var(--font-color-2);
+    
+        &::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 60px;
+            background-color: var(--background-color-2);
+            z-index: -1;
+        }        
+    }
 
     // All Menus
     nav {
@@ -19,6 +33,10 @@
                 gap: 5px;
 
                 background-color: transparent;
+
+                &:hover {
+                    color: var(--font-active-color-2);
+                }
 
                 &:not(:hover) {
                     color: var(--font-color-3);
@@ -65,7 +83,7 @@
 
         &.open {            
             .dropdown-toggle, & > a {
-                color: var(--font-active-color);
+                color: var(--font-active-color-2);
 
                 svg {
                     // transition: transform 0.3s ease-in-out;
@@ -180,7 +198,7 @@
 
                         &::before, &::after {
                             width: calc(50% - 5px);
-                            background: var(--font-active-color);
+                            background: var(--font-active-color-2);
                         }
                     }
                 }

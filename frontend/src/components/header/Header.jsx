@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import ProgressiveImage from 'react-progressive-graceful-image'
 // import { FaCaretDown } from 'react-icons/fa'
-import logo from '../../assets/images/logos/logo4.webp'
+import logo from '../../assets/images/logos/logo9.webp'
 import { Link, useLocation } from 'react-router-dom'
 import HamburgerMenu from '../hamburgerMenu/HamburgerMenu'
 import Dropdown from '../dropdown/Dropdown'
@@ -35,7 +35,7 @@ const Header = () => {
   }, [openDropdown])
 
   return (
-    <header className='header h-[var(--header-height)] fixed top-0 left-0 right-0 z-50 shadow-lg'>
+    <header className='header h-[var(--header-height)] sticky mb-[-60px] top-0 left-0 right-0 z-50 shadow-lg'>
 
       <div className="header-wrapper relative flex items-center justify-between h-full px-8 xl:px-[8vw]">
 
