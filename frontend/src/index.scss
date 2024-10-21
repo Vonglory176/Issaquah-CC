@@ -12,6 +12,7 @@
 @import './components/pageWrapper/_pageWrapper.scss';
 @import './components/videoContainer/_videoContainer.scss';
 @import './components/spinner/_spinner.scss';
+@import './components/banner/_banner.scss';
 
 
 // Pages
@@ -49,13 +50,11 @@
     font-family: var(--font-family-1); // 'Open Sans', sans-serif;
 }
 
-h1 {
-    &, p, span {
-        font-family: var(--font-family-2); // 'Niobium', 'Open Sans', sans-serif;
-    }
+body {
+    background-color: var(--background-color-2); // #F7F7F7;
 }
 
-body {
+.App {
     background-color: #F7F7F7;
     // background-image: url('./assets/images/textures/60-lines.png');
     // background-image: url('./assets/images/textures/az-subtle.png');
@@ -97,18 +96,69 @@ body {
     }
 }
 
+// Fonts
+h1 {
+    &, p, span {
+        font-family: var(--font-family-2); // 'Niobium', 'Open Sans', sans-serif;
+    }
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 600;
+
+    // @media (min-width: 768px) {
+}
+    
+p, a {
+    font-size: 18px;
+}
+
+@media (min-width: 768px) {
+    h2 {font-size: 30px}
+}
+@media (min-width: 1280px) {
+    h2 {font-size: 36px}
+    p, a {font-size: 20px}
+}
+
+// Links
 a {
     text-decoration: none;
     cursor: pointer;
 }
 
-button, a {
-    transition: all 0.2s ease-in-out;
+.header a, .footer a {
+    // color: var(--font-active-color-2);
 
     &:hover, &.active {
         // background-color: #D4AF37;
-        color: var(--font-active-color);
+        color: var(--font-active-color-2);
     }
+}
+
+main a {
+    color: var(--font-active-color-1);
+
+    &:hover, &.active {
+        // background-color: #D4AF37;
+        // color: var(--font-active-color-2);
+        text-decoration: underline;
+    }
+}
+
+// Buttons
+button {
+
+    &:hover, &.active {
+        // background-color: #D4AF37;
+        color: var(--font-active-color-1);
+    }    
+}
+
+// Buttons + Links
+button, a {
+    transition: all 0.2s ease-in-out;
 
     &.disabled {
         color: gray !important;
@@ -117,8 +167,133 @@ button, a {
     }
 }
 
+// Form stuff
+form {
+    border: 2px solid var(--border-color-1);
+    border-radius: 0.5rem;
+    max-width: 678px;
+    margin: 0 auto;
+
+    .form-container {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem; // 1.5rem;
+    }
+
+    input, textarea {
+        padding: 0.5rem;
+        // margin: 0.5rem 0;
+        border-radius: 0.5rem;
+    
+        &:focus {
+            outline: none;
+            z-index: 2;
+        }
+    }
+
+    .form-group {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+
+        & > label {
+            color: var(--font-color-4);
+        }
+    }
+    
+    .form-group-text-input {
+        position: relative;
+        border: 1px solid #6B7280;
+        border-radius: 0.5rem;
+        transition: all 0.2s ease-in-out;
+        margin-bottom: 1rem;
+
+        label {
+            content: attr(htmlFor); // Use the name attribute for content
+            position: absolute;
+            top: 8px; // 16px;
+            left: 8px;
+            transition: .3s ease-in-out;
+            color: var(--font-color-4); // #999;
+            pointer-events: none;
+            z-index: 2;
+        }
+
+        input, textarea {
+            background-color: transparent;
+        }
+
+        // input:focus + label,
+        // textarea:focus + label {
+        //     color: var(--font-color-4); // #fff;
+        // }
+
+        input:focus + label,
+        textarea:focus + label,
+        &.is-active label {
+            top: -18px; // -12px;
+            font-size: 12px;
+            // color: inherit;
+        }
+
+        .form-group-error-text {
+            position: absolute;
+            bottom: -24px; // -28px;
+            left: 8px;
+        }
+
+    }
+    .form-group.has-error {
+        border-color: #f56565;
+        // label {color: #f56565 !important} // text-red-500
+    }
+
+    .form-group.is-active:not(.has-error) {
+        border-color: var(--font-color-1);
+        label {color: var(--font-color-1)} // text-white
+    }
+
+    .form-group-error-text {
+        color: #f56565; // #f00; /* Equivalent to text-red-500 */
+        // position: absolute;
+        // bottom: -28px;
+        // left: 8px;
+        animation: fade-in 0.5s; /* Assuming you have a fade-in animation defined */
+        font-size: 0.875rem;
+        font-weight: 400; // 600;
+    }
+    
+    .form-row {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    // @media (min-width: 769px) {
+    @media (min-width: 640px) {
+        .form-row {
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem; // 4rem;
+        }
+    }
+}
+
 @keyframes rotate {
     to {
         transform: rotate(360deg);
     }
 }
+
+.fade-in {
+    animation: fade-in 0.3s ease-in-out;
+  }
+  
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
