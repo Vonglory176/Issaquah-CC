@@ -4,15 +4,20 @@ import VideoContainer from '../../../components/videoContainer/VideoContainer'
 
 const Bulletin = () => {
   return (
-    <PageWrapper name='bulletin' className='flex flex-col gap-8'>
+    <PageWrapper name='bulletin' className='flex flex-col gap-8' bannerSettings={{
+      text: {
+        heading: 'Church Bulletin',
+        // className: ''
+      }
+    }}>
 
-      <section className='flex flex-col gap-4'>
+      {/* <section className='flex flex-col gap-4'>
 
         <h1 className='text-3xl font-bold'>Church Bulletin</h1>
 
         <hr className='border border-[var(--border-color-3)]' />
 
-      </section>
+      </section> */}
 
 
       <div className='flex flex-col gap-4'>
@@ -23,7 +28,7 @@ const Bulletin = () => {
           href="https://www.canva.com/design/DAD2KnH2kKQ/view?utm_content=DAD2KnH2kKQ&utm_campaign=designshare&utm_medium=embeds&utm_source=link"
           target="_blank"
           rel="noopener"
-          className='w-fit text-[var(--font-active-color)]'
+          className='w-fit text-[var(--font-active-color-1)]'
         >
           ICC Bulletin Slide Show
         </a>
@@ -39,7 +44,7 @@ const Bulletin = () => {
           href="https://faithlife.com/issaquahcc/bulletins"
           target='_blank'
           rel='noopener'
-          className='w-fit px-2 py-1 rounded-lg font-semibold border-2 border-[var(--button-hover-background-color)] bg-[var(--button-background-color)] text-[var(--button-text-color)] hover:bg-[var(--button-hover-background-color)] hover:text-[var(--font-color-2)]'
+          className='w-fit px-2 py-1 rounded-lg font-semibold border-2 border-[var(--button-hover-background-color)] bg-[var(--button-background-color)] text-[var(--button-text-color)] hover:bg-[var(--button-hover-background-color)] hover:text-[var(--font-color-2)] hover:no-underline'
         >
           Get the Current Bulletin
         </a>

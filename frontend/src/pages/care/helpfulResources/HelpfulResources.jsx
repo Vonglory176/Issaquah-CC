@@ -6,13 +6,18 @@ import { Link } from 'react-router-dom'
 
 const HelpfulResources = () => {
     return (
-        <PageWrapper name='helpful-resources' className='flex flex-col gap-12 mx-auto text-center text-lg md:text-xl' maxWidth='max-w-[800px]'>
+        <PageWrapper name='helpful-resources' className='flex flex-col gap-12 mx-auto text-center' maxWidth='max-w-[800px]' bannerSettings={{
+            text: {
+                heading: "Helpful Resources",
+                // subheading: ""
+            }
+        }}>
 
 
             {/* <hr className='border border-[var(--border-color-3)]' /> */}
 
             <div className="flex flex-col gap-4">
-                <h1 className='text-3xl font-bold'>We're Here To Help</h1>
+                <h2 className='text-3xl font-bold'>We're Here To Help</h2>
 
                 <p>As the church, we are uniquely equipped to bring the light of Jesus to those around us.</p>
 
@@ -49,7 +54,7 @@ const HelpfulResources = () => {
 
             </div>
 
-            <p>For prayer requests, please email the ICC office at <a href="mailto:office@issaquah.cc" className='text-[var(--font-active-color)]'>office@issaquah.cc</a></p>
+            <p>For prayer requests, please email the ICC office at <a href="mailto:office@issaquah.cc" className='text-[var(--font-active-color-1)]'>office@issaquah.cc</a></p>
 
         </PageWrapper>
     )

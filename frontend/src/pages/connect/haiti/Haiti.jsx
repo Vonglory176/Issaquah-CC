@@ -5,15 +5,18 @@ import sponsor from '../../../assets/images/sponsor.webp'
 
 const Haiti = () => {
     return (
-        <PageWrapper name='men' className='flex flex-col gap-8'>
+        <PageWrapper name='men' className='flex flex-col gap-8 text-center' bannerSettings={{
+            text: {
+                heading: "Haiti"
+            }
+        }}>
 
             <section className='justify-center text-center'>
 
-                <h1 className='text-3xl font-bold flex gap-2 flex-wrap mx-auto'>Be Part Of The Solution</h1>
+                <h2 className='text-3xl font-bold'>Be Part Of The Solution</h2>
 
-                <div className="flex flex-col gap-8 text-lg md:text-xl text-center">
-                    <p>Click  <a href="https://gvcm.reachapp.co/sponsorships?sponsorship_type=child-sponsorship-orphanage&status=unsponsored,partial" target='_blank' rel='noopener noreferrer' className='text-[var(--font-active-color)]'>Here</a> to Become a Sponsor</p>
-                </div>
+
+                <p>Click <a href="https://gvcm.reachapp.co/sponsorships?sponsorship_type=child-sponsorship-orphanage&status=unsponsored,partial" target='_blank' rel='noopener noreferrer' className='text-[var(--font-active-color-1)]'>Here</a> to Become a Sponsor</p>
 
                 {/* <p className='text-lg md:text-xl'>We have a three step process to become a member at Issaquah Christian Church:</p> */}
 

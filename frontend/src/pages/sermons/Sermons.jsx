@@ -11,13 +11,18 @@ import youtubeChannel from '../../assets/images/youtubeChannel.webp'
 const Sermons = () => {
     const [playerLoaded, setPlayerLoaded] = useState(false);
     return (
-        <PageWrapper name='sermons' className='flex flex-col gap-8'>
+        <PageWrapper name='sermons' className='flex flex-col gap-8' bannerSettings={{
+            text: {
+                heading: 'Sermons',
+                // className: ''
+            }
+        }}>
 
-            <section className='flex flex-col gap-4'>
+            {/* <section className='flex flex-col gap-4'> */}
 
-                <h1 className='text-3xl font-bold'>Sermons</h1>
+                {/* <h1 className='text-3xl font-bold'>Sermons</h1>
 
-                <hr className='border border-[var(--border-color-3)]' />
+                <hr className='border border-[var(--border-color-3)]' /> */}
 
                 <div className="player-container shadow-md rounded-lg overflow-hidden bg-white" style={{ width: '100%', position: 'relative', margin: '20px auto', paddingBottom: 'calc(56.25% + 368px)' }}>
 
@@ -31,12 +36,12 @@ const Sermons = () => {
                         onLoad={() => setPlayerLoaded(true)}
                     />
                 </div>
-            </section>
+            {/* </section> */}
 
             <hr className='border border-[var(--border-color-3)]' />
 
 
-            <p className='max-w-[900px] text-center mx-auto'>Worship the Lord Jesus with us with on Sundays at 10:30am. We will be recording live sermons and later publishing them here and on our podcasting platforms at <a href="" target='_blank' rel='noopener' className='text-[var(--font-active-color)]'>Apple</a> and <a href="" target='_blank' rel='noopener' className='text-[var(--font-active-color)]'>Amazon</a>. Don't forget to Subscribe to our <a href="" target='_blank' rel='noopener' className='text-[var(--font-active-color)]'>YouTube Page</a> and head over to our <a href="" target='_blank' rel='noopener' className='text-[var(--font-active-color)]'>Facebook Page</a> as well! Want to interact with the sermons and discuss with a chatbot the content or get discussion questions? <a href="" target='_blank' rel='noopener' className='text-[var(--font-active-color)]'>Check this out!</a></p>
+            <p className='max-w-[900px] text-center mx-auto'>Worship the Lord Jesus with us with on Sundays at 10:30am. We will be recording live sermons and later publishing them here and on our podcasting platforms at <a href="" target='_blank' rel='noopener' className='text-[var(--font-active-color-1)]'>Apple</a> and <a href="" target='_blank' rel='noopener' className='text-[var(--font-active-color-1)]'>Amazon</a>. Don't forget to Subscribe to our <a href="" target='_blank' rel='noopener' className='text-[var(--font-active-color-1)]'>YouTube Page</a> and head over to our <a href="" target='_blank' rel='noopener' className='text-[var(--font-active-color-1)]'>Facebook Page</a> as well! Want to interact with the sermons and discuss with a chatbot the content or get discussion questions? <a href="" target='_blank' rel='noopener' className='text-[var(--font-active-color-1)]'>Check this out!</a></p>
 
             <div className="link-container grid grid-cols-2 gap-2 grid-cols-[176px_1fr] max-w-[356px] mx-auto sm:max-w-full sm:gap-6 sm:grid-cols-[122.19px_1fr]">
                 <ProgressiveImage src={podcast} placeholder={''}>

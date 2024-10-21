@@ -4,13 +4,24 @@ import VideoContainer from '../../../components/videoContainer/VideoContainer'
 
 const Vision = () => {
     return (
-        <PageWrapper name='vision' className='flex flex-col gap-8'>
+        <PageWrapper name='vision' className='flex flex-col gap-8' bannerSettings={{
+            // image: {
+            //     large: '',
+            //     small: '',
+            //     className: 'object-top h-[100svh]'
+            // },
+            text: {
+                heading: 'Vision, Values, and Mission',
+                // className: ''
+            }
+        }}>
 
             <section>
 
-                <h1 className='text-3xl font-bold'>Love God and Love Your Neighbor</h1>
+                <h2 className=''>Love God and Love Your Neighbor</h2>
 
-                <p className='sm:text-lg md:text-xl'>Jesus has created a Family of Missionary Servants and we exist to Love God and Love our Neighbor. Our Mission is to help others Follow Jesus in the everyday stuff of life through our Gatherings and Groups.</p>
+                {/* <p className='sm:text-lg md:text-xl'>Jesus has created a Family of Missionary Servants and we exist to Love God and Love our Neighbor. Our Mission is to help others Follow Jesus in the everyday stuff of life through our Gatherings and Groups.</p> */}
+                <p>Jesus has created a Family of Missionary Servants and we exist to Love God and Love our Neighbor. Our Mission is to help others Follow Jesus in the everyday stuff of life through our Gatherings and Groups.</p>
 
 
                 <div>

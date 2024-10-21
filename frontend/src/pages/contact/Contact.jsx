@@ -5,7 +5,12 @@ import Spinner from '../../components/spinner/Spinner'
 const Contact = () => {
     const [mapLoaded, setMapLoaded] = useState(false)
     return (
-        <PageWrapper name='contact' className='flex flex-col gap-12 mx-auto text-center text-lg md:text-xl' maxWidth='max-w-[800px]'>
+        <PageWrapper name='contact' className='flex flex-col gap-12 mx-auto text-center' maxWidth='max-w-[800px]' bannerSettings={{
+            text: {
+                heading: "Contact Us",
+                // subheading: ""
+            }
+        }}>
 
 
             {/* <hr className='border border-[var(--border-color-3)]' /> */}
@@ -19,7 +24,7 @@ const Contact = () => {
             <div className="flex flex-col gap-4 max-w-[600px] mx-auto">
                 <h2 className='text-3xl font-bold'>Prayer Requests</h2>
 
-                <p>If you have a prayer request, please contact us at <a href="mailto:office@issaquah.cc" className='text-[var(--font-active-color)]'>office@issaquah.cc</a> and we will send it to our prayer team.</p>
+                <p>If you have a prayer request, please contact us at <a href="mailto:office@issaquah.cc" className='text-[var(--font-active-color-1)]'>office@issaquah.cc</a> and we will send it to our prayer team.</p>
             </div>
 
             <div className="map-container shadow-md rounded-lg overflow-hidden bg-white" style={{width: '100%', height: '300px', position: 'relative', margin: '20px auto'}}>

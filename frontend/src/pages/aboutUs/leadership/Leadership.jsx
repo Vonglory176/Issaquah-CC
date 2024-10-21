@@ -47,10 +47,15 @@ const leadershipData = [
 
 const Leadership = () => {
     return (
-        <PageWrapper name='leadership' className='flex flex-col'>
+        <PageWrapper name='leadership' className='flex flex-col' bannerSettings={{
+            text: {
+                heading: 'Meet Our Leadership',
+                // className: ''
+            }
+        }}>
 
-            <h1 className='text-3xl font-bold text-center'>Meet Our Leadership</h1>
-            <hr className='border border-[var(--border-color-3)] w-full mt-8' />
+            {/* <h1 className='text-3xl font-bold text-center'>Meet Our Leadership</h1> */}
+            {/* <hr className='border border-[var(--border-color-3)] w-full mt-8' /> */}
 
             {/* Profile Printing */}
             <div className='flex flex-col justify-center items-center'> {/*  md:grid md:grid-cols-2 */}
@@ -87,9 +92,9 @@ const Leadership = () => {
 
 
                             <div className='text-center flex flex-col gap-2'>
-                                <p className='italic text-[var(--font-color-4)] text-sm'>{person.quote}</p>
+                                <p className='italic text-[var(--font-color-4)] text-sm md:text-base'>{person.quote}</p>
                                 <p className='text-left'>{person.description}</p>
-                                <a href={`mailto:${person.email}`} className='text-sm text-[var(--font-active-color)]'>{person.email}</a>
+                                <a href={`mailto:${person.email}`} className='text-sm md:text-base text-[var(--font-active-color-1)]'>{person.email}</a>
                             </div>
 
 

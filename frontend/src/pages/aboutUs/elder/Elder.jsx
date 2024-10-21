@@ -6,15 +6,20 @@ import pestle from '../../../assets/images/pestle.webp'
 
 const Elder = () => {
     return (
-        <PageWrapper name='elder' className='flex flex-col gap-8'>
+        <PageWrapper name='elder' className='flex flex-col gap-8' bannerSettings={{
+            text: {
+                heading: 'Elder Nominations',
+                // className: ''
+            }
+        }}>
 
-            <section className=''>
+            {/* <section className=''>
 
                 <h1 className='text-3xl font-bold'>Elder Nominations</h1>
 
                 <hr className='border border-[var(--border-color-3)]' />
 
-            </section>
+            </section> */}
 
             <ProgressiveImage src={pestle} placeholder={''}>
                 {(src, loading) => (

@@ -9,19 +9,26 @@ import dcVsMarvel from '../../../assets/images/dcVsMarvel.webp'
 
 const Teens = () => {
     return (
-        <PageWrapper name='teens' className='flex flex-col gap-8 text-lg md:text-xl'>
+        <PageWrapper name='teens' className='flex flex-col gap-8 text-center' maxWidth='max-w-[800px]' bannerSettings={{
+            text: {
+                heading: 'Youth Group',
+                // className: ''
+            }
+        }}>
 
-            <section>
+            {/* <section>
 
-                <h1 className='text-3xl font-bold flex gap-2 flex-wrap'>Youth Group</h1>
-
+                <h2 className='text-2xl font-bold flex gap-2 flex-wrap'>Youth Group</h2>
+                
                 <hr className='border border-[var(--border-color-3)]' />
+                
+            </section> */}
 
-            </section>
+            <h2 className='text-3xl font-bold'>Welcome to The ICC Youth Group</h2>
 
-            <div className="flex flex-col gap-8 text-lg md:text-xl">
+            <div className="flex flex-col gap-8">
                 <p>Grades 6-12 meet on Wednesday Night at 7pm at Pastor Aaron's House. We eat dinner together and study the Bible together.</p>
-                <p>Email <a href="mailto:aaron@issaquah.cc" target='_blank' rel='noopener noreferrer' className='text-[var(--font-active-color)]'>aaron@issaquah.cc</a> to stay updated on our activities.</p>
+                <p>Email <a href="mailto:aaron@issaquah.cc" target='_blank' rel='noopener noreferrer' className='text-[var(--font-active-color-1)]'>aaron@issaquah.cc</a> to stay updated on our activities.</p>
             </div>
 
             <div>
