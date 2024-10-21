@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.3be6242c.css",
+    "main.css": "/static/css/main.24f24f93.css",
     "main.js": "/static/js/main.26a3e8c3.js",
     "static/media/guyTime.webp": "/static/media/guyTime.1188a251010e87d09d53.webp",
     "static/media/mens-group.webp": "/static/media/mens-group.5fe752cbd93a3fa9630e.webp",
@@ -32,11 +32,11 @@
     "index.html": "/index.html",
     "static/media/guy-praying-small.webp": "/static/media/guy-praying-small.8b824aa30c2a84356522.webp",
     "static/media/wheat-field-small.webp": "/static/media/wheat-field-small.1d51c8952bdf77820eae.webp",
-    "main.3be6242c.css.map": "/static/css/main.3be6242c.css.map",
+    "main.24f24f93.css.map": "/static/css/main.24f24f93.css.map",
     "main.26a3e8c3.js.map": "/static/js/main.26a3e8c3.js.map"
   },
   "entrypoints": [
-    "static/css/main.3be6242c.css",
+    "static/css/main.24f24f93.css",
     "static/js/main.26a3e8c3.js"
   ]
 }
