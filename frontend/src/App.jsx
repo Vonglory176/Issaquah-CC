@@ -24,6 +24,7 @@ import Contact from "./pages/contact/Contact";
 import Sermons from "./pages/sermons/Sermons";
 import Teens from "./pages/connect/teens/Teens";
 import PrayerRequests from "./pages/connect/prayerRequests/PrayerRequests";
+import WomensSignUp from "./pages/eventInfo/womensSignUp/WomensSignUp";
 
 function App() {
   return (
@@ -46,7 +47,7 @@ function App() {
 
           {/* Event Info */}
           <Route path="/event-info" element={<Navigate to="/" />} />
-          {/* <Route path="/event-info/women-s-sign-up" element={<WomenSignUp />} /> */}
+          <Route path="/event-info/womens-sign-up" element={<WomensSignUp />} />
           {/* <Route path="/event-info/calendar" element={<Calendar />} /> */}
           <Route path="/event-info/bulletin" element={<Bulletin />} />
 
@@ -98,7 +99,24 @@ export default App;
     - Calendar
     - Forms
 
-  Hookup links to images in Sermons page
+
+  Hookup links to images in Sermons page ( Important !!!!!!!)
+
+  Implement ReCaptcha for Forms (PrayerRequests/WomensSignUp)
+
+  Get "Impact" font for some headers (h2 only?)
+
+  Weird issue with Canva video ui when scrolling in mobile view
+
+  Finish/cleanup forms !!!
+
+  Add reCaptcha to forms
+
+  Research Calender building ( React-Big-Calendar / FullCalendar ) ( Google Calendar API )
+
+  ---------------------------------------
+
+  Margin issue in teens slideshow (?)
 
   Move resize event listener (in Dropdown.jsx) to Context
 
@@ -110,21 +128,10 @@ export default App;
 
   Replace Gold colors
 
-  Standardize font sizes
-
-  Get "Impact" font for some headers (h2 only?)
-
-  Weird issue with Canva video ui when scrolling in mobile view
-
-  Finish form in Prayer Requests !!! (Use Contact from WebPortfolio for submission logic/styling)
-
   Separate Head/Footer colors from Body colors
-
-  Implement ReCaptcha for Forms (PrayerRequests/WomensSignUp)
 
   Move event listener (in Banner.jsx) to Context
 
-  Margin issue in teens slideshow
-
   Tinker with line-height
+
 */
