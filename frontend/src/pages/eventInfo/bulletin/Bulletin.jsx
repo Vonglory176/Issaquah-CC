@@ -37,14 +37,14 @@ const Bulletin = () => {
 
       <hr className='border border-[var(--border-color-3)]' />
 
-      <div className='max-w-[600px] text-center mx-auto flex flex-col items-center gap-4 text-lg'>
+      <div className='max-w-[650px] text-center mx-auto flex flex-col items-center gap-4 text-lg'>
         <p>All of our bulletins are stored here at Faithlife and include sermon slides along with all other presentation content from each week we gather.</p>
 
         <a 
           href="https://faithlife.com/issaquahcc/bulletins"
           target='_blank'
           rel='noopener'
-          className='w-fit px-2 py-1 rounded-lg font-semibold border-2 border-[var(--button-hover-background-color)] bg-[var(--button-background-color)] text-[var(--button-text-color)] hover:bg-[var(--button-hover-background-color)] hover:text-[var(--font-color-2)] hover:no-underline'
+          className='w-fit px-4 py-2 rounded-lg font-semibold border-2 border-[var(--button-hover-background-color)] bg-[var(--button-background-color)] text-[var(--button-text-color)] hover:bg-[var(--button-hover-background-color)] hover:text-[var(--font-color-2)] hover:no-underline'
         >
           Get the Current Bulletin
         </a>
