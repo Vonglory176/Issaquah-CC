@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.d7ca8110.css",
-    "main.js": "/static/js/main.a33cf0b1.js",
+    "main.css": "/static/css/main.9279b039.css",
+    "main.js": "/static/js/main.a3283918.js",
     "static/media/guyTime.webp": "/static/media/guyTime.1188a251010e87d09d53.webp",
     "static/media/mens-group.webp": "/static/media/mens-group.5fe752cbd93a3fa9630e.webp",
     "static/media/whale.webp": "/static/media/whale.3eafcd14c868d49e368d.webp",
@@ -9,6 +9,7 @@
     "static/media/sponsor.webp": "/static/media/sponsor.e7b2a164cf1c4ae31d32.webp",
     "static/media/youtubeChannel.webp": "/static/media/youtubeChannel.fa2223c17bac09720027.webp",
     "static/media/dcVsMarvel.webp": "/static/media/dcVsMarvel.fe7b6d743b6bb62d13a7.webp",
+    "static/media/forestInFall.webp": "/static/media/forestInFall.3d09422227ba6adc2f4c.webp",
     "static/media/guy-praying.webp": "/static/media/guy-praying.71e855b7492ec7051bcd.webp",
     "static/media/youthGroup.webp": "/static/media/youthGroup.b83ae5b4d4c365a368bf.webp",
     "static/media/woman-with-hands-up.webp": "/static/media/woman-with-hands-up.a8b12e310d323cb428a0.webp",
@@ -28,15 +29,16 @@
     "static/media/pestle.webp": "/static/media/pestle.aa6ec1bafa4388943a13.webp",
     "static/media/womens-group-small.webp": "/static/media/womens-group-small.d5cb1b0543df193e12d7.webp",
     "static/media/mens-group-small.webp": "/static/media/mens-group-small.1dd466d5281c96be17bd.webp",
+    "static/media/forestInFall-small.webp": "/static/media/forestInFall-small.c10db5e2557332e6ac99.webp",
     "static/media/woman-with-hands-up-small.webp": "/static/media/woman-with-hands-up-small.83faba2ec7812328bced.webp",
     "index.html": "/index.html",
     "static/media/guy-praying-small.webp": "/static/media/guy-praying-small.8b824aa30c2a84356522.webp",
     "static/media/wheat-field-small.webp": "/static/media/wheat-field-small.1d51c8952bdf77820eae.webp",
-    "main.d7ca8110.css.map": "/static/css/main.d7ca8110.css.map",
-    "main.a33cf0b1.js.map": "/static/js/main.a33cf0b1.js.map"
+    "main.9279b039.css.map": "/static/css/main.9279b039.css.map",
+    "main.a3283918.js.map": "/static/js/main.a3283918.js.map"
   },
   "entrypoints": [
-    "static/css/main.d7ca8110.css",
-    "static/js/main.a33cf0b1.js"
+    "static/css/main.9279b039.css",
+    "static/js/main.a3283918.js"
   ]
 }
