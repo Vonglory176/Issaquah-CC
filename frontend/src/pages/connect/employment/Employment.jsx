@@ -12,7 +12,7 @@ const Employment = () => {
 
             <section>
 
-                <h2 className='text-3xl font-bold flex gap-2 flex-wrap'>Become a Part of ICC</h2>
+                <h2 className='font-bold flex gap-2 flex-wrap'>Become a Part of ICC</h2>
 
                 <p className=''>Do you love Jesus and his church? Do you align with our beliefs? Join the staff team at ICC. We have energetic teams already in place to support you in your new position.</p>
 

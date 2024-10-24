@@ -16,13 +16,13 @@ const Contact = () => {
             {/* <hr className='border border-[var(--border-color-3)]' /> */}
 
             <div className="flex flex-col gap-4">
-                <h2 className='text-3xl font-bold'>Mailing Address</h2>
+                <h2 className='font-bold'>Mailing Address</h2>
 
                 <p>P.O. Box 1028, Issaquah, WA 98027</p>
             </div>
 
             <div className="flex flex-col gap-4 max-w-[600px] mx-auto">
-                <h2 className='text-3xl font-bold'>Prayer Requests</h2>
+                <h2 className='font-bold'>Prayer Requests</h2>
 
                 <p>If you have a prayer request, please contact us at <a href="mailto:office@issaquah.cc" className='text-[var(--font-active-color-1)]'>office@issaquah.cc</a> and we will send it to our prayer team.</p>
             </div>

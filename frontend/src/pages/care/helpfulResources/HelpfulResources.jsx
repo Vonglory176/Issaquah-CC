@@ -17,7 +17,7 @@ const HelpfulResources = () => {
             {/* <hr className='border border-[var(--border-color-3)]' /> */}
 
             <div className="flex flex-col gap-4">
-                <h2 className='text-3xl font-bold'>We're Here To Help</h2>
+                <h2 className='font-bold'>We're Here To Help</h2>
 
                 <p>As the church, we are uniquely equipped to bring the light of Jesus to those around us.</p>
 

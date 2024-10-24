@@ -12,7 +12,7 @@ const Outreach = () => {
 
             <section>
 
-                <h2 className='text-3xl font-bold flex gap-2 flex-wrap'>Global and Local Outreach</h2>
+                <h2 className='font-bold flex gap-2 flex-wrap'>Global and Local Outreach</h2>
 
                 <p className=''>In addition to our regular, ongoing efforts to share the gospel through the services and ministries of Issaquah Christian Church, we are also involved in various missions that operate both locally and abroad.</p>
 

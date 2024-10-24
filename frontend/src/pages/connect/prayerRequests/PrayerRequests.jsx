@@ -116,7 +116,7 @@ const PrayerRequests = () => {
             <hr className='border border-[var(--border-color-3)]' /> */}
 
             <div className='flex flex-col gap-4 text-center'>
-                <h2 className='text-3xl font-bold'>Please enter your information and requests below</h2>
+                <h2 className='font-bold'>Please enter your information below</h2> {/*  and requests */}
                 <p className=''>If the form does not work or you are having trouble filling it out, please email us directly at <a href="mailto:office@issaquah.cc" target='_blank' rel='noopener noreferrer'>office@issaquah.cc</a>.</p>
             </div>
 
@@ -303,8 +303,8 @@ const PrayerRequests = () => {
                         >
                         </textarea>
                         <label for="message" className='font-bold'>Prayer Request / Praise Report</label> {/* Enter your prayer request or praise report here: */}
-                        <p className='text-sm text-[var(--font-color-4)] absolute bottom-[-24px] left-[8px]'>Feel free to also include any comments, questions or suggestions ...</p>
-                        {formErrors.message && <p className='form-group-error-text right-[0px] text-right'>{formErrors.message}</p>}
+                        <p className='hidden sm:block text-sm text-[var(--font-color-4)] absolute bottom-[-24px] left-[8px]'>Feel free to also include any comments, questions or suggestions ...</p>
+                        {formErrors.message && <p className='form-group-error-text sm:right-[0px] text-right'>{formErrors.message}</p>}
                     </div>
 
                     {/* Submit Button */}

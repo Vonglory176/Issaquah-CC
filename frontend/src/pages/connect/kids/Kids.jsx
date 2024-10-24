@@ -12,7 +12,7 @@ const Kids = () => {
             }
         }}>
 
-            <h2 className='text-3xl font-bold flex gap-1 flex-wrap mx-auto'>Welcome to The ICC Kids Ministry</h2>
+            <h2 className='font-bold flex gap-1 flex-wrap mx-auto'>Welcome to The ICC Kids Ministry</h2>
 
             {/* <h2 className='text-3xl font-bold flex gap-1 flex-wrap mx-auto'>
                 <span className='text-[#7D1E2C]'>Welcome</span>

@@ -16,7 +16,7 @@ const Women = () => {
             }
         }}>
 
-            <h2 className='text-3xl font-bold'>Welcome to The ICC Womens Ministry</h2>
+            <h2 className='font-bold'>Welcome to The ICC Womens Ministry</h2>
 
             <div className="flex flex-col gap-8">
                 <p>By seeking God's word and direction, ICC Women's Ministry exists for the purpose of nurturing, encouraging, and equipping the women of the church. We pray that through scripture study, prayer and walking alongside one another, we can help women emotionally and spiritually grow in their faith in Christ and live out their full purpose in God's Kingdom.</p>

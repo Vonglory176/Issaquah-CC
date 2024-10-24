@@ -24,7 +24,7 @@ const Teens = () => {
                 
             </section> */}
 
-            <h2 className='text-3xl font-bold'>Welcome to The ICC Youth Group</h2>
+            <h2 className='font-bold'>Welcome to The ICC Youth Group</h2>
 
             <div className="flex flex-col gap-8">
                 <p>Grades 6-12 meet on Wednesday Night at 7pm at Pastor Aaron's House. We eat dinner together and study the Bible together.</p>
