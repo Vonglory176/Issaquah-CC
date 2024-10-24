@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.9279b039.css",
-    "main.js": "/static/js/main.a3283918.js",
+    "main.css": "/static/css/main.2c58a5af.css",
+    "main.js": "/static/js/main.efc8cc7b.js",
     "static/media/guyTime.webp": "/static/media/guyTime.1188a251010e87d09d53.webp",
     "static/media/mens-group.webp": "/static/media/mens-group.5fe752cbd93a3fa9630e.webp",
     "static/media/whale.webp": "/static/media/whale.3eafcd14c868d49e368d.webp",
@@ -34,11 +34,11 @@
     "index.html": "/index.html",
     "static/media/guy-praying-small.webp": "/static/media/guy-praying-small.8b824aa30c2a84356522.webp",
     "static/media/wheat-field-small.webp": "/static/media/wheat-field-small.1d51c8952bdf77820eae.webp",
-    "main.9279b039.css.map": "/static/css/main.9279b039.css.map",
-    "main.a3283918.js.map": "/static/js/main.a3283918.js.map"
+    "main.2c58a5af.css.map": "/static/css/main.2c58a5af.css.map",
+    "main.efc8cc7b.js.map": "/static/js/main.efc8cc7b.js.map"
   },
   "entrypoints": [
-    "static/css/main.9279b039.css",
-    "static/js/main.a3283918.js"
+    "static/css/main.2c58a5af.css",
+    "static/js/main.efc8cc7b.js"
   ]
 }
