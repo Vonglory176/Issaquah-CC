@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import ProgressiveImage from 'react-progressive-graceful-image'
 // import { FaCaretDown } from 'react-icons/fa'
 import logo from '../../assets/images/logos/logo9.webp'
-import { Link, useLocation } from 'react-router-dom'
+import { Link, NavLink, useLocation } from 'react-router-dom'
 import HamburgerMenu from '../hamburgerMenu/HamburgerMenu'
 import Dropdown from '../dropdown/Dropdown'
 
@@ -26,13 +26,13 @@ const Header = () => {
 
   // Toggle dropdown (Sub-Menu)
   const toggleDropdown = (title) => {
-    console.log(title)
+    // console.log(title)
     setOpenDropdown(title === openDropdown ? null : title)
   }
 
-  useEffect(() => {
-    console.log(openDropdown)
-  }, [openDropdown])
+  // useEffect(() => {
+  //   console.log(openDropdown)
+  // }, [openDropdown])
 
   return (
     <header className='header h-[var(--header-height)] sticky mb-[-60px] top-0 left-0 right-0 z-50 shadow-lg'>
@@ -64,19 +64,19 @@ const Header = () => {
             <li>
               <Dropdown title="About Us" openDropdown={openDropdown} toggleDropdown={toggleDropdown}>
                 <li>
-                  <Link to={'/about-us/beliefs'}>What We Believe</Link>
+                  <NavLink to={'/about-us/beliefs'} className={({ isActive }) => isActive ? 'isActive' : ''} >What We Believe</NavLink>
                 </li>
                 <li>
-                  <Link to={'/about-us/what-to-expect'}>What to Expect</Link>
+                  <NavLink to={'/about-us/what-to-expect'} className={({ isActive }) => isActive ? 'isActive' : ''} >What to Expect</NavLink>
                 </li>
                 <li>
-                  <Link to={'/about-us/vision-mission-and-values'}>Vision, Mission, and Values</Link>
+                  <NavLink to={'/about-us/vision-mission-and-values'} className={({ isActive }) => isActive ? 'isActive' : ''} >Vision, Mission, and Values</NavLink>
                 </li>
                 <li>
-                  <Link to={'/about-us/leadership'}>Meet Our Leadership</Link>
+                  <NavLink to={'/about-us/leadership'} className={({ isActive }) => isActive ? 'isActive' : ''} >Meet Our Leadership</NavLink>
                 </li>
                 <li>
-                  <Link to={'/about-us/elder'}>Elder Nominations</Link>
+                  <NavLink to={'/about-us/elder'} className={({ isActive }) => isActive ? 'isActive' : ''} >Elder Nominations</NavLink>
                 </li>
               </Dropdown>
             </li>
@@ -85,20 +85,20 @@ const Header = () => {
             <li>
               <Dropdown title="Event Info" openDropdown={openDropdown} toggleDropdown={toggleDropdown}>
                 <li>
-                  <Link to={'/event-info/women-s-sign-up'} className='disabled' disabled >Women's Retreat Sign Up</Link>
+                  <NavLink to={'/event-info/womens-sign-up'} className={({ isActive }) => isActive ? 'isActive' : ''} >Women's Retreat Sign Up</NavLink>
                 </li>
                 <li>
-                  <Link to={'/event-info/calendar'} className='disabled' disabled >Calendar</Link>
+                  <NavLink to={'/event-info/calendar'} className={({ isActive }) => isActive ? 'isActive' : 'disabled'} >Calendar</NavLink>
                 </li>
                 <li>
-                  <Link to={'/event-info/bulletin'}>Church Bulletin</Link>
+                  <NavLink to={'/event-info/bulletin'} className={({ isActive }) => isActive ? 'isActive' : ''} >Church Bulletin</NavLink>
                 </li>
               </Dropdown>
             </li>
 
             {/* Other Menu Items */}
             <li>
-              <Link to={'/sermons'} className='nav-link'>Sermons</Link>
+              <NavLink to={'/sermons'} className={({ isActive }) => isActive ? 'isActive nav-link' : 'nav-link'} >Sermons</NavLink>
               {/* <a className='nav-link' href="https://www.issaquah.cc/sermons" target='_blank' rel='noopener noreferrer'>Sermons</a> */}
             </li>
 
@@ -111,9 +111,9 @@ const Header = () => {
                   </a>
                 </li>
                 <li>
-                  <Link to={'/giving/stocks-and-crypto'}>
+                  <NavLink to={'/giving/stocks-and-crypto'} className={({ isActive }) => isActive ? 'isActive' : ''} >
                     Stocks and Crypto
-                  </Link>
+                  </NavLink>
                 </li>
               </Dropdown>
             </li>
@@ -122,63 +122,63 @@ const Header = () => {
             <li>
               <Dropdown title="Connect" openDropdown={openDropdown} toggleDropdown={toggleDropdown}>
                 <li>
-                  <Link to={'/connect/prayer-requests'}>
+                  <NavLink to={'/connect/prayer-requests'} className={({ isActive }) => isActive ? 'isActive' : ''} >
                     Prayer Requests
-                  </Link>
+                  </NavLink>
                 </li>
                 <li>
-                  <Link to={'/connect/membership'}>
+                  <NavLink to={'/connect/membership'} className={({ isActive }) => isActive ? 'isActive' : ''} >
                     Membership
-                  </Link>
+                  </NavLink>
                 </li>
                 <li>
-                  <Link to={'/connect/kids'}>
+                  <NavLink to={'/connect/kids'} className={({ isActive }) => isActive ? 'isActive' : ''} >
                     Kids
-                  </Link>
+                  </NavLink>
                 </li>
                 <li>
-                  <Link to={'/connect/teens'}>
+                  <NavLink to={'/connect/teens'} className={({ isActive }) => isActive ? 'isActive' : ''} >
                     Teens
-                  </Link>
+                  </NavLink>
                 </li>
                 <li>
-                  <Link to={'/connect/women'}>
+                  <NavLink to={'/connect/women'} className={({ isActive }) => isActive ? 'isActive' : ''} >
                     Women
-                  </Link>
+                  </NavLink>
                 </li>
                 <li>
-                  <Link to={'/connect/men'}>
+                  <NavLink to={'/connect/men'} className={({ isActive }) => isActive ? 'isActive' : ''} >
                     Men
-                  </Link>
+                  </NavLink>
                 </li>
                 <li>
-                  <Link to={'/connect/outreach'}>
+                  <NavLink to={'/connect/outreach'} className={({ isActive }) => isActive ? 'isActive' : ''} >
                     Outreach
-                  </Link>
+                  </NavLink>
                 </li>
                 <li>
-                  <Link to={'/connect/haiti'}>
+                  <NavLink to={'/connect/haiti'} className={({ isActive }) => isActive ? 'isActive' : ''} >
                     Haiti
-                  </Link>
+                  </NavLink>
                 </li>
                 <li>
-                  <Link to={'/connect/recommended-bible-apps'}>
+                  <NavLink to={'/connect/recommended-bible-apps'} className={({ isActive }) => isActive ? 'isActive' : ''} >
                     Recommended Bible Apps
-                  </Link>
+                  </NavLink>
                 </li>
                 <li>
-                  <Link to={'/connect/employment'}>
+                  <NavLink to={'/connect/employment'} className={({ isActive }) => isActive ? 'isActive' : ''} >
                     Employment
-                  </Link>
+                  </NavLink>
                 </li>
               </Dropdown>
             </li>
 
             {/* Contact */}
             <li>
-              <Link to={'/contact'} className='nav-link'>
+              <NavLink to={'/contact'} className={({ isActive }) => isActive ? 'isActive nav-link' : 'nav-link'} >
                 Contact
-              </Link>
+              </NavLink>
               {/* <a className='nav-link' href="https://www.issaquah.cc/contact" target='_blank' rel='noopener noreferrer'>Contact</a> */}
             </li>
 
@@ -186,9 +186,9 @@ const Header = () => {
             <li>
               <Dropdown title="Care" openDropdown={openDropdown} toggleDropdown={toggleDropdown}>
                 <li>
-                  <Link to={'/care/helpful-resources'}>
+                  <NavLink to={'/care/helpful-resources'} className={({ isActive }) => isActive ? 'isActive' : ''} >
                     Helpful Resources
-                  </Link>
+                  </NavLink>
                 </li>
               </Dropdown>
             </li>
