@@ -20,22 +20,22 @@ const Sermons = () => {
 
             {/* <section className='flex flex-col gap-4'> */}
 
-                {/* <h1 className='text-3xl font-bold'>Sermons</h1>
+            {/* <h1 className='text-3xl font-bold'>Sermons</h1>
 
                 <hr className='border border-[var(--border-color-3)]' /> */}
 
-                <div className="player-container shadow-md rounded-lg overflow-hidden bg-white" style={{ width: '100%', position: 'relative', margin: '20px auto', paddingBottom: 'calc(56.25% + 368px)' }}>
+            <div className="player-container shadow-md rounded-lg overflow-hidden bg-white" style={{ width: '100%', position: 'relative', margin: '20px auto', paddingBottom: 'calc(56.25% + 368px)' }}>
 
-                    {!playerLoaded && <Spinner />}
+                {!playerLoaded && <Spinner />}
 
-                    <iframe
-                        title="Video Player"
-                        src={`https://sermons.logos.com/embed/profile/2857448/recent?includePlaylist=true&defaultSort=datePresented:desc,dateSubmitted:desc`}
-                        aria-label="Video Player"
-                        style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', border: '0' }}
-                        onLoad={() => setPlayerLoaded(true)}
-                    />
-                </div>
+                <iframe
+                    title="Video Player"
+                    src={`https://sermons.logos.com/embed/profile/2857448/recent?includePlaylist=true&defaultSort=datePresented:desc,dateSubmitted:desc`}
+                    aria-label="Video Player"
+                    style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', border: '0' }}
+                    onLoad={() => setPlayerLoaded(true)}
+                />
+            </div>
             {/* </section> */}
 
             <hr className='border border-[var(--border-color-3)]' />
@@ -44,48 +44,61 @@ const Sermons = () => {
             <p className='max-w-[900px] text-center mx-auto'>Worship the Lord Jesus with us with on Sundays at 10:30am. We will be recording live sermons and later publishing them here and on our podcasting platforms at <a href="" target='_blank' rel='noopener' className='text-[var(--font-active-color-1)]'>Apple</a> and <a href="" target='_blank' rel='noopener' className='text-[var(--font-active-color-1)]'>Amazon</a>. Don't forget to Subscribe to our <a href="" target='_blank' rel='noopener' className='text-[var(--font-active-color-1)]'>YouTube Page</a> and head over to our <a href="" target='_blank' rel='noopener' className='text-[var(--font-active-color-1)]'>Facebook Page</a> as well! Want to interact with the sermons and discuss with a chatbot the content or get discussion questions? <a href="" target='_blank' rel='noopener' className='text-[var(--font-active-color-1)]'>Check this out!</a></p>
 
             <div className="link-container grid grid-cols-2 gap-2 grid-cols-[176px_1fr] max-w-[356px] mx-auto sm:max-w-full sm:gap-6 sm:grid-cols-[122.19px_1fr]">
-                <ProgressiveImage src={podcast} placeholder={''}>
-                    {(src, loading) => (
-                        <img
-                            src={src}
-                            alt={''}
-                            className={` duration-300 sm:h-[122.19px] ${loading ? 'opacity-0' : 'opacity-100'}`}
-                        />
-                    )}
-                </ProgressiveImage>
 
-                <div className='grid sm:grid-cols-2 gap-2 sm:gap-6'>
-
-                    <div className='flex flex-col gap-2 max-w-[207px]'>
-                        <ProgressiveImage src={applePodcast} placeholder={''}>
-                            {(src, loading) => (
-                                <img
-                                    src={src}
-                                    alt={''}
-                                    className={`max-h-[64px] duration-300 ${loading ? 'opacity-0' : 'opacity-100'}`}
-                                />
-                            )}
-                        </ProgressiveImage>
-                        <ProgressiveImage src={amazonMusic} placeholder={''}>
-                            {(src, loading) => (
-                                <img
-                                    src={src}
-                                    alt={''}
-                                    className={`max-h-[64px] duration-300 ${loading ? 'opacity-0' : 'opacity-100'}`}
-                                />
-                            )}
-                        </ProgressiveImage>
-                    </div>
-
-                    <ProgressiveImage src={youtubeChannel} placeholder={''}>
+                <a href="https://podcasts.apple.com/us/podcast/issaquah-christian-church/id1475686744" target='_blank' rel='noopener'>
+                    <ProgressiveImage src={podcast} placeholder={''}>
                         {(src, loading) => (
                             <img
                                 src={src}
                                 alt={''}
-                                className={`max-h-[64px] duration-300 ${loading ? 'opacity-0' : 'opacity-100'}`}
+                                className={` duration-300 sm:h-[122.19px] ${loading ? 'opacity-0' : 'opacity-100'}`}
                             />
                         )}
                     </ProgressiveImage>
+                </a>
+
+                <div className='grid sm:grid-cols-2 gap-2 sm:gap-6'>
+
+                    <div className='flex flex-col gap-2 max-w-[207px]'>
+
+                        <a href="https://podcasts.apple.com/us/podcast/issaquah-christian-church/id1475686744" target='_blank' rel='noopener'>
+                            <ProgressiveImage src={applePodcast} placeholder={''}>
+                                {(src, loading) => (
+                                    <img
+                                        src={src}
+                                        alt={''}
+                                        className={`max-h-[64px] w-full duration-300 ${loading ? 'opacity-0' : 'opacity-100'}`}
+                                    />
+                                )}
+                            </ProgressiveImage>
+                        </a>
+
+                        <a href="https://music.amazon.com/podcasts/f35a0f7b-fd3a-4db2-88ea-38c1b927fd45/issaquah-christian-church" target='_blank' rel='noopener'>
+                            <ProgressiveImage src={amazonMusic} placeholder={''}>
+                                {(src, loading) => (
+                                    <img
+                                        src={src}
+                                        alt={''}
+                                        className={`max-h-[64px] w-full duration-300 ${loading ? 'opacity-0' : 'opacity-100'}`}
+                                    />
+                                )}
+                            </ProgressiveImage>
+                        </a>
+
+                    </div>
+
+                    <a href="https://www.youtube.com/channel/UCT0ZOk1ORNepZtu7E0IQaCQ" target='_blank' rel='noopener'>
+                    <ProgressiveImage src={youtubeChannel} placeholder={''}>
+                        {(src, loading) => (
+                            <img
+                                src={src}
+                                    alt={''}
+                                    className={`max-h-[64px] w-full duration-300 ${loading ? 'opacity-0' : 'opacity-100'}`}
+                                />
+                            )}
+                        </ProgressiveImage>
+                    </a>
+
                 </div>
 
             </div>
