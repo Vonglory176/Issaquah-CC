@@ -88,7 +88,7 @@ const Header = () => {
                   <NavLink to={'/event-info/womens-sign-up'} className={({ isActive }) => isActive ? 'isActive' : ''} >Women's Retreat Sign Up</NavLink>
                 </li>
                 <li>
-                  <NavLink to={'/event-info/calendar'} className={({ isActive }) => isActive ? 'isActive' : 'disabled'} >Calendar</NavLink>
+                  <NavLink to={'/event-info/calendar'} className={({ isActive }) => isActive ? 'isActive' : ''} >Church Calendar</NavLink>
                 </li>
                 <li>
                   <NavLink to={'/event-info/bulletin'} className={({ isActive }) => isActive ? 'isActive' : ''} >Church Bulletin</NavLink>
