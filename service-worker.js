@@ -2,15 +2,15 @@ const CACHE_NAME = 'my-site-cache-v2'
 const urlsToCache = [
   '/',
 
-  'index.html',
-  '404.html',
-  'manifest.json',
-  'robots.txt',
+  './index.html',
+  './404.html',
+  './manifest.json',
+  './robots.txt',
 
-  '/src/index.css',
-  '/src/index.js',
+  '../src/index.css',
+  '../src/index.js',
 
-  '/src/assets/images/logos/logo9.webp',
+  '../src/assets/images/logos/logo9.webp',
 
   // Add other assets you want to cache
 ]
@@ -46,6 +46,9 @@ self.addEventListener('activate', event => {
 // Fetch event - serve cached content
 self.addEventListener('fetch', event => {
   const url = new URL(event.request.url)
+
+  // Skip caching for unsupported schemes
+  if (!url.protocol.startsWith('http')) return
 
   if (event.request.mode === 'navigate') {
     event.respondWith(
