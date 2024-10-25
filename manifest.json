@@ -1,6 +1,7 @@
 {
   "short_name": "Issaquah CC",
   "name": "Issaquah Christian Church",
+  "description": "Welcome to Issaquah Christian Church. Teaching Biblical life applications as you learn to follow Jesus.",
   "icons": [
     {
       "src": "fav-icon2.webp",
@@ -8,7 +9,7 @@
       "type": "image/x-icon"
     },
     {
-      "src": "logo5.webp",
+      "src": "logo9.webp",
       "type": "image/webp",
       "sizes": "192x192"
     }
