@@ -1,12 +1,18 @@
-const CACHE_NAME = 'my-site-cache-v1'
+const CACHE_NAME = 'my-site-cache-v2'
 const urlsToCache = [
   '/',
-  '/styles/main.css',
-  '/script/main.js',
-  // Add other assets you want to cache
 
-  // VIDEO LINKS
-  // 'https://www.canva.com/design/DAD2KnH2kKQ/watch?embed' (CORS error)
+  'index.html',
+  '404.html',
+  'manifest.json',
+  'robots.txt',
+
+  '/src/index.css',
+  '/src/index.js',
+
+  '/src/assets/images/logos/logo9.webp',
+
+  // Add other assets you want to cache
 ]
 
 // Install event - cache files
@@ -17,20 +23,7 @@ self.addEventListener('install', event => {
         console.log('Opened cache')
         return cache.addAll(urlsToCache)
       })
-  )
-})
-
-// Fetch event - serve cached content
-self.addEventListener('fetch', event => {
-  event.respondWith(
-    caches.match(event.request)
-      .then(response => {
-        // Cache hit - return response
-        if (response) {
-          return response
-        }
-        return fetch(event.request)
-      })
+      .catch(error => console.error('Failed to open cache:', error))
   )
 })
 
@@ -47,5 +40,43 @@ self.addEventListener('activate', event => {
         })
       )
     })
+  )
+})
+
+// Fetch event - serve cached content
+self.addEventListener('fetch', event => {
+  const url = new URL(event.request.url)
+
+  if (event.request.mode === 'navigate') {
+    event.respondWith(
+      caches.match('/index.html').then(response => {
+        return response || fetch(event.request)
+      })
+    )
+    return
+  }
+
+  if (event.request.method !== 'GET' ||
+    url.href.includes("google.com/recaptcha") ||
+    url.href.includes("index.css")) {
+    return
+  }
+
+  event.respondWith(
+    caches.match(event.request)
+      .then(cachedResponse => {
+        if (cachedResponse) return cachedResponse
+
+        return fetch(event.request).then(fetchResponse => {
+          if (fetchResponse.ok) {
+            return caches.open(CACHE_NAME).then(cache => {
+              cache.put(event.request, fetchResponse.clone())
+              return fetchResponse
+            })
+          }
+          return fetchResponse
+        })
+      })
+      .catch(error => console.error('Fetch failed:', error))
   )
 })
