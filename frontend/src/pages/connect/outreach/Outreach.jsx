@@ -1,10 +1,11 @@
 import React from 'react'
 import PageWrapper from '../../../components/pageWrapper/PageWrapper'
-import ProgressiveImage from 'react-progressive-graceful-image'
+import VideoContainer from '../../../components/videoContainer/VideoContainer'
+// import ProgressiveImage from 'react-progressive-graceful-image'
 
 const Outreach = () => {
     return (
-        <PageWrapper name='outreach' className='flex flex-col gap-8' bannerSettings={{
+        <PageWrapper name='outreach' className='flex flex-col gap-12' bannerSettings={{
             text: {
                 heading: "Outreach"
             }
@@ -74,7 +75,7 @@ const Outreach = () => {
                 </div>
 
                 <a
-                    href="https://faithlife.com/issaquahcc/bulletins"
+                    href="https://onedrive.live.com/edit.aspx?resid=99E8EB42333EFA02!174497&ithint=file%2cxlsx&wdo=2&authkey=!AhFiZ6jpKu4TNF8"
                     target='_blank'
                     rel='noopener'
                     className='w-fit px-3 py-2 mt-2 rounded-lg font-semibold border-2 border-[var(--button-hover-background-color)] bg-[var(--button-background-color)] text-[var(--button-text-color)] hover:bg-[var(--button-hover-background-color)] hover:text-[var(--font-color-2)] hover:no-underline'
@@ -82,6 +83,12 @@ const Outreach = () => {
                     Sign Up for Help at the Tree Lot
                 </a>
             </div>
+
+            <hr className='border border-[var(--border-color-3)]' />
+
+            <VideoContainer src="https://www.youtube.com/embed/ZmjyPM44Um0?playsinline=1&modestBranding=1&rel=0&autoplay=false&enablejsapi=1&origin=https%3A%2F%2Fwww.issaquah.cc&widgetid=1" />
+
+            <VideoContainer src="https://www.youtube.com/embed/jlq0LIYFHBA?playsinline=1&modestBranding=1&rel=0&autoplay=false&enablejsapi=1&origin=https%3A%2F%2Fwww.issaquah.cc&widgetid=2" />
 
         </PageWrapper>
     )
