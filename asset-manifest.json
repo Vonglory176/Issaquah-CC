@@ -1,11 +1,13 @@
 {
   "files": {
-    "main.css": "/static/css/main.0e56cd63.css",
-    "main.js": "/static/js/main.041fe43b.js",
+    "main.css": "/static/css/main.349506d7.css",
+    "main.js": "/static/js/main.5c19cd9f.js",
     "static/media/guyTime.webp": "/static/media/guyTime.1188a251010e87d09d53.webp",
     "static/media/mens-group.webp": "/static/media/mens-group.5fe752cbd93a3fa9630e.webp",
     "static/media/whale.webp": "/static/media/whale.3eafcd14c868d49e368d.webp",
+    "static/media/Oswald-VariableFont_wght.ttf": "/static/media/Oswald-VariableFont_wght.7cecd0da606d25b0905d.ttf",
     "static/media/womens-group.webp": "/static/media/womens-group.3361fa2f442415f8f205.webp",
+    "static/media/impact.ttf": "/static/media/impact.0294f8285a2493417c09.ttf",
     "static/media/sponsor.webp": "/static/media/sponsor.e7b2a164cf1c4ae31d32.webp",
     "static/media/youtubeChannel.webp": "/static/media/youtubeChannel.fa2223c17bac09720027.webp",
     "static/media/dcVsMarvel.webp": "/static/media/dcVsMarvel.fe7b6d743b6bb62d13a7.webp",
@@ -36,11 +38,11 @@
     "static/media/calendar-small.webp": "/static/media/calendar-small.28e7b9be4c5fdc287a0d.webp",
     "static/media/guy-praying-small.webp": "/static/media/guy-praying-small.8b824aa30c2a84356522.webp",
     "static/media/wheat-field-small.webp": "/static/media/wheat-field-small.1d51c8952bdf77820eae.webp",
-    "main.0e56cd63.css.map": "/static/css/main.0e56cd63.css.map",
-    "main.041fe43b.js.map": "/static/js/main.041fe43b.js.map"
+    "main.349506d7.css.map": "/static/css/main.349506d7.css.map",
+    "main.5c19cd9f.js.map": "/static/js/main.5c19cd9f.js.map"
   },
   "entrypoints": [
-    "static/css/main.0e56cd63.css",
-    "static/js/main.041fe43b.js"
+    "static/css/main.349506d7.css",
+    "static/js/main.5c19cd9f.js"
   ]
 }
