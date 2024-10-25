@@ -42,7 +42,7 @@ const Banner = ({ bannerSettings = {
 
     return (
 
-        <div className="banner min-h-[300px] bg-gray-500 px-4 py-[80px] overflow-hidden relative flex justify-center items-center text-center border-b-2 border-[var(--border-color-2)]"> {/* shadow-[0_-10px_10px_-5px_rgba(0,0,0,0.3)] */}
+        <div className="banner min-h-[300px] bg-[#FA8072] px-4 py-[80px] overflow-hidden relative flex justify-center items-center text-center border-b-2 border-[var(--border-color-2)]"> {/* shadow-[0_-10px_10px_-5px_rgba(0,0,0,0.3)] */}
 
             {/* Banner - Background Image */}
             <ProgressiveImage src={bannerSettings.image?.large || wheatField} placeholder={bannerSettings.image?.small || wheatFieldSmall}>
