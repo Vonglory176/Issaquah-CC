@@ -25,6 +25,7 @@ import Sermons from "./pages/sermons/Sermons";
 import Teens from "./pages/connect/teens/Teens";
 import PrayerRequests from "./pages/connect/prayerRequests/PrayerRequests";
 import WomensSignUp from "./pages/eventInfo/womensSignUp/WomensSignUp";
+import Calendar from "./pages/eventInfo/calendar/Calendar";
 
 function App() {
   return (
@@ -48,7 +49,7 @@ function App() {
           {/* Event Info */}
           <Route path="/event-info" element={<Navigate to="/" />} />
           <Route path="/event-info/womens-sign-up" element={<WomensSignUp />} />
-          {/* <Route path="/event-info/calendar" element={<Calendar />} /> */}
+          <Route path="/event-info/calendar" element={<Calendar />} />
           <Route path="/event-info/bulletin" element={<Bulletin />} />
 
           {/* Sermons */}
@@ -99,22 +100,17 @@ export default App;
     - Calendar
     - Forms
 
-
-  Hookup links to images in Sermons page ( Important !!!!!!!)
-
   Implement ReCaptcha for Forms (PrayerRequests/WomensSignUp)
 
-  Get "Impact" font for some headers (h2 only?)
+  Clean/Hook up form-submission
 
-  Weird issue with Canva video ui when scrolling in mobile view
+  Weird issue with Canva video ui when scrolling in mobile view (Has to do with browser UI growing/shrinking)
 
-  Finish/cleanup forms !!!
-
-  Add reCaptcha to forms
-
-  Research Calender building ( React-Big-Calendar / FullCalendar ) ( Google Calendar API )
+  Do Aria-Label / Title / TabIndex(?) sweep
 
   ---------------------------------------
+
+  Hamburger animation is kinda jank
 
   Margin issue in teens slideshow (?)
 
@@ -126,9 +122,7 @@ export default App;
 
   Look into centered content with larger text for certain pages
 
-  Replace Gold colors
-
-  Separate Head/Footer colors from Body colors
+  Clean up theme.scss
 
   Move event listener (in Banner.jsx) to Context
 
