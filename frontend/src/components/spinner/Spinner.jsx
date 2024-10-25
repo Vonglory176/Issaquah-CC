@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Spinner = () => {
+const Spinner = ({ className }) => {
   return (
-    <div className='spinner'>
+    <div className={`spinner ${className || ''}`}>
 
       {/* Spinner / "Loading..." */}
       <div className="spinner-loading">
