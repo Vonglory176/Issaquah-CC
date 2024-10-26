@@ -53,7 +53,8 @@ function App() {
           <Route path="/event-info/bulletin" element={<Bulletin />} />
 
           {/* Sermons */}
-          <Route path="/sermons" element={<Sermons />} />
+          <Route path="/sermons" element={<Navigate to="/sermons/library" />} />
+          <Route path="/sermons/library" element={<Sermons />} />
 
           {/* Giving */}
           <Route path="/giving" element={<Navigate to="/" />} />
@@ -95,18 +96,22 @@ export default App;
 
 /* TODO ---------------------------------------
 
+  UPDATE SERVICE WORKER NAME BEFORE DEPLOYMENT !!!!!!
+
   Complicated features:
     - Sermon Player
     - Calendar
     - Forms
+
+  Look at proxies to mesh with CSP better?
+
+  Nonce generation? ( use in script-src + "strict-dynamic" )
 
   Implement ReCaptcha for Forms (PrayerRequests/WomensSignUp)
 
   Clean/Hook up form-submission
 
   Weird issue with Canva video ui when scrolling in mobile view (Has to do with browser UI growing/shrinking)
-
-  Do Aria-Label / Title / TabIndex(?) sweep
 
   ---------------------------------------
 
