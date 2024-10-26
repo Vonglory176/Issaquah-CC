@@ -2,7 +2,6 @@ import React from 'react'
 import PageWrapper from '../../../components/pageWrapper/PageWrapper'
 import ProgressiveImage from 'react-progressive-graceful-image'
 import logo from '../../../assets/images/logos/logo8.webp'
-// import { Link } from 'react-router-dom'
 
 const LocalResources = () => {
     return (
