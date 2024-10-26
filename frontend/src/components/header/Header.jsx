@@ -40,7 +40,7 @@ const Header = () => {
       <div className="header-wrapper relative flex items-center justify-between h-full px-8 xl:px-[8vw]">
 
         {/* Logo */}
-        <Link to={'/'} className='h-full'>
+        <Link to={'/'} className='h-full' aria-label='Return to home page' title='Return to home page'>
           <ProgressiveImage src={logo} placeholder={''}>
             {(src, loading) => (
               <img
@@ -64,19 +64,19 @@ const Header = () => {
             <li>
               <Dropdown title="About Us" openDropdown={openDropdown} toggleDropdown={toggleDropdown}>
                 <li>
-                  <NavLink to={'/about-us/beliefs'} className={({ isActive }) => isActive ? 'isActive' : ''} >What We Believe</NavLink>
+                  <NavLink to={'/about-us/beliefs'} className={({ isActive }) => isActive ? 'isActive' : ''} aria-label='View the What We Believe page' >What We Believe</NavLink>
                 </li>
                 <li>
-                  <NavLink to={'/about-us/what-to-expect'} className={({ isActive }) => isActive ? 'isActive' : ''} >What to Expect</NavLink>
+                  <NavLink to={'/about-us/what-to-expect'} className={({ isActive }) => isActive ? 'isActive' : ''} aria-label='View the What to Expect page' >What to Expect</NavLink>
                 </li>
                 <li>
-                  <NavLink to={'/about-us/vision-mission-and-values'} className={({ isActive }) => isActive ? 'isActive' : ''} >Vision, Mission, and Values</NavLink>
+                  <NavLink to={'/about-us/vision-mission-and-values'} className={({ isActive }) => isActive ? 'isActive' : ''} aria-label='View the Vision, Mission, and Values page' >Vision, Mission, and Values</NavLink>
                 </li>
                 <li>
-                  <NavLink to={'/about-us/leadership'} className={({ isActive }) => isActive ? 'isActive' : ''} >Meet Our Leadership</NavLink>
+                  <NavLink to={'/about-us/leadership'} className={({ isActive }) => isActive ? 'isActive' : ''} aria-label='View the Meet Our Leadership page' >Meet Our Leadership</NavLink>
                 </li>
                 <li>
-                  <NavLink to={'/about-us/elder'} className={({ isActive }) => isActive ? 'isActive' : ''} >Elder Nominations</NavLink>
+                  <NavLink to={'/about-us/elder'} className={({ isActive }) => isActive ? 'isActive' : ''} aria-label='View the Elder Nominations page' >Elder Nominations</NavLink>
                 </li>
               </Dropdown>
             </li>
@@ -85,20 +85,30 @@ const Header = () => {
             <li>
               <Dropdown title="Event Info" openDropdown={openDropdown} toggleDropdown={toggleDropdown}>
                 <li>
-                  <NavLink to={'/event-info/womens-sign-up'} className={({ isActive }) => isActive ? 'isActive' : ''} >Women's Retreat Sign Up</NavLink>
+                  <NavLink to={'/event-info/womens-sign-up'} className={({ isActive }) => isActive ? 'isActive' : ''} aria-label="View the Women's Retreat Sign Up page" >Women's Retreat Sign Up</NavLink>
                 </li>
                 <li>
-                  <NavLink to={'/event-info/calendar'} className={({ isActive }) => isActive ? 'isActive' : ''} >Church Calendar</NavLink>
+                  <NavLink to={'/event-info/calendar'} className={({ isActive }) => isActive ? 'isActive' : ''} aria-label="View the Church Calendar page" >Church Calendar</NavLink>
                 </li>
                 <li>
-                  <NavLink to={'/event-info/bulletin'} className={({ isActive }) => isActive ? 'isActive' : ''} >Church Bulletin</NavLink>
+                  <NavLink to={'/event-info/bulletin'} className={({ isActive }) => isActive ? 'isActive' : ''} aria-label="View the Church Bulletin page" >Church Bulletin</NavLink>
                 </li>
               </Dropdown>
             </li>
 
             {/* Other Menu Items */}
             <li>
-              <NavLink to={'/sermons'} className={({ isActive }) => isActive ? 'isActive nav-link' : 'nav-link'} >Sermons</NavLink>
+              <Dropdown title="Sermons" openDropdown={openDropdown} toggleDropdown={toggleDropdown}>
+                <li>
+                  <NavLink to={'/sermons/library'} className={({ isActive }) => isActive ? 'isActive' : ''} aria-label="See the ICC Sermon Video Library" title="See the ICC Sermon Video Library" >Video Library</NavLink>
+                </li>
+                <li>
+                  <a href={'https://pastors.ai/church/@issaquahchristianchurch2266'} target='_blank' rel='noopener noreferrer' aria-label="Check out the ICC Sermon Chatbot" title="Check out the ICC Sermon Chatbot" >
+                    AI Chatbot
+                  </a>
+                </li>
+              </Dropdown>
+              {/* <NavLink to={'/sermons'} className={({ isActive }) => isActive ? 'isActive nav-link' : 'nav-link'} aria-label="View the Sermons page" >Sermons</NavLink> */}
               {/* <a className='nav-link' href="https://www.issaquah.cc/sermons" target='_blank' rel='noopener noreferrer'>Sermons</a> */}
             </li>
 
@@ -106,12 +116,12 @@ const Header = () => {
             <li>
               <Dropdown title="Giving" openDropdown={openDropdown} toggleDropdown={toggleDropdown}>
                 <li>
-                  <a href={'https://giving.servantkeeper.com/issaquahcc'} target='_blank' rel='noopener noreferrer'>
+                  <a href={'https://giving.servantkeeper.com/issaquahcc'} target='_blank' rel='noopener noreferrer' aria-label="Open a new tab to the Tithes and Offerings page" >
                     Tithes and Offerings
                   </a>
                 </li>
                 <li>
-                  <NavLink to={'/giving/stocks-and-crypto'} className={({ isActive }) => isActive ? 'isActive' : ''} >
+                  <NavLink to={'/giving/stocks-and-crypto'} className={({ isActive }) => isActive ? 'isActive' : ''} aria-label="View the Stocks and Crypto page" >
                     Stocks and Crypto
                   </NavLink>
                 </li>
@@ -122,52 +132,52 @@ const Header = () => {
             <li>
               <Dropdown title="Connect" openDropdown={openDropdown} toggleDropdown={toggleDropdown}>
                 <li>
-                  <NavLink to={'/connect/prayer-requests'} className={({ isActive }) => isActive ? 'isActive' : ''} >
+                  <NavLink to={'/connect/prayer-requests'} className={({ isActive }) => isActive ? 'isActive' : ''} aria-label="View the Prayer Requests page" >
                     Prayer Requests
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to={'/connect/membership'} className={({ isActive }) => isActive ? 'isActive' : ''} >
+                  <NavLink to={'/connect/membership'} className={({ isActive }) => isActive ? 'isActive' : ''} aria-label="View the Membership page" >
                     Membership
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to={'/connect/kids'} className={({ isActive }) => isActive ? 'isActive' : ''} >
+                  <NavLink to={'/connect/kids'} className={({ isActive }) => isActive ? 'isActive' : ''} aria-label="View the Kids Ministry page" >
                     Kids
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to={'/connect/teens'} className={({ isActive }) => isActive ? 'isActive' : ''} >
+                  <NavLink to={'/connect/teens'} className={({ isActive }) => isActive ? 'isActive' : ''} aria-label="View the Teens Ministry page" >
                     Teens
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to={'/connect/women'} className={({ isActive }) => isActive ? 'isActive' : ''} >
+                  <NavLink to={'/connect/women'} className={({ isActive }) => isActive ? 'isActive' : ''} aria-label="View the Women Ministry page" >
                     Women
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to={'/connect/men'} className={({ isActive }) => isActive ? 'isActive' : ''} >
+                  <NavLink to={'/connect/men'} className={({ isActive }) => isActive ? 'isActive' : ''} aria-label="View the Men Ministry page" >
                     Men
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to={'/connect/outreach'} className={({ isActive }) => isActive ? 'isActive' : ''} >
+                  <NavLink to={'/connect/outreach'} className={({ isActive }) => isActive ? 'isActive' : ''} aria-label="View the Outreach page" >
                     Outreach
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to={'/connect/haiti'} className={({ isActive }) => isActive ? 'isActive' : ''} >
+                  <NavLink to={'/connect/haiti'} className={({ isActive }) => isActive ? 'isActive' : ''} aria-label="View the Haiti page" >
                     Haiti
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to={'/connect/recommended-bible-apps'} className={({ isActive }) => isActive ? 'isActive' : ''} >
+                  <NavLink to={'/connect/recommended-bible-apps'} className={({ isActive }) => isActive ? 'isActive' : ''} aria-label="View the Recommended Bible Apps page" >
                     Recommended Bible Apps
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to={'/connect/employment'} className={({ isActive }) => isActive ? 'isActive' : ''} >
+                  <NavLink to={'/connect/employment'} className={({ isActive }) => isActive ? 'isActive' : ''} aria-label="View the Employment page" >
                     Employment
                   </NavLink>
                 </li>
@@ -176,7 +186,7 @@ const Header = () => {
 
             {/* Contact */}
             <li>
-              <NavLink to={'/contact'} className={({ isActive }) => isActive ? 'isActive nav-link' : 'nav-link'} >
+              <NavLink to={'/contact'} className={({ isActive }) => isActive ? 'isActive nav-link' : 'nav-link'} aria-label="View the Contact page" >
                 Contact
               </NavLink>
               {/* <a className='nav-link' href="https://www.issaquah.cc/contact" target='_blank' rel='noopener noreferrer'>Contact</a> */}
@@ -186,7 +196,7 @@ const Header = () => {
             <li>
               <Dropdown title="Care" openDropdown={openDropdown} toggleDropdown={toggleDropdown}>
                 <li>
-                  <NavLink to={'/care/helpful-resources'} className={({ isActive }) => isActive ? 'isActive' : ''} >
+                  <NavLink to={'/care/helpful-resources'} className={({ isActive }) => isActive ? 'isActive' : ''} aria-label="View the Helpful Resources page" >
                     Helpful Resources
                   </NavLink>
                 </li>
@@ -195,9 +205,9 @@ const Header = () => {
           </ul>
         </nav>
 
-      </div>
+      </div >
 
-    </header>
+    </header >
   )
 }
 
