@@ -2,8 +2,8 @@ const CACHE_NAME = 'my-site-cache-v2'
 const urlsToCache = [
   '/',
 
-  // './index.html',
-  // './404.html',
+  './index.html',
+  './404.html',
   './manifest.json',
   './robots.txt',
 
