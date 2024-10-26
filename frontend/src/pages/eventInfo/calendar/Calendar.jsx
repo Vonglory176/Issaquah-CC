@@ -18,7 +18,9 @@ const Calendar = () => {
             }
         }}>
 
-            <BigCalendar />
+            <div className='min-h-[600px]'>
+                <BigCalendar />
+            </div>
 
         </PageWrapper>
     )
