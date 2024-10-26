@@ -23,7 +23,7 @@ const Dropdown = ({ children, title, openDropdown, toggleDropdown }) => {
         onMouseEnter={isDesktop && !isOpen ? () => toggleDropdown(title) : null}
         onMouseLeave={isDesktop && isOpen ? () => toggleDropdown(null) : null}
         >
-            <button onClick={() => toggleDropdown(title)} className="dropdown-toggle">
+            <button onClick={() => toggleDropdown(title)} className="dropdown-toggle" aria-label={`Open the ${title} dropdown menu`} >
                 {title} <FaCaretDown />
             </button>
 

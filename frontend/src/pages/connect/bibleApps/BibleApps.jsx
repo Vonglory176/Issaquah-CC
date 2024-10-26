@@ -27,10 +27,10 @@ const BibleApps = () => {
 
                 <ul className='list-disc pl-4 ml-4'>
                     <li>
-                        <a className='flex gap-2 items-center text-[var(--font-active-color-1)]' href='https://itunes.apple.com/us/app/faithlife-study-bible/id485998842' target='_blank' rel='noopener noreferrer'>Download for iOS <FaApple size={24} className='mt-[-5px]' /> </a>
+                        <a className='flex gap-2 items-center text-[var(--font-active-color-1)]' href='https://itunes.apple.com/us/app/faithlife-study-bible/id485998842' target='_blank' rel='noopener noreferrer' aria-label="Download the Faithlife Study Bible for iOS" title="Download the Faithlife Study Bible for iOS" >Download for iOS <FaApple size={24} className='mt-[-5px]' /> </a>
                     </li>
                     <li>
-                        <a className='flex gap-2 items-center text-[var(--font-active-color-1)]' href='https://play.google.com/store/apps/details?id=com.logos.androidfaithlife' target='_blank' rel='noopener noreferrer'>Download for Android <FaAndroid size={24} className='mt-[1px]' /> </a>
+                        <a className='flex gap-2 items-center text-[var(--font-active-color-1)]' href='https://play.google.com/store/apps/details?id=com.logos.androidfaithlife' target='_blank' rel='noopener noreferrer' aria-label="Download the Faithlife Study Bible for Android" title="Download the Faithlife Study Bible for Android" >Download for Android <FaAndroid size={24} className='mt-[1px]' /> </a>
                     </li>
                 </ul>
             </section>
@@ -41,10 +41,10 @@ const BibleApps = () => {
 
                 <ul className='list-disc pl-4 ml-4'>
                     <li>
-                        <a className='flex gap-2 items-center text-[var(--font-active-color-1)]' href='https://itunes.apple.com/app/apple-store/id336400266' target='_blank' rel='noopener noreferrer'>Download for iOS <FaApple size={24} className='mt-[-5px]' /> </a>
+                        <a className='flex gap-2 items-center text-[var(--font-active-color-1)]' href='https://itunes.apple.com/app/apple-store/id336400266' target='_blank' rel='noopener noreferrer' aria-label="Download the Logos Bible Software for iOS" title="Download the Logos Bible Software for iOS" >Download for iOS <FaApple size={24} className='mt-[-5px]' /> </a>
                     </li>
                     <li>
-                        <a className='flex gap-2 items-center text-[var(--font-active-color-1)]' href='https://play.google.com/store/apps/details?id=com.logos.androidlogos' target='_blank' rel='noopener noreferrer'>Download for Android <FaAndroid size={24} className='mt-[1px]' /> </a>
+                        <a className='flex gap-2 items-center text-[var(--font-active-color-1)]' href='https://play.google.com/store/apps/details?id=com.logos.androidlogos' target='_blank' rel='noopener noreferrer' aria-label="Download the Logos Bible Software for Android" title="Download the Logos Bible Software for Android" >Download for Android <FaAndroid size={24} className='mt-[1px]' /> </a>
                     </li>
                 </ul>
             </section>

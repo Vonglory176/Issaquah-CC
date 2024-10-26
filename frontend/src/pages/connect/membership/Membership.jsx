@@ -22,11 +22,11 @@ const Membership = () => {
 
             <ul className=''>
                 <li>
-                    <p><span className='font-semibold'>1.</span> Listen to the sermon on the <a href="https://youtu.be/MzmwxTk3vXA" target='_blank' rel='noopener noreferrer' className='text-[var(--font-active-color-1)]'>Pathway Toward Becoming Family at ICC</a>.</p>
+                    <p><span className='font-semibold'>1.</span> Listen to the sermon on the <a href="https://youtu.be/MzmwxTk3vXA" target='_blank' rel='noopener noreferrer' aria-label="Listen to the sermon on the Pathway Toward Becoming Family at ICC">Pathway Toward Becoming Family at ICC</a>.</p>
                 </li>
 
                 <li>
-                    <p><span className='font-semibold'>2.</span> RSVP for a class time on our <a href="https://faithlife.com/issaquahcc/calendar?view=Month" target='_blank' rel='noopener noreferrer' className='text-[var(--font-active-color-1)]'>Church Calendar</a> for a discussion with staff and other prospective members on the first Sunday of the Month at 9:25am-10:15am.</p>
+                    <p><span className='font-semibold'>2.</span> RSVP for a class time on our <a href="https://faithlife.com/issaquahcc/calendar?view=Month" target='_blank' rel='noopener noreferrer' aria-label="View the ICC Calendar" title="View the ICC Calendar" >Church Calendar</a> for a discussion with staff and other prospective members on the first Sunday of the Month at 9:25am-10:15am.</p>
                 </li>
 
                 <li>

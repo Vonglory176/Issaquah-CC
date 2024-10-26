@@ -30,7 +30,7 @@ const Kids = () => {
 
                     <p><span className='font-semibold'>We will not be able to provide nursery at this time.</span> <span className='italic'>We do, however,</span> provide a crying room with a sermon monitor in the ladies room, if needed.</p>
 
-                    <p>If you have any questions please contact us at <a href="mailto:office@issaquah.cc" className='text-[var(--font-active-color-1)]'>office@issaquah.cc</a></p>
+                    <p>If you have any questions please contact us at <a href="mailto:office@issaquah.cc" rel='noopener noreferrer' target='_blank' aria-label="Email the ICC office" title="Email the ICC office" className='text-[var(--font-active-color-1)]'>office@issaquah.cc</a></p>
                 </div>
 
             </div>

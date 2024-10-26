@@ -16,7 +16,7 @@ const Haiti = () => {
                 <h2 className='font-bold'>Be Part Of The Solution</h2>
 
 
-                <p>Click <a href="https://gvcm.reachapp.co/sponsorships?sponsorship_type=child-sponsorship-orphanage&status=unsponsored,partial" target='_blank' rel='noopener noreferrer' className='text-[var(--font-active-color-1)]'>Here</a> to Become a Sponsor</p>
+                <a href="https://gvcm.reachapp.co/sponsorships?sponsorship_type=child-sponsorship-orphanage&status=unsponsored,partial" target='_blank' rel='noopener noreferrer' className='text-[var(--font-active-color-1)]'>Click here to Become a Sponsor</a>
 
                 {/* <p className='text-lg md:text-xl'>We have a three step process to become a member at Issaquah Christian Church:</p> */}
 

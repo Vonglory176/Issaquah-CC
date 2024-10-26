@@ -38,14 +38,14 @@ const Sermons = () => {
             </div>
             {/* </section> */}
 
-            <hr className='border border-[var(--border-color-3)]' />
+            <hr />
 
 
-            <p className='max-w-[900px] text-center mx-auto'>Worship the Lord Jesus with us with on Sundays at 10:30am. We will be recording live sermons and later publishing them here and on our podcasting platforms at <a href="" target='_blank' rel='noopener' className='text-[var(--font-active-color-1)]'>Apple</a> and <a href="" target='_blank' rel='noopener' className='text-[var(--font-active-color-1)]'>Amazon</a>. Don't forget to Subscribe to our <a href="" target='_blank' rel='noopener' className='text-[var(--font-active-color-1)]'>YouTube Page</a> and head over to our <a href="" target='_blank' rel='noopener' className='text-[var(--font-active-color-1)]'>Facebook Page</a> as well! Want to interact with the sermons and discuss with a chatbot the content or get discussion questions? <a href="" target='_blank' rel='noopener' className='text-[var(--font-active-color-1)]'>Check this out!</a></p>
+            <p className='max-w-[900px] text-center mx-auto'>Worship the Lord Jesus with us with on Sundays at 10:30am. We will be recording live sermons and later publishing them here and on our podcasting platforms at <a href="https://podcasts.apple.com/us/podcast/issaquah-christian-church/id1475686744" target='_blank' rel='noopener noreferrer' aria-label="Listen to ICC on Apple Podcasts" title="Listen to ICC on Apple Podcasts" >Apple</a> and <a href="https://music.amazon.com/podcasts/f35a0f7b-fd3a-4db2-88ea-38c1b927fd45/issaquah-christian-church" target='_blank' rel='noopener noreferrer' aria-label="Listen to ICC on Amazon Music" title="Listen to ICC on Amazon Music" >Amazon</a>. Don't forget to Subscribe to our <a href="https://www.youtube.com/channel/UCT0ZOk1ORNepZtu7E0IQaCQ" target='_blank' rel='noopener noreferrer' aria-label="Subscribe to the ICC YouTube Channel" title="Subscribe to the ICC YouTube Channel" >YouTube Page</a> and head over to our <a href="https://www.facebook.com/IssyCC/" target='_blank' rel='noopener noreferrer' aria-label="Visit the ICC Facebook Page" title="Visit the ICC Facebook Page" >Facebook Page</a> as well! Want to interact with the sermons and discuss with a chatbot the content or get discussion questions? <a href="https://pastors.ai/church/@issaquahchristianchurch2266" target='_blank' rel='noopener noreferrer' aria-label="Check out the ICC Sermon Chatbot" title="Check out the ICC Sermon Chatbot" >Check this out!</a></p>
 
             <div className="link-container grid grid-cols-2 gap-2 grid-cols-[176px_1fr] max-w-[356px] mx-auto sm:max-w-full sm:gap-6 sm:grid-cols-[122.19px_1fr]">
 
-                <a href="https://podcasts.apple.com/us/podcast/issaquah-christian-church/id1475686744" target='_blank' rel='noopener'>
+                <a href="https://podcasts.apple.com/us/podcast/issaquah-christian-church/id1475686744" target='_blank' rel='noopener' aria-label="Listen to ICC on Apple Podcasts" title="Listen to ICC on Apple Podcasts" >
                     <ProgressiveImage src={podcast} placeholder={''}>
                         {(src, loading) => (
                             <img
@@ -61,7 +61,7 @@ const Sermons = () => {
 
                     <div className='flex flex-col gap-2 max-w-[207px]'>
 
-                        <a href="https://podcasts.apple.com/us/podcast/issaquah-christian-church/id1475686744" target='_blank' rel='noopener'>
+                        <a href="https://podcasts.apple.com/us/podcast/issaquah-christian-church/id1475686744" target='_blank' rel='noopener' aria-label="Listen to ICC on Apple Podcasts" title="Listen to ICC on Apple Podcasts" >
                             <ProgressiveImage src={applePodcast} placeholder={''}>
                                 {(src, loading) => (
                                     <img
@@ -73,7 +73,7 @@ const Sermons = () => {
                             </ProgressiveImage>
                         </a>
 
-                        <a href="https://music.amazon.com/podcasts/f35a0f7b-fd3a-4db2-88ea-38c1b927fd45/issaquah-christian-church" target='_blank' rel='noopener'>
+                        <a href="https://music.amazon.com/podcasts/f35a0f7b-fd3a-4db2-88ea-38c1b927fd45/issaquah-christian-church" target='_blank' rel='noopener' aria-label="Listen to ICC on Amazon Music" title="Listen to ICC on Amazon Music" >
                             <ProgressiveImage src={amazonMusic} placeholder={''}>
                                 {(src, loading) => (
                                     <img
@@ -87,7 +87,7 @@ const Sermons = () => {
 
                     </div>
 
-                    <a href="https://www.youtube.com/channel/UCT0ZOk1ORNepZtu7E0IQaCQ" target='_blank' rel='noopener'>
+                    <a href="https://www.youtube.com/channel/UCT0ZOk1ORNepZtu7E0IQaCQ" target='_blank' rel='noopener' aria-label="Subscribe to the ICC YouTube Channel" title="Subscribe to the ICC YouTube Channel" >
                     <ProgressiveImage src={youtubeChannel} placeholder={''}>
                         {(src, loading) => (
                             <img

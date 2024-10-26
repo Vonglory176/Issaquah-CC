@@ -7,7 +7,7 @@ const HamburgerMenu = ({ isOpen, toggleMenu }) => {
   // const location = useLocation()  
 
   return (
-    <button className={`hamburger-container h-full lg:hidden p-4 mr-[-16px] ${isOpen ? 'active' : ''}`} onClick={toggleMenu}>
+    <button className={`hamburger-container h-full lg:hidden p-4 mr-[-16px] ${isOpen ? 'active' : ''}`} onClick={toggleMenu} aria-label='Open the hamburger menu' >
       
       
       {/* <FaBars size={28} /> */}

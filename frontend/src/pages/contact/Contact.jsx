@@ -24,7 +24,7 @@ const Contact = () => {
             <div className="flex flex-col gap-4 max-w-[600px] mx-auto">
                 <h2 className='font-bold'>Prayer Requests</h2>
 
-                <p>If you have a prayer request, please contact us at <a href="mailto:office@issaquah.cc" className='text-[var(--font-active-color-1)]'>office@issaquah.cc</a> and we will send it to our prayer team.</p>
+                <p>If you have a prayer request, please contact us at <a href="mailto:office@issaquah.cc" target='_blank' rel='noopener noreferrer' aria-label="Email the ICC office" title="Email the ICC office" >office@issaquah.cc</a> and we will send it to our prayer team.</p>
             </div>
 
             <div className="map-container shadow-md rounded-lg overflow-hidden bg-white" style={{width: '100%', height: '300px', position: 'relative', margin: '20px auto'}}>

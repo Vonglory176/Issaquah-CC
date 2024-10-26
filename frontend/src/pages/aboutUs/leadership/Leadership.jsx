@@ -94,7 +94,7 @@ const Leadership = () => {
                             <div className='text-center flex flex-col gap-2'>
                                 <p className='italic text-[var(--font-color-4)] text-sm md:text-base'>{person.quote}</p>
                                 <p className='text-left'>{person.description}</p>
-                                <a href={`mailto:${person.email}`} className='text-sm md:text-base text-[var(--font-active-color-1)]'>{person.email}</a>
+                                <a href={`mailto:${person.email}`} className='text-sm md:text-base text-[var(--font-active-color-1)]' rel='noopener noreferrer' target='_blank' aria-label={`Send an Email to ${person.name}`} title={`Send an Email to ${person.name}`}>{person.email}</a>
                             </div>
 
 

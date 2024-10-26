@@ -117,7 +117,7 @@ const PrayerRequests = () => {
 
             <div className='flex flex-col gap-4 text-center'>
                 <h2 className='font-bold'>Please enter your information below</h2> {/*  and requests */}
-                <p className=''>If the form does not work or you are having trouble filling it out, please email us directly at <a href="mailto:office@issaquah.cc" target='_blank' rel='noopener noreferrer'>office@issaquah.cc</a>.</p>
+                <p className=''>If the form does not work or you are having trouble filling it out, please email us directly at <a href="mailto:office@issaquah.cc" target='_blank' rel='noopener noreferrer' aria-label="Email the ICC office" title="Email the ICC office" >office@issaquah.cc</a>.</p>
             </div>
 
             <hr className='border border-[var(--border-color-3)]  my-8' />
@@ -195,16 +195,16 @@ const PrayerRequests = () => {
                             <label htmlFor="form-field-fbf71ca8-3f12-11ef-9dae-0614187498c1" className='font-bold'>I am a ... {formErrors.frequency && <span className='form-group-error-text'>{formErrors.frequency}</span>}</label>
                             <div>
                                 <div className="radio">
-                                    <label><input aria-label="I am a ..." type="radio" name="form-field-fbf71ca8-3f12-11ef-9dae-0614187498c1" tabindex="10100005" value="fbfb3176-3f12-11ef-ba61-0614187498c1" /> 1st Time Guest</label>
+                                    <label><input aria-label="I am a ..." type="radio" name="form-field-fbf71ca8-3f12-11ef-9dae-0614187498c1" tabIndex="10100005" value="fbfb3176-3f12-11ef-ba61-0614187498c1" /> 1st Time Guest</label>
                                 </div>
                                 <div className="radio">
-                                    <label><input aria-label="I am a ..." type="radio" name="form-field-fbf71ca8-3f12-11ef-9dae-0614187498c1" tabindex="10100005" value="fc089f3c-3f12-11ef-8bad-0614187498c1" /> 2nd Time Guest</label>
+                                    <label><input aria-label="I am a ..." type="radio" name="form-field-fbf71ca8-3f12-11ef-9dae-0614187498c1" tabIndex="10100005" value="fc089f3c-3f12-11ef-8bad-0614187498c1" /> 2nd Time Guest</label>
                                 </div>
                                 <div className="radio">
-                                    <label><input aria-label="I am a ..." type="radio" name="form-field-fbf71ca8-3f12-11ef-9dae-0614187498c1" tabindex="10100005" value="fbff72ae-3f12-11ef-ad23-0614187498c1" /> Regular Attendee</label>
+                                    <label><input aria-label="I am a ..." type="radio" name="form-field-fbf71ca8-3f12-11ef-9dae-0614187498c1" tabIndex="10100005" value="fbff72ae-3f12-11ef-ad23-0614187498c1" /> Regular Attendee</label>
                                 </div>
                                 <div className="radio">
-                                    <label><input aria-label="I am a ..." type="radio" name="form-field-fbf71ca8-3f12-11ef-9dae-0614187498c1" tabindex="10100005" value="fc120950-3f12-11ef-9149-0614187498c1" /> Member</label>
+                                    <label><input aria-label="I am a ..." type="radio" name="form-field-fbf71ca8-3f12-11ef-9dae-0614187498c1" tabIndex="10100005" value="fc120950-3f12-11ef-9149-0614187498c1" /> Member</label>
                                 </div>
                             </div>
                             {/* {formErrors.frequency && <p className='form-group-error-text'>{formErrors.frequency}</p>} */}
@@ -215,16 +215,16 @@ const PrayerRequests = () => {
                             <label htmlFor="form-field-4eb87a70-3f10-11ef-be19-0614187498c1" className='font-bold'>How did you hear about us? {formErrors.referrer && <span className='form-group-error-text'>{formErrors.referrer}</span>}</label>
                             <div>
                                 <div className="checkbox">
-                                    <label><input aria-label="Friend / Other" type="checkbox" tabindex="10100006" name="form-field-4eb87a70-3f10-11ef-be19-0614187498c1[4ec5e188-3f10-11ef-8b10-0614187498c1]" /> Friend / Other</label>
+                                    <label><input aria-label="Friend / Other" type="checkbox" tabIndex="10100006" name="form-field-4eb87a70-3f10-11ef-be19-0614187498c1[4ec5e188-3f10-11ef-8b10-0614187498c1]" /> Friend / Other</label>
                                 </div>
                                 <div className="checkbox">
-                                    <label><input aria-label="Drive By" type="checkbox" tabindex="10100006" name="form-field-4eb87a70-3f10-11ef-be19-0614187498c1[86258d72-3f10-11ef-aa8e-0614187498c1]" /> Drive By</label>
+                                    <label><input aria-label="Drive By" type="checkbox" tabIndex="10100006" name="form-field-4eb87a70-3f10-11ef-be19-0614187498c1[86258d72-3f10-11ef-aa8e-0614187498c1]" /> Drive By</label>
                                 </div>
                                 <div className="checkbox">
-                                    <label><input aria-label="Facebook / Youtube / Instagram" type="checkbox" tabindex="10100006" name="form-field-4eb87a70-3f10-11ef-be19-0614187498c1[4ec5ba46-3f10-11ef-836c-0614187498c1]" /> Facebook / Youtube / Instagram</label>
+                                    <label><input aria-label="Facebook / Youtube / Instagram" type="checkbox" tabIndex="10100006" name="form-field-4eb87a70-3f10-11ef-be19-0614187498c1[4ec5ba46-3f10-11ef-836c-0614187498c1]" /> Facebook / Youtube / Instagram</label>
                                 </div>
                                 <div className="checkbox">
-                                    <label><input aria-label="Website" type="checkbox" tabindex="10100006" name="form-field-4eb87a70-3f10-11ef-be19-0614187498c1[4ec60e2e-3f10-11ef-a26d-0614187498c1]" /> Website</label>
+                                    <label><input aria-label="Website" type="checkbox" tabIndex="10100006" name="form-field-4eb87a70-3f10-11ef-be19-0614187498c1[4ec60e2e-3f10-11ef-a26d-0614187498c1]" /> Website</label>
                                 </div>
                             </div>
                             {/* {formErrors.referrer && <p className='form-group-error-text form-group-error-text'>{formErrors.referrer}</p>} */}
@@ -239,22 +239,22 @@ const PrayerRequests = () => {
                             <label htmlFor="form-field-59ad036e-3f11-11ef-b029-0614187498c1" className='font-bold'>Please contact me: {formErrors.contact && <span className='form-group-error-text'>{formErrors.contact}</span>}</label>
                             <div>
                                 <div className="checkbox">
-                                    <label><input aria-label="I am committing my life to Christ." type="checkbox" tabindex="10100007" name="form-field-59ad036e-3f11-11ef-b029-0614187498c1[59b89f1c-3f11-11ef-b12f-0614187498c1]" /> I am committing my life to Christ.</label>
+                                    <label><input aria-label="I am committing my life to Christ." type="checkbox" tabIndex="10100007" name="form-field-59ad036e-3f11-11ef-b029-0614187498c1[59b89f1c-3f11-11ef-b12f-0614187498c1]" /> I am committing my life to Christ.</label>
                                 </div>
                                 <div className="checkbox">
-                                    <label><input aria-label="I want to be baptized." type="checkbox" tabindex="10100007" name="form-field-59ad036e-3f11-11ef-b029-0614187498c1[59b9394a-3f11-11ef-9154-0614187498c1]" /> I want to be baptized.</label>
+                                    <label><input aria-label="I want to be baptized." type="checkbox" tabIndex="10100007" name="form-field-59ad036e-3f11-11ef-b029-0614187498c1[59b9394a-3f11-11ef-9154-0614187498c1]" /> I want to be baptized.</label>
                                 </div>
                                 <div className="checkbox">
-                                    <label><input aria-label="I would like to share my testimony." type="checkbox" tabindex="10100007" name="form-field-59ad036e-3f11-11ef-b029-0614187498c1[b6fd295e-3f11-11ef-ac5c-0614187498c1]" /> I would like to share my testimony.</label>
+                                    <label><input aria-label="I would like to share my testimony." type="checkbox" tabIndex="10100007" name="form-field-59ad036e-3f11-11ef-b029-0614187498c1[b6fd295e-3f11-11ef-ac5c-0614187498c1]" /> I would like to share my testimony.</label>
                                 </div>
                                 <div className="checkbox">
-                                    <label><input aria-label="I am interested in membership." type="checkbox" tabindex="10100007" name="form-field-59ad036e-3f11-11ef-b029-0614187498c1[59b935d0-3f11-11ef-9fdb-0614187498c1]" /> I am interested in membership.</label>
+                                    <label><input aria-label="I am interested in membership." type="checkbox" tabIndex="10100007" name="form-field-59ad036e-3f11-11ef-b029-0614187498c1[59b935d0-3f11-11ef-9fdb-0614187498c1]" /> I am interested in membership.</label>
                                 </div>
                                 <div className="checkbox">
-                                    <label><input aria-label="I am interested in Bible Study, Women's and/or Men's Ministry." type="checkbox" tabindex="10100007" name="form-field-59ad036e-3f11-11ef-b029-0614187498c1[dd19a6da-3f11-11ef-8d0c-0614187498c1]" /> I am interested in Bible Study, Women's and/or Men's Ministry.</label>
+                                    <label><input aria-label="I am interested in Bible Study, Women's and/or Men's Ministry." type="checkbox" tabIndex="10100007" name="form-field-59ad036e-3f11-11ef-b029-0614187498c1[dd19a6da-3f11-11ef-8d0c-0614187498c1]" /> I am interested in Bible Study, Women's and/or Men's Ministry.</label>
                                 </div>
                                 <div className="checkbox">
-                                    <label><input aria-label="Other." type="checkbox" tabindex="10100007" name="form-field-59ad036e-3f11-11ef-b029-0614187498c1[eba2f2e2-3f11-11ef-8314-0614187498c1]" /> Other.</label>
+                                    <label><input aria-label="Other." type="checkbox" tabIndex="10100007" name="form-field-59ad036e-3f11-11ef-b029-0614187498c1[eba2f2e2-3f11-11ef-8314-0614187498c1]" /> Other.</label>
                                 </div>
                             </div>
                             {/* {formErrors.contact && <p className='form-group-error-text'>{formErrors.contact}</p>} */}
@@ -265,22 +265,22 @@ const PrayerRequests = () => {
                             <label htmlFor="form-field-7473709a-3f14-11ef-b635-0614187498c1" className='font-bold'>I would like to serve on the ... {formErrors.serve && <span className='form-group-error-text'>{formErrors.serve}</span>}</label>
                             <div>
                                 <div className="checkbox">
-                                    <label><input aria-label="Hospitality / Serving Team" type="checkbox" tabindex="10100008" name="form-field-7473709a-3f14-11ef-b635-0614187498c1[7481d6ee-3f14-11ef-8c4c-0614187498c1]" /> Hospitality / Serving Team</label>
+                                    <label><input aria-label="Hospitality / Serving Team" type="checkbox" tabIndex="10100008" name="form-field-7473709a-3f14-11ef-b635-0614187498c1[7481d6ee-3f14-11ef-8c4c-0614187498c1]" /> Hospitality / Serving Team</label>
                                 </div>
                                 <div className="checkbox">
-                                    <label><input aria-label="Property Maintenance Team" type="checkbox" tabindex="10100008" name="form-field-7473709a-3f14-11ef-b635-0614187498c1[0bf555c8-3f15-11ef-ac56-0614187498c1]" /> Property Maintenance Team</label>
+                                    <label><input aria-label="Property Maintenance Team" type="checkbox" tabIndex="10100008" name="form-field-7473709a-3f14-11ef-b635-0614187498c1[0bf555c8-3f15-11ef-ac56-0614187498c1]" /> Property Maintenance Team</label>
                                 </div>
                                 <div className="checkbox">
-                                    <label><input aria-label="Women's Ministry Team" type="checkbox" tabindex="10100008" name="form-field-7473709a-3f14-11ef-b635-0614187498c1[b1bd5ccc-3f14-11ef-8eb4-0614187498c1]" /> Women's Ministry Team</label>
+                                    <label><input aria-label="Women's Ministry Team" type="checkbox" tabIndex="10100008" name="form-field-7473709a-3f14-11ef-b635-0614187498c1[b1bd5ccc-3f14-11ef-8eb4-0614187498c1]" /> Women's Ministry Team</label>
                                 </div>
                                 <div className="checkbox">
-                                    <label><input aria-label="Men's Ministry Team" type="checkbox" tabindex="10100008" name="form-field-7473709a-3f14-11ef-b635-0614187498c1[fd52caf0-3f14-11ef-a6f3-0614187498c1]" /> Men's Ministry Team</label>
+                                    <label><input aria-label="Men's Ministry Team" type="checkbox" tabIndex="10100008" name="form-field-7473709a-3f14-11ef-b635-0614187498c1[fd52caf0-3f14-11ef-a6f3-0614187498c1]" /> Men's Ministry Team</label>
                                 </div>
                                 <div className="checkbox">
-                                    <label><input aria-label="Children's Ministry Team" type="checkbox" tabindex="10100008" name="form-field-7473709a-3f14-11ef-b635-0614187498c1[7481f5fc-3f14-11ef-95eb-0614187498c1]" /> Children's Ministry Team</label>
+                                    <label><input aria-label="Children's Ministry Team" type="checkbox" tabIndex="10100008" name="form-field-7473709a-3f14-11ef-b635-0614187498c1[7481f5fc-3f14-11ef-95eb-0614187498c1]" /> Children's Ministry Team</label>
                                 </div>
                                 <div className="checkbox">
-                                    <label><input aria-label="Youth Ministry Team" type="checkbox" tabindex="10100008" name="form-field-7473709a-3f14-11ef-b635-0614187498c1[7484bd8c-3f14-11ef-a3b3-0614187498c1]" /> Youth Ministry Team</label>
+                                    <label><input aria-label="Youth Ministry Team" type="checkbox" tabIndex="10100008" name="form-field-7473709a-3f14-11ef-b635-0614187498c1[7484bd8c-3f14-11ef-a3b3-0614187498c1]" /> Youth Ministry Team</label>
                                 </div>
                             </div>
                         </div>
@@ -292,7 +292,7 @@ const PrayerRequests = () => {
                         <textarea
                             ref={textareaRef}
                             aria-label="Please enter your prayer request or praise report here:"
-                            tabindex="10100009"
+                            tabIndex="10100009"
                             // placeholder="Please feel free to also include any comments, questions or suggestions ..."
                             name="message" // "form-field-2bea9ed6-3f0d-11ef-b8ae-0614187498c1"
                             id="message" // "form-field-2bea9ed6-3f0d-11ef-b8ae-0614187498c1"
@@ -302,13 +302,13 @@ const PrayerRequests = () => {
                             onChange={handleChange}
                         >
                         </textarea>
-                        <label for="message" className='font-bold'>Prayer Request / Praise Report</label> {/* Enter your prayer request or praise report here: */}
+                        <label htmlFor="message" className='font-bold'>Prayer Request / Praise Report</label> {/* Enter your prayer request or praise report here: */}
                         <p className='hidden sm:block text-sm text-[var(--font-color-4)] absolute bottom-[-24px] left-[8px]'>Feel free to also include any comments, questions or suggestions ...</p>
                         {formErrors.message && <p className='form-group-error-text sm:right-[0px] text-right'>{formErrors.message}</p>}
                     </div>
 
                     {/* Submit Button */}
-                    <button type='submit' className='bg-[var(--button-background-color)] text-[var(--button-text-color)] rounded-lg font-semibold border-2 border-[var(--button-hover-background-color)] px-4 py-2 mt-6 rounded-md hover:text-[#D9D9D9] hover:bg-[var(--button-hover-background-color)]'>Submit</button>
+                    <button type='submit' className='bg-[var(--button-background-color)] text-[var(--button-text-color)] rounded-lg font-semibold border-2 border-[var(--button-hover-background-color)] px-4 py-2 mt-6 rounded-md hover:text-[#D9D9D9] hover:bg-[var(--button-hover-background-color)]' aria-label='Submit the prayer request form' >Submit</button>
 
                     {/* Privacy */}
                     <div data-field-id="8ac2417e-3f13-11ef-b4e1-0614187498c1" data-fw-model="FormField" className="">
@@ -317,10 +317,10 @@ const PrayerRequests = () => {
                                 <label htmlFor="form-field-8ac2417e-3f13-11ef-b4e1-0614187498c1" className='font-bold'></label>
                                 <div>
                                     <div className="checkbox">
-                                        <label><input aria-label="Please include me in the Prayer Chain Emails. (Be sure to fill in contact info above)." type="checkbox" tabindex="10100010" name="form-field-8ac2417e-3f13-11ef-b4e1-0614187498c1[8ad72346-3f13-11ef-844c-0614187498c1]" /> Please include me in the Prayer Chain Emails. (Be sure to fill in contact info above).</label>
+                                        <label><input aria-label="Please include me in the Prayer Chain Emails. (Be sure to fill in contact info above)." type="checkbox" tabIndex="10100010" name="form-field-8ac2417e-3f13-11ef-b4e1-0614187498c1[8ad72346-3f13-11ef-844c-0614187498c1]" /> Please include me in the Prayer Chain Emails. (Be sure to fill in contact info above).</label>
                                     </div>
                                     <div className="checkbox">
-                                        <label><input aria-label="Please keep private, except Elders/Pastor." type="checkbox" tabindex="10100010" name="form-field-8ac2417e-3f13-11ef-b4e1-0614187498c1[8ad7276a-3f13-11ef-a4b8-0614187498c1]" /> Please keep private, except Elders/Pastor.</label>
+                                        <label><input aria-label="Please keep private, except Elders/Pastor." type="checkbox" tabIndex="10100010" name="form-field-8ac2417e-3f13-11ef-b4e1-0614187498c1[8ad7276a-3f13-11ef-a4b8-0614187498c1]" /> Please keep private, except Elders/Pastor.</label>
                                     </div>
                                 </div>
                             </div>

@@ -35,7 +35,7 @@ const WhatToExpect = () => {
 
                 <h2 className=''>Worship Service</h2>
 
-                <p>Issaquah Christian Church meets every Sunday Morning at 10:30am for our main service at <a className='text-[var(--font-active-color-1)]' href="https://goo.gl/maps/HYQADAVaDTs" target='_blank' referrerPolicy='no-referrer'>10328 Issaquah-Hobart Rd SE, Issaquah, 98027</a>. As you approach the parking lot, you will see the pathway down to our Worship Center. You can bring your kids with you to the Worship Service and we'll lead them to the Kid Ministry in the middle of the service after our singing time. You may pick up a cup of coffee or tea and an individual communion cup at the service counter. We have plenty of room for you to sit with those you want. We do not require Face Coverings, but respect you if you want to wear one. We can provide you with one if you like.</p>
+                <p>Issaquah Christian Church meets every Sunday Morning at 10:30am for our main service at <a className='text-[var(--font-active-color-1)]' href="https://goo.gl/maps/HYQADAVaDTs" target='_blank' rel='noopener noreferrer' aria-label="View ICC on Google Maps" title="View ICC on Google Maps">10328 Issaquah-Hobart Rd SE, Issaquah, 98027</a>. As you approach the parking lot, you will see the pathway down to our Worship Center. You can bring your kids with you to the Worship Service and we'll lead them to the Kid Ministry in the middle of the service after our singing time. You may pick up a cup of coffee or tea and an individual communion cup at the service counter. We have plenty of room for you to sit with those you want. We do not require Face Coverings, but respect you if you want to wear one. We can provide you with one if you like.</p>
 
             </section>
 

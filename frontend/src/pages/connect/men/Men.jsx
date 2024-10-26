@@ -20,7 +20,7 @@ const Men = () => {
 
             <h2 className='font-bold'>Welcome to The ICC Men's Ministry</h2>
 
-            <p>We are excited to partner with <a href="https://www.impactplayers.org/" target='_blank' rel='noopener noreferrer' className='text-[var(--font-active-color-1)]'>Impact Players</a> for monthly Breakfasts and weekly cohorts for men.</p>
+            <p>We are excited to partner with <a href="https://www.impactplayers.org/" target='_blank' rel='noopener noreferrer' aria-label="Visit the Impact Players website" title="Visit the Impact Players website" >Impact Players</a> for monthly Breakfasts and weekly cohorts for men.</p>
 
 
             <ProgressiveImage src={guyTime} placeholder={''}>

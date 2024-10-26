@@ -40,13 +40,13 @@ const HelpfulResources = () => {
                 {/* <p>Press the HELP button for various resources.</p> */}
                 {/* <p>Press the donate button to give to the "Mercy Fund".</p> */}
 
-                <Link to='/care/local-resources' className='interactive-button'>
+                <Link to='/care/local-resources' className='interactive-button' aria-label="View the Local Resources page" >
                     <div>
                         <p>See Our Resources</p>
                     </div>
                 </Link>
 
-                <a href='https://giving.servantkeeper.com/issaquahcc' target='_blank' rel='noopener noreferrer' className='interactive-button'>
+                <a href='https://giving.servantkeeper.com/issaquahcc' target='_blank' rel='noopener noreferrer' className='interactive-button' aria-label="Open a new tab to the Mercy Fund Donation page" >
                     <div>
                         <p>Mercy Fund Donation</p>
                     </div>
@@ -54,7 +54,7 @@ const HelpfulResources = () => {
 
             </div>
 
-            <p>For prayer requests, please email the ICC office at <a href="mailto:office@issaquah.cc" className='text-[var(--font-active-color-1)]'>office@issaquah.cc</a></p>
+            <p>For prayer requests, please email the ICC office at <a href="mailto:office@issaquah.cc" className='text-[var(--font-active-color-1)]' rel='noopener noreferrer' target='_blank' aria-label="Email the ICC office" title="Email the ICC office" >office@issaquah.cc</a></p>
 
         </PageWrapper>
     )

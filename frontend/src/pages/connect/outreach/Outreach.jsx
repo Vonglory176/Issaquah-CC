@@ -24,43 +24,43 @@ const Outreach = () => {
             <div className='flex flex-col gap-4 md:flex-row md:justify-evenly'>
 
                 <div>
-                    <p>Local Missions:</p>
+                    <p className='font-semibold'>Local Missions:</p>
                     <ul className=' list-disc pl-4 ml-4 sm:ml-6'>
                         <li>
-                            <a href="http://www.ugm.org/site/PageServer?pagename=default" target='_blank' rel='noopener noreferrer' className='text-[var(--font-active-color-1)]'>Seattle Union Gospel Mission</a>
+                            <a href="http://www.ugm.org/site/PageServer?pagename=default" target='_blank' rel='noopener noreferrer' >Seattle Union Gospel Mission</a>
                         </li>
                         <li>
-                            <a href="https://www.issaquahfoodbank.org/" target='_blank' rel='noopener noreferrer' className='text-[var(--font-active-color-1)]'>Issaquah Food and Clothing Bank</a>
+                            <a href="https://www.issaquahfoodbank.org/" target='_blank' rel='noopener noreferrer'>Issaquah Food and Clothing Bank</a>
                         </li>
                         <li>
-                            <a href="mailTo:office@issaquah.cc" target='_blank' rel='noopener noreferrer' className='text-[var(--font-active-color-1)]'>Issaquah Hot Meal Program</a>
+                            <a href="mailTo:office@issaquah.cc" target='_blank' rel='noopener noreferrer'>Issaquah Hot Meal Program</a>
                         </li>
                         <li>
-                            <a href="https://www.pleasantvalleycamp.org/" target='_blank' rel='noopener noreferrer' className='text-[var(--font-active-color-1)]'>Pleasant Valley Christian Camp</a>
+                            <a href="https://www.pleasantvalleycamp.org/" target='_blank' rel='noopener noreferrer'>Pleasant Valley Christian Camp</a>
                         </li>
                         <li>
-                            <a href="https://youtu.be/EtI7Wncy7uk" target='_blank' rel='noopener noreferrer' className='text-[var(--font-active-color-1)]'>Arnold and Justin Corsiga (Philippines)</a>
+                            <a href="https://youtu.be/EtI7Wncy7uk" target='_blank' rel='noopener noreferrer'>Arnold and Justin Corsiga (Philippines)</a>
                         </li>
                         <li>
-                            <a href="http://www.goincmissions.org/" target='_blank' rel='noopener noreferrer' className='text-[var(--font-active-color-1)]'>GO Inc.</a>
+                            <a href="http://www.goincmissions.org/" target='_blank' rel='noopener noreferrer'>GO Inc. Missions</a>
                         </li>
                         <li>
-                            <a href="https://www.issaquah.cc/outreach#:~:text=International%20Disaster%20Emergency%20Services%20(IDES)" target='_blank' rel='noopener noreferrer' className='text-[var(--font-active-color-1)]'>International Disaster Emergency Services (IDES)</a>
+                            <a href="https://www.issaquah.cc/outreach#:~:text=International%20Disaster%20Emergency%20Services%20(IDES)" target='_blank' rel='noopener noreferrer'>International Disaster Emergency Services (IDES)</a>
                         </li>
                         <li>
-                            <a href="https://www.issaquah.cc/outreach#:~:text=Global%20Vision%20Citadelle%20Ministries" target='_blank' rel='noopener noreferrer' className='text-[var(--font-active-color-1)]'>Global Vision Citadelle Ministries</a>
+                            <a href="https://www.issaquah.cc/outreach#:~:text=Global%20Vision%20Citadelle%20Ministries" target='_blank' rel='noopener noreferrer'>Global Vision Citadelle Ministries</a>
                         </li>
                     </ul>
                 </div>
 
                 <div>
-                    <p>International Missions:</p> {/* <p>Short term trips to:</p> */}
+                    <p className='font-semibold'>International Missions:</p> {/* <p>Short term trips to:</p> */}
                     <ul className=' list-disc pl-4 ml-4 sm:ml-6'>
                         <li>
-                            <a href="mailTo:office@issaquah.cc" target='_blank' rel='noopener noreferrer' className='text-[var(--font-active-color-1)]'>Mexico</a>
+                            <a href="mailTo:office@issaquah.cc" target='_blank' rel='noopener noreferrer'>Mexico</a>
                         </li>
                         <li>
-                            <a href="mailTo:office@issaquah.cc" target='_blank' rel='noopener noreferrer' className='text-[var(--font-active-color-1)]'>Haiti</a>
+                            <a href="mailTo:office@issaquah.cc" target='_blank' rel='noopener noreferrer'>Haiti</a>
                         </li>
                     </ul>
                 </div>

@@ -15,7 +15,7 @@ const Footer = () => {
         <div className="footer-left flex flex-col gap-4">
 
           {/* Logo */}
-          <Link to={'/'} className='flex h-[80px] w-fit'>
+          <Link to={'/'} className='flex h-[80px] w-fit' aria-label='Return to home page' title='Return to home page'>
             <ProgressiveImage src={logo} placeholder={''}>
               {(src, loading) => (
                 <img
@@ -29,9 +29,9 @@ const Footer = () => {
 
           {/* Social Media Icons */}
           <ul className='flex gap-4'>
-            <li><a href={process.env.REACT_APP_FACEBOOK} target='_blank' rel='noopener noreferrer'><FaFacebookSquare size={32} /></a></li>
-            <li><a href={process.env.REACT_APP_INSTAGRAM} target='_blank' rel='noopener noreferrer'><FaInstagramSquare size={32} /></a></li>
-            <li><a href={process.env.REACT_APP_YOUTUBE} target='_blank' rel='noopener noreferrer'><FaYoutubeSquare size={32} /></a></li>
+            <li><a href={process.env.REACT_APP_FACEBOOK} target='_blank' rel='noopener noreferrer' aria-label="Visit the ICC Facebook page" title="Visit the ICC Facebook page" ><FaFacebookSquare size={32} /></a></li>
+            <li><a href={process.env.REACT_APP_INSTAGRAM} target='_blank' rel='noopener noreferrer' aria-label="Visit the ICC Instagram page" title="Visit the ICC Instagram page" ><FaInstagramSquare size={32} /></a></li>
+            <li><a href={process.env.REACT_APP_YOUTUBE} target='_blank' rel='noopener noreferrer' aria-label="Visit the ICC YouTube page" title="Visit the ICC YouTube page" ><FaYoutubeSquare size={32} /></a></li>
           </ul>
 
         </div>
@@ -44,7 +44,8 @@ const Footer = () => {
             {/* Address */}
             <li>
               <a
-                aria-label="view on google maps"
+                aria-label="View ICC on Google Maps"
+                title="View ICC on Google Maps"
                 href={process.env.REACT_APP_ADDRESS_URL}
                 target='_blank'
                 rel='noopener noreferrer'
@@ -58,7 +59,8 @@ const Footer = () => {
             {/* Phone */}
             <li>
               <a
-                aria-label="send a text"
+                aria-label="Call or Text ICC"
+                title="Call or Text ICC"
                 href={`tel:${process.env.REACT_APP_PHONE}`}
                 className='flex items-center gap-2'
               >
@@ -70,7 +72,8 @@ const Footer = () => {
             {/* Email */}
             <li>
               <a
-                aria-label="send an email"
+                aria-label="Send an Email to ICC"
+                title="Send an Email to ICC"
                 href={`mailto:${process.env.REACT_APP_EMAIL}`}
                 className='flex items-center gap-2'
               >

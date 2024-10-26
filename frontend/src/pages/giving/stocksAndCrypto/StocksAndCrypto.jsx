@@ -25,10 +25,10 @@ const StocksAndCrypto = () => {
 
             <div className='flex flex-col gap-4'>
                 <h2 className=''>Check out Daffy</h2>
-                <p>Consider using <a href="https://daffy.org/charities/237326840" target='_blank' rel='noopener' className='text-[var(---1)]'>Daffy</a> to send ICC some of your stocks with a high Cost Basis or CryptoCurrency you don't want to pay the high tax rate on. <a href="https://daffy.org/charities/237326840" target='_blank' rel='noopener' className='text-[var(--font-active-color-1)]'>Issaquah Christian Church</a> has a page all set up and ready to receive your charitable donations. When you donate, they immediately cash it out into their Donor Advised Fund and you have it waiting to assign. They send you all the tax documents and don't charge the church any transaction fees.</p>
+                <p>Consider using <a href="https://daffy.org/charities/237326840" target='_blank' rel='noopener noreferrer' aria-label="Donate to ICC using Daffy" title="Donate to ICC using Daffy" >Daffy</a> to send ICC some of your stocks with a high Cost Basis or CryptoCurrency you don't want to pay the high tax rate on. <a href="https://daffy.org/charities/237326840" target='_blank' rel='noopener noreferrer' aria-label="Return to the ICC home page" title="Return to the ICC home page" >Issaquah Christian Church</a> has a page all set up and ready to receive your charitable donations. When you donate, they immediately cash it out into their Donor Advised Fund and you have it waiting to assign. They send you all the tax documents and don't charge the church any transaction fees.</p>
             </div>
 
-            <hr className='border border-[var(--border-color-3)]' />
+            <hr />
 
             <VideoContainer src="https://www.youtube.com/embed/t93mpNpVgh8?si=XJzJW5K16OVqRgKL" className='' />
 

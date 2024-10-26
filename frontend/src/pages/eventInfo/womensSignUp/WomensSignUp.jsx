@@ -115,7 +115,7 @@ const WomensSignUp = () => {
 
             <div className='flex flex-col gap-4 text-center'>
                 <h2 className='font-bold'>Please enter your information below</h2>
-                <p className=''>If the form does not work or you are having trouble filling it out, please email us directly at <a href="mailto:office@issaquah.cc" target='_blank' rel='noopener noreferrer'>office@issaquah.cc</a>.</p>
+                <p className=''>If the form does not work or you are having trouble filling it out, please email us directly at <a href="mailto:office@issaquah.cc" target='_blank' rel='noopener noreferrer' aria-label="Email the ICC office" title="Email the ICC office" >office@issaquah.cc</a>.</p>
             </div>
 
             <hr className='border border-[var(--border-color-3)]  my-8' />
@@ -286,7 +286,7 @@ const WomensSignUp = () => {
                     </div>
 
                     {/* Submit Button */}
-                    <button type='submit' className='bg-[var(--button-background-color)] text-[var(--button-text-color)] rounded-lg font-semibold border-2 border-[var(--button-hover-background-color)] px-4 py-2 mt-6 rounded-md hover:text-[#D9D9D9] hover:bg-[var(--button-hover-background-color)]'>Submit</button>
+                    <button type='submit' className='bg-[var(--button-background-color)] text-[var(--button-text-color)] rounded-lg font-semibold border-2 border-[var(--button-hover-background-color)] px-4 py-2 mt-6 rounded-md hover:text-[#D9D9D9] hover:bg-[var(--button-hover-background-color)]' aria-label='Submit the womens retreat sign up form' >Submit</button>
 
                 </div>
 
