@@ -15,6 +15,7 @@ const BigCalendar = () => {
     const [isLoading, setIsLoading] = useState(true)
     const fetchEvents = async (startDate, endDate) => {
         try {
+            setEvents([])
             setIsLoading(true)
 
             const response = await getCalendarEventsHook({ timeMin: startDate.toISOString(), timeMax: endDate.toISOString(), maxResults: 1000 })
