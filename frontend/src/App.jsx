@@ -103,11 +103,15 @@ export default App;
     - Calendar
     - Forms
 
+  Create 'email sent' modal after form submission
+
+  Finish email formatting
+
   Look at proxies to mesh with CSP better?
 
   Nonce generation? ( use in script-src + "strict-dynamic" )
 
-  Implement ReCaptcha for Forms (PrayerRequests/WomensSignUp)
+  Implement ReCaptcha for Forms (PrayerRequests/WomensSignUp) (ADD TO EMAILJS)
 
   Clean/Hook up form-submission
 
