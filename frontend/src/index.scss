@@ -222,13 +222,19 @@ form {
         }
     }
 
+    .radio, .checkbox {
+        display: flex;
+        align-items: baseline; // center;
+        gap: 0.5rem;
+    }
+
     .form-group {
         position: relative;
         display: flex;
         flex-direction: column;
         gap: 0.5rem;
 
-        & > label {
+        & > label, legend {
             color: var(--font-color-4);
         }
     }
