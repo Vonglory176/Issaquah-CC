@@ -19,6 +19,19 @@ if ('serviceWorker' in navigator) {
   })
 }
 
+// Unregister service worker
+// if ('serviceWorker' in navigator) {
+//   navigator.serviceWorker.getRegistrations().then(registrations => {
+//     for (const registration of registrations) {
+//       registration.unregister().then(() => {
+//         console.log('Service Worker unregistered')
+//       })
+//     }
+//   }).catch(error => {
+//     console.error('Error unregistering service workers:', error)
+//   })
+// }
+
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
   <BrowserRouter>
