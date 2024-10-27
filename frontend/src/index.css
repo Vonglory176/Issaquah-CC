@@ -661,13 +661,18 @@ form input:focus, form textarea:focus {
   outline: none;
   z-index: 2;
 }
+form .radio, form .checkbox {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
 form .form-group {
   position: relative;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
-form .form-group > label {
+form .form-group > label, form .form-group legend {
   color: var(--font-color-4);
 }
 form .form-group-text-input {
