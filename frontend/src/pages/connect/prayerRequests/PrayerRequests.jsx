@@ -1,37 +1,73 @@
 import React, { useEffect, useRef, useState } from 'react'
 import PageWrapper from '../../../components/pageWrapper/PageWrapper'
 import autosize from 'autosize'
+import emailjs from 'emailjs-com'
 
 import guyPraying from '../../../assets/images/backgrounds/guy-praying.webp'
 import guyPrayingSmall from '../../../assets/images/backgrounds/guy-praying-small.webp'
 
 const PrayerRequests = () => {
 
-    const [formData, setFormData] = useState({
-        firstname: '',
-        lastname: '',
-        email: '',
-        phone: '',
-        frequency: '',
-        referrer: '',
-        contact: '',
-        serve: '',
-        message: ''
-    })
-    const [formErrors, setFormErrors] = useState({
-        firstname: false,
-        lastname: false,
-        email: false,
-        phone: false,
-        frequency: false,
-        referrer: false,
-        contact: false,
-        serve: false,
-        message: false,
-
-        errorExists: false
-    })
+    const [formData, setFormData] = useState()
+    const [formErrors, setFormErrors] = useState()
     const [formSuccess, setFormSuccess] = useState(false)
+
+    // Initialize form data
+    const resetForm = () => {
+        setFormData({
+            firstName: '', // 'John',
+            lastName: '', // 'Doe',
+            email: '', // 'john.doe@example.com',
+            phone: '', // '123-456-7890',
+            attendance: '', // 'Regular Attendee',
+            referrer: {
+                friend: false,
+                walkIn: false,
+                socialMedia: false,
+                website: false,
+                other: false
+            },
+            contact: {
+                commitmentToChrist: false,
+                baptism: false,
+                testimony: false,
+                membership: false,
+                events: false, // bibleStudyWomenMenMinistry: false,
+                other: false
+            },
+            service: {
+                hospitalityServingTeam: false,
+                propertyMaintenanceTeam: false,
+                womensMinistryTeam: false,
+                mensMinistryTeam: false,
+                childrensMinistryTeam: false,
+                youthMinistryTeam: false
+            },
+            message: '', // 'This is a test prayer request',
+            privacy: {
+                prayerChainEmails: false,
+                privateExceptEldersPastor: false
+            }
+        })
+
+        setFormErrors({
+            firstName: false,
+            lastName: false,
+            email: false,
+            phone: false,
+            // attendance: false,
+            // referrer: false,
+            // contact: false,
+            // service: false,
+            message: false,
+
+            errorExists: false
+        })
+    }
+
+    useEffect(() => {
+        resetForm()
+    }, [])
 
     // Auto-resize textarea
     const textareaRef = useRef(null)
@@ -42,10 +78,27 @@ const PrayerRequests = () => {
     }, [])
 
     // Handle form input changes
-    const handleChange = (e) => {
+    const handleTextChange = (e) => {
         console.log(e.target.value)
-        const fieldName = e.target.name.replace(/-/g, '')
-        setFormData({ ...formData, [fieldName]: e.target.value })
+        // const fieldName = e.target.name.replace(/-/g, '')
+        setFormData({ ...formData, [e.target.name]: e.target.value })
+    }
+
+    const handleRadioChange = (e) => {
+        console.log(e.target.value)
+        setFormData({ ...formData, [e.target.name]: e.target.value })
+    }
+
+    const handleCheckboxChange = (e, checkboxCategory) => {
+        // console.log(e.target.name, e.target.checked)
+
+        setFormData({
+            ...formData,
+            [checkboxCategory]: {
+                ...formData[checkboxCategory],
+                [e.target.name]: e.target.checked
+            }
+        })
     }
 
     // Handle form submission
@@ -58,8 +111,45 @@ const PrayerRequests = () => {
 
             console.log('Form is valid')
 
+            const templateParams = {
+                // to_name: 'ICC Office',
+                // to_email: process.env.REACT_APP_EMAIL,
+
+                firstName: formData.firstName,
+                lastName: formData.lastName,
+                email: formData.email,
+                phone: formData.phone,
+
+                attendance: formData.attendance,
+                referrer: JSON.stringify(formData.referrer, null, 2), // Pretty print JSON
+                contact: JSON.stringify(formData.contact, null, 2),
+                service: JSON.stringify(formData.service, null, 2),
+
+                message: formData.message,
+
+                privacy: JSON.stringify(formData.privacy, null, 2)
+            }
+
+            emailjs.send(
+                process.env.REACT_APP_EMAILJS_SERVICE_ID,
+                process.env.REACT_APP_EMAILJS_PRAYER_REQUEST_TEMPLATE_ID,
+                templateParams,
+                process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+            )
+                .then((response) => {
+                    console.log('SUCCESS!', response.status, response.text)
+                    setFormData({ email: '', subject: '', message: '' })
+                    setFormSuccess("Message sent successfully, thank you for contacting me!")
+                }, (error) => {
+                    console.log('FAILED...', error)
+                    setFormErrors({ ...formErrors, general: "Something went wrong, please try again later", errorExists: true })
+                })
+
+            setFormSuccess(true)
+
         } else {
             console.error('Form is invalid')
+            setFormSuccess(false)
         }
     }
 
@@ -68,26 +158,26 @@ const PrayerRequests = () => {
         const { email, subject, message } = formData
         console.log(email, subject, message)
 
-        const firstnameValid = Boolean(formData.firstname.trim())
-        const lastnameValid = Boolean(formData.lastname.trim())
+        const firstNameValid = Boolean(formData.firstName.trim())
+        const lastNameValid = Boolean(formData.lastName.trim())
         const emailValid = Boolean(email.trim())
         const phoneValid = Boolean(formData.phone.trim())
-        const frequencyValid = Boolean(formData.frequency)
-        const referrerValid = Boolean(formData.referrer)
+        // const attendanceValid = Boolean(formData.attendance)
+        // const referrerValid = Boolean(formData.referrer)
         // const contactValid = Boolean(formData.contact)
         // const serveValid = Boolean(formData.serve)
         const messageValid = Boolean(message.trim())
-        const errorCheck = firstnameValid && lastnameValid && emailValid && phoneValid && frequencyValid && referrerValid && messageValid // && contactValid && serveValid
+        const errorCheck = firstNameValid && lastNameValid && emailValid && phoneValid && messageValid // && attendanceValid && referrerValid && messageValid // && contactValid && serveValid
 
         console.log(errorCheck)
 
         setFormErrors({
-            firstname: firstnameValid ? false : "First name cannot be blank",
-            lastname: lastnameValid ? false : "Last name cannot be blank",
+            firstName: firstNameValid ? false : "First name cannot be blank",
+            lastName: lastNameValid ? false : "Last name cannot be blank",
             email: emailValid ? false : "Email cannot be blank",
             phone: phoneValid ? false : "Phone cannot be blank",
-            frequency: frequencyValid ? false : "Required", // "Frequency cannot be blank",
-            referrer: referrerValid ? false : "Required", // "Referrer cannot be blank",
+            // attendance: attendanceValid ? false : "Required", // "attendance cannot be blank",
+            // referrer: referrerValid ? false : "Required", // "Referrer cannot be blank",
             // contact: contactValid ? false : "Required", // "Contact cannot be blank",
             // serve: serveValid ? false : "Required", // "Serve cannot be blank",
             message: messageValid ? false : "Message cannot be blank",
@@ -97,7 +187,7 @@ const PrayerRequests = () => {
         return errorCheck
     }
 
-    return (
+    return formData && (
         <PageWrapper name='prayer-requests' className='flex flex-col gap-8' maxWidth='max-w-[800px]' bannerSettings={{
             image: {
                 large: guyPraying,
@@ -131,29 +221,29 @@ const PrayerRequests = () => {
                     <div className="form-row flex flex-col gap-4 md:flex-row">
 
                         {/* First Name */}
-                        <div className={`form-group form-group-text-input  ${formData.firstname ? 'is-active' : ''} ${formErrors.firstname ? 'has-error' : ''}`}>
+                        <div className={`form-group form-group-text-input  ${formData.firstName ? 'is-active' : ''} ${formErrors.firstName ? 'has-error' : ''}`}>
                             <input
                                 type="text"
                                 id='first-name'
-                                name='first-name'
-                                value={formData.firstname}
-                                onChange={handleChange}
+                                name='firstName'
+                                value={formData.firstName}
+                                onChange={handleTextChange}
                             />
                             <label htmlFor="first-name" className='font-bold'>First Name</label>
-                            {formErrors.firstname && <p className='form-group-error-text'>{formErrors.firstname}</p>}
+                            {formErrors.firstName && <p className='form-group-error-text'>{formErrors.firstName}</p>}
                         </div>
 
                         {/* Last Name */}
-                        <div className={`form-group form-group-text-input  ${formData.lastname ? 'is-active' : ''} ${formErrors.lastname ? 'has-error' : ''}`}>
+                        <div className={`form-group form-group-text-input  ${formData.lastName ? 'is-active' : ''} ${formErrors.lastName ? 'has-error' : ''}`}>
                             <input
                                 type="text"
                                 id='last-name'
-                                name='last-name'
-                                value={formData.lastname}
-                                onChange={handleChange}
+                                name='lastName'
+                                value={formData.lastName}
+                                onChange={handleTextChange}
                             />
                             <label htmlFor="last-name" className='font-bold'>Last Name</label>
-                            {formErrors.lastname && <p className='form-group-error-text'>{formErrors.lastname}</p>}
+                            {formErrors.lastName && <p className='form-group-error-text'>{formErrors.lastName}</p>}
                         </div>
 
                     </div>
@@ -167,7 +257,7 @@ const PrayerRequests = () => {
                                 id='email'
                                 name='email'
                                 value={formData.email}
-                                onChange={handleChange}
+                                onChange={handleTextChange}
                             />
                             <label htmlFor="email" className='font-bold'>Email</label>
                             {formErrors.email && <p className='form-group-error-text'>{formErrors.email}</p>}
@@ -180,7 +270,7 @@ const PrayerRequests = () => {
                                 id='phone'
                                 name='phone'
                                 value={formData.phone}
-                                onChange={handleChange}
+                                onChange={handleTextChange}
                             />
                             <label htmlFor="phone" className='font-bold'>Phone</label>
                             {formErrors.phone && <p className='form-group-error-text'>{formErrors.phone}</p>}
@@ -191,98 +281,122 @@ const PrayerRequests = () => {
                     <div className="form-row flex flex-col gap-4 md:flex-row">
 
                         {/* I am a ... */}
-                        <div className='form-group form-group-radio'>
-                            <label htmlFor="form-field-fbf71ca8-3f12-11ef-9dae-0614187498c1" className='font-bold'>I am a ... {formErrors.frequency && <span className='form-group-error-text'>{formErrors.frequency}</span>}</label>
-                            <div>
-                                <div className="radio">
-                                    <label><input aria-label="I am a ..." type="radio" name="form-field-fbf71ca8-3f12-11ef-9dae-0614187498c1" tabIndex="10100005" value="fbfb3176-3f12-11ef-ba61-0614187498c1" /> 1st Time Guest</label>
-                                </div>
-                                <div className="radio">
-                                    <label><input aria-label="I am a ..." type="radio" name="form-field-fbf71ca8-3f12-11ef-9dae-0614187498c1" tabIndex="10100005" value="fc089f3c-3f12-11ef-8bad-0614187498c1" /> 2nd Time Guest</label>
-                                </div>
-                                <div className="radio">
-                                    <label><input aria-label="I am a ..." type="radio" name="form-field-fbf71ca8-3f12-11ef-9dae-0614187498c1" tabIndex="10100005" value="fbff72ae-3f12-11ef-ad23-0614187498c1" /> Regular Attendee</label>
-                                </div>
-                                <div className="radio">
-                                    <label><input aria-label="I am a ..." type="radio" name="form-field-fbf71ca8-3f12-11ef-9dae-0614187498c1" tabIndex="10100005" value="fc120950-3f12-11ef-9149-0614187498c1" /> Member</label>
-                                </div>
-                            </div>
-                            {/* {formErrors.frequency && <p className='form-group-error-text'>{formErrors.frequency}</p>} */}
-                        </div>
+                        <fieldset className='form-group form-group-radio'>
+                            <legend className='font-bold'>I am a ... {formErrors.attendance && <span className='form-group-error-text'>{formErrors.attendance}</span>}</legend>
+                            <ul>
+                                <li className="radio">
+                                    <input aria-label="I am a 1st Time Guest" type="radio" id="attendance-1st-time-guest" name="attendance" value="1st Time Guest" checked={formData.attendance === '1st Time Guest'} onChange={handleRadioChange} />
+                                    <label htmlFor="attendance-1st-time-guest"> 1st Time Guest</label>
+                                </li>
+                                <li className="radio">
+                                    <input aria-label="I am a 2nd Time Guest" type="radio" id="attendance-2nd-time-guest" name="attendance" value="2nd Time Guest" checked={formData.attendance === '2nd Time Guest'} onChange={handleRadioChange} />
+                                    <label htmlFor="attendance-2nd-time-guest">2nd Time Guest</label>
+                                </li>
+                                <li className="radio">
+                                    <input aria-label="I am a Regular Attendee" type="radio" id="attendance-regular-attendee" name="attendance" value="Regular Attendee" checked={formData.attendance === 'Regular Attendee'} onChange={handleRadioChange} />
+                                    <label htmlFor="attendance-regular-attendee">Regular Attendee</label>
+                                </li>
+                                <li className="radio">
+                                    <input aria-label="I am a Member" type="radio" id="attendance-member" name="attendance" value="Member" checked={formData.attendance === 'Member'} onChange={handleRadioChange} />
+                                    <label htmlFor="attendance-member">Member</label>
+                                </li>
+                            </ul>
+                            {/* {formErrors.attendance && <p className='form-group-error-text'>{formErrors.attendance}</p>} */}
+                        </fieldset>
 
                         {/* How did you hear about us? */}
-                        <div className="form-group form-group-checkbox">
-                            <label htmlFor="form-field-4eb87a70-3f10-11ef-be19-0614187498c1" className='font-bold'>How did you hear about us? {formErrors.referrer && <span className='form-group-error-text'>{formErrors.referrer}</span>}</label>
-                            <div>
-                                <div className="checkbox">
-                                    <label><input aria-label="Friend / Other" type="checkbox" tabIndex="10100006" name="form-field-4eb87a70-3f10-11ef-be19-0614187498c1[4ec5e188-3f10-11ef-8b10-0614187498c1]" /> Friend / Other</label>
-                                </div>
-                                <div className="checkbox">
-                                    <label><input aria-label="Drive By" type="checkbox" tabIndex="10100006" name="form-field-4eb87a70-3f10-11ef-be19-0614187498c1[86258d72-3f10-11ef-aa8e-0614187498c1]" /> Drive By</label>
-                                </div>
-                                <div className="checkbox">
-                                    <label><input aria-label="Facebook / Youtube / Instagram" type="checkbox" tabIndex="10100006" name="form-field-4eb87a70-3f10-11ef-be19-0614187498c1[4ec5ba46-3f10-11ef-836c-0614187498c1]" /> Facebook / Youtube / Instagram</label>
-                                </div>
-                                <div className="checkbox">
-                                    <label><input aria-label="Website" type="checkbox" tabIndex="10100006" name="form-field-4eb87a70-3f10-11ef-be19-0614187498c1[4ec60e2e-3f10-11ef-a26d-0614187498c1]" /> Website</label>
-                                </div>
-                            </div>
+                        <fieldset className="form-group form-group-checkbox">
+                            <legend htmlFor="form-field-referrer" className='font-bold'>How did you hear about us? {formErrors.referrer && <span className='form-group-error-text'>{formErrors.referrer}</span>}</legend>
+                            <ul>
+                                <li className="checkbox">
+                                    <input aria-label="Referred by Friend" type="checkbox" id="referrer-friend" name="friend" checked={formData.referrer.friend} onChange={(e) => handleCheckboxChange(e, 'referrer', 'friend')} />
+                                    <label htmlFor="referrer-friend">Friend</label>
+                                </li>
+                                <li className="checkbox">
+                                    <input aria-label="Referred by Walk In" type="checkbox" id="referrer-walk-in" name="walkIn" checked={formData.referrer.walkIn} onChange={(e) => handleCheckboxChange(e, 'referrer', 'walkIn')} />
+                                    <label htmlFor="referrer-walk-in">Walk In</label>
+                                </li>
+                                <li className="checkbox">
+                                    <input aria-label="Referred by Social Media" type="checkbox" id="referrer-social-media" name="socialMedia" checked={formData.referrer.socialMedia} onChange={(e) => handleCheckboxChange(e, 'referrer', 'socialMedia')} />
+                                    <label htmlFor="referrer-social-media">Social Media</label>
+                                </li>
+                                <li className="checkbox">
+                                    <input aria-label="Referred by Website" type="checkbox" id="referrer-website" name="website" checked={formData.referrer.website} onChange={(e) => handleCheckboxChange(e, 'referrer', 'website')} />
+                                    <label htmlFor="referrer-website">Website</label>
+                                </li>
+                                <li className="checkbox">
+                                    <input aria-label="Referred by Other" type="checkbox" id="referrer-other" name="other" checked={formData.referrer.other} onChange={(e) => handleCheckboxChange(e, 'referrer', 'other')} />
+                                    <label htmlFor="referrer-other">Other</label>
+                                </li>
+                            </ul>
                             {/* {formErrors.referrer && <p className='form-group-error-text form-group-error-text'>{formErrors.referrer}</p>} */}
-                        </div>
+                        </fieldset>
 
                     </div>
 
                     <div className="form-row flex flex-col gap-4 md:flex-row">
 
                         {/* Please contact me */}
-                        <div className="form-group form-group-checkbox">
-                            <label htmlFor="form-field-59ad036e-3f11-11ef-b029-0614187498c1" className='font-bold'>Please contact me: {formErrors.contact && <span className='form-group-error-text'>{formErrors.contact}</span>}</label>
-                            <div>
-                                <div className="checkbox">
-                                    <label><input aria-label="I am committing my life to Christ." type="checkbox" tabIndex="10100007" name="form-field-59ad036e-3f11-11ef-b029-0614187498c1[59b89f1c-3f11-11ef-b12f-0614187498c1]" /> I am committing my life to Christ.</label>
-                                </div>
-                                <div className="checkbox">
-                                    <label><input aria-label="I want to be baptized." type="checkbox" tabIndex="10100007" name="form-field-59ad036e-3f11-11ef-b029-0614187498c1[59b9394a-3f11-11ef-9154-0614187498c1]" /> I want to be baptized.</label>
-                                </div>
-                                <div className="checkbox">
-                                    <label><input aria-label="I would like to share my testimony." type="checkbox" tabIndex="10100007" name="form-field-59ad036e-3f11-11ef-b029-0614187498c1[b6fd295e-3f11-11ef-ac5c-0614187498c1]" /> I would like to share my testimony.</label>
-                                </div>
-                                <div className="checkbox">
-                                    <label><input aria-label="I am interested in membership." type="checkbox" tabIndex="10100007" name="form-field-59ad036e-3f11-11ef-b029-0614187498c1[59b935d0-3f11-11ef-9fdb-0614187498c1]" /> I am interested in membership.</label>
-                                </div>
-                                <div className="checkbox">
-                                    <label><input aria-label="I am interested in Bible Study, Women's and/or Men's Ministry." type="checkbox" tabIndex="10100007" name="form-field-59ad036e-3f11-11ef-b029-0614187498c1[dd19a6da-3f11-11ef-8d0c-0614187498c1]" /> I am interested in Bible Study, Women's and/or Men's Ministry.</label>
-                                </div>
-                                <div className="checkbox">
-                                    <label><input aria-label="Other." type="checkbox" tabIndex="10100007" name="form-field-59ad036e-3f11-11ef-b029-0614187498c1[eba2f2e2-3f11-11ef-8314-0614187498c1]" /> Other.</label>
-                                </div>
-                            </div>
+                        <fieldset className="form-group form-group-checkbox">
+                            <legend className='font-bold'>Please contact me: {formErrors.contact && <span className='form-group-error-text'>{formErrors.contact}</span>}</legend>
+                            <ul>
+                                <li className="checkbox">
+                                    <input aria-label="I am committing my life to Christ." type="checkbox" id="contact-commitment-to-Christ" name="commitmentToChrist" checked={formData.contact.commitmentToChrist} onChange={(e) => handleCheckboxChange(e, 'contact')} />
+                                    <label htmlFor='contact-commitment-to-Christ'>I am committing my life to Christ.</label>
+                                </li>
+                                <li className="checkbox">
+                                    <input aria-label="I want to be baptized." type="checkbox" id="contact-baptism" name="baptism" checked={formData.contact.baptism} onChange={(e) => handleCheckboxChange(e, 'contact')} />
+                                    <label htmlFor='contact-baptism'>I want to be baptized.</label>
+                                </li>
+                                <li className="checkbox">
+                                    <input aria-label="I would like to share my testimony." type="checkbox" id="contact-testimony" name="testimony" checked={formData.contact.testimony} onChange={(e) => handleCheckboxChange(e, 'contact')} />
+                                    <label htmlFor='contact-testimony'>I would like to share my testimony.</label>
+                                </li>
+                                <li className="checkbox">
+                                    <input aria-label="I am interested in membership." type="checkbox" id="contact-membership" name="membership" checked={formData.contact.membership} onChange={(e) => handleCheckboxChange(e, 'contact')} />
+                                    <label htmlFor='contact-membership'>I am interested in membership.</label>
+                                </li>
+                                <li className="checkbox">
+                                    <input aria-label="I am interested in Bible Study, Women's and/or Men's Ministry." type="checkbox" id="contact-events" name="events" checked={formData.contact.events} onChange={(e) => handleCheckboxChange(e, 'contact')} />
+                                    <label htmlFor='contact-events'>I am interested in Bible Study, Women's and/or Men's Ministry.</label>
+                                </li>
+                                <li className="checkbox">
+                                    <input aria-label="Other." type="checkbox" id="contact-other" name="other" checked={formData.contact.other} onChange={(e) => handleCheckboxChange(e, 'contact', 'other')} />
+                                    <label htmlFor='contact-other'>Other.</label>
+                                </li>
+                            </ul>
                             {/* {formErrors.contact && <p className='form-group-error-text'>{formErrors.contact}</p>} */}
-                        </div>
+                        </fieldset>
 
                         {/* I would to serve on the... */}
                         <div className="form-group form-group-checkbox">
-                            <label htmlFor="form-field-7473709a-3f14-11ef-b635-0614187498c1" className='font-bold'>I would like to serve on the ... {formErrors.serve && <span className='form-group-error-text'>{formErrors.serve}</span>}</label>
-                            <div>
-                                <div className="checkbox">
-                                    <label><input aria-label="Hospitality / Serving Team" type="checkbox" tabIndex="10100008" name="form-field-7473709a-3f14-11ef-b635-0614187498c1[7481d6ee-3f14-11ef-8c4c-0614187498c1]" /> Hospitality / Serving Team</label>
-                                </div>
-                                <div className="checkbox">
-                                    <label><input aria-label="Property Maintenance Team" type="checkbox" tabIndex="10100008" name="form-field-7473709a-3f14-11ef-b635-0614187498c1[0bf555c8-3f15-11ef-ac56-0614187498c1]" /> Property Maintenance Team</label>
-                                </div>
-                                <div className="checkbox">
-                                    <label><input aria-label="Women's Ministry Team" type="checkbox" tabIndex="10100008" name="form-field-7473709a-3f14-11ef-b635-0614187498c1[b1bd5ccc-3f14-11ef-8eb4-0614187498c1]" /> Women's Ministry Team</label>
-                                </div>
-                                <div className="checkbox">
-                                    <label><input aria-label="Men's Ministry Team" type="checkbox" tabIndex="10100008" name="form-field-7473709a-3f14-11ef-b635-0614187498c1[fd52caf0-3f14-11ef-a6f3-0614187498c1]" /> Men's Ministry Team</label>
-                                </div>
-                                <div className="checkbox">
-                                    <label><input aria-label="Children's Ministry Team" type="checkbox" tabIndex="10100008" name="form-field-7473709a-3f14-11ef-b635-0614187498c1[7481f5fc-3f14-11ef-95eb-0614187498c1]" /> Children's Ministry Team</label>
-                                </div>
-                                <div className="checkbox">
-                                    <label><input aria-label="Youth Ministry Team" type="checkbox" tabIndex="10100008" name="form-field-7473709a-3f14-11ef-b635-0614187498c1[7484bd8c-3f14-11ef-a3b3-0614187498c1]" /> Youth Ministry Team</label>
-                                </div>
-                            </div>
+                            <legend className='font-bold'>I would like to serve on the ... {formErrors.service && <span className='form-group-error-text'>{formErrors.service}</span>}</legend>
+                            <ul>
+                                <li className="checkbox">
+                                    <input aria-label="Hospitality / Serving Team" type="checkbox" id="service-hospitality-serving-team" name="hospitalityServingTeam" checked={formData.service.hospitalityServingTeam} onChange={(e) => handleCheckboxChange(e, 'service')} />
+                                    <label htmlFor="service-hospitality-serving-team">Hospitality / Serving Team</label>
+                                </li>
+                                <li className="checkbox">
+                                    <input aria-label="Property Maintenance Team" type="checkbox" id="service-property-maintenance-team" name="propertyMaintenanceTeam" checked={formData.service.propertyMaintenanceTeam} onChange={(e) => handleCheckboxChange(e, 'service')} />
+                                    <label htmlFor="service-property-maintenance-team">Property Maintenance Team</label>
+                                </li>
+                                <li className="checkbox">
+                                    <input aria-label="Women's Ministry Team" type="checkbox" id="service-womens-ministry-team" name="womensMinistryTeam" checked={formData.service.womensMinistryTeam} onChange={(e) => handleCheckboxChange(e, 'service')} />
+                                    <label htmlFor="service-womens-ministry-team">Women's Ministry Team</label>
+                                </li>
+                                <li className="checkbox">
+                                    <input aria-label="Men's Ministry Team" type="checkbox" id="service-mens-ministry-team" name="mensMinistryTeam" checked={formData.service.mensMinistryTeam} onChange={(e) => handleCheckboxChange(e, 'service')} />
+                                    <label htmlFor="service-mens-ministry-team">Men's Ministry Team</label>
+                                </li>
+                                <li className="checkbox">
+                                    <input aria-label="Children's Ministry Team" type="checkbox" id="service-children-ministry-team" name="childrensMinistryTeam" checked={formData.service.childrensMinistryTeam} onChange={(e) => handleCheckboxChange(e, 'service')} />
+                                    <label htmlFor="service-children-ministry-team">Children's Ministry Team</label>
+                                </li>
+                                <li className="checkbox">
+                                    <input aria-label="Youth Ministry Team" type="checkbox" id="service-youth-ministry-team" name="youthMinistryTeam" checked={formData.service.youthMinistryTeam} onChange={(e) => handleCheckboxChange(e, 'service')} />
+                                    <label htmlFor="service-youth-ministry-team">Youth Ministry Team</label>
+                                </li>
+                            </ul>
                         </div>
 
                     </div>
@@ -292,14 +406,13 @@ const PrayerRequests = () => {
                         <textarea
                             ref={textareaRef}
                             aria-label="Please enter your prayer request or praise report here:"
-                            tabIndex="10100009"
                             // placeholder="Please feel free to also include any comments, questions or suggestions ..."
-                            name="message" // "form-field-2bea9ed6-3f0d-11ef-b8ae-0614187498c1"
-                            id="message" // "form-field-2bea9ed6-3f0d-11ef-b8ae-0614187498c1"
+                            name="message"
+                            id="message"
                             // className="form-control min-h-[196px]"
                             rows="2"
                             value={formData.message}
-                            onChange={handleChange}
+                            onChange={handleTextChange}
                         >
                         </textarea>
                         <label htmlFor="message" className='font-bold'>Prayer Request / Praise Report</label> {/* Enter your prayer request or praise report here: */}
@@ -311,22 +424,19 @@ const PrayerRequests = () => {
                     <button type='submit' className='bg-[var(--button-background-color)] text-[var(--button-text-color)] rounded-lg font-semibold border-2 border-[var(--button-hover-background-color)] px-4 py-2 mt-6 rounded-md hover:text-[#D9D9D9] hover:bg-[var(--button-hover-background-color)]' aria-label='Submit the prayer request form' >Submit</button>
 
                     {/* Privacy */}
-                    <div data-field-id="8ac2417e-3f13-11ef-b4e1-0614187498c1" data-fw-model="FormField" className="">
-                        <div>
-                            <div className="form-group form-group-checkbox">
-                                <label htmlFor="form-field-8ac2417e-3f13-11ef-b4e1-0614187498c1" className='font-bold'></label>
-                                <div>
-                                    <div className="checkbox">
-                                        <label><input aria-label="Please include me in the Prayer Chain Emails. (Be sure to fill in contact info above)." type="checkbox" tabIndex="10100010" name="form-field-8ac2417e-3f13-11ef-b4e1-0614187498c1[8ad72346-3f13-11ef-844c-0614187498c1]" /> Please include me in the Prayer Chain Emails. (Be sure to fill in contact info above).</label>
-                                    </div>
-                                    <div className="checkbox">
-                                        <label><input aria-label="Please keep private, except Elders/Pastor." type="checkbox" tabIndex="10100010" name="form-field-8ac2417e-3f13-11ef-b4e1-0614187498c1[8ad7276a-3f13-11ef-a4b8-0614187498c1]" /> Please keep private, except Elders/Pastor.</label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        {/* <span className="react-resizable-handle react-resizable-handle-se"></span> */}
-                    </div>
+                    <fieldset className="form-group form-group-checkbox">
+                        <legend className='font-bold'>Privacy</legend>
+                        <ul>
+                            <li className="checkbox">
+                                <input aria-label="Please include me in the Prayer Chain Emails" type="checkbox" id="privacy-prayer-chain-emails" name="prayerChainEmails" onChange={(e) => handleCheckboxChange(e, 'privacy')} />
+                                <label htmlFor="privacy-prayer-chain-emails">Please include me in the Prayer Chain Emails. <span className='text-gray-500'>(Be sure to fill in contact info above).</span></label>
+                            </li>
+                            <li className="checkbox">
+                                <input aria-label="Please keep private, except Elders/Pastor." type="checkbox" id="privacy-private-except-elders-pastor" name="privateExceptEldersPastor" onChange={(e) => handleCheckboxChange(e, 'privacy')} />
+                                <label htmlFor="privacy-private-except-elders-pastor">Please keep private, except Elders/Pastor.</label>
+                            </li>
+                        </ul>
+                    </fieldset>
 
                 </div>
 
