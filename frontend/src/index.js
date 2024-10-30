@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'
 import App from './App'
 import './index.css'
+import { SiteProvider } from './context/SiteContext'
 
 // import reportWebVitals from './reportWebVitals'
 
@@ -35,7 +36,9 @@ if ('serviceWorker' in navigator) {
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
   <BrowserRouter>
-    <App />
+    <SiteProvider>
+      <App />
+    </SiteProvider>
   </BrowserRouter>
 )
 
