@@ -59,6 +59,7 @@
   height: 60px;
   background-color: var(--background-color-2);
   z-index: -1;
+  border-bottom: 2px solid var(--border-color-2);
 }
 .header nav.open {
   max-height: var(--page-height);
@@ -359,21 +360,6 @@
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
-.calendar-event-description *, .calendar-event-details *, .calendar-event-links * {
-  font-size: 16px !important;
-}
-.calendar-event-description p {
-  margin-bottom: 10px;
-}
-.calendar-event-description ul {
-  margin-left: 2rem;
-  margin-bottom: 10px;
-}
-.calendar-event-description li, .calendar-event-description li b, .calendar-event-description li i {
-  list-style-type: disc;
-  font-size: 14px !important;
-}
-
 .big-calendar {
   position: relative;
 }
@@ -412,6 +398,28 @@
   right: 0;
   background-color: rgba(255, 255, 255, 0.5);
   z-index: 10;
+}
+
+.calendar-event-description *, .calendar-event-details *, .calendar-event-links * {
+  font-size: 16px !important;
+}
+.calendar-event-description p {
+  margin-bottom: 10px;
+}
+.calendar-event-description ul {
+  margin-left: 2rem;
+  margin-bottom: 10px;
+}
+.calendar-event-description li, .calendar-event-description li b, .calendar-event-description li i {
+  list-style-type: disc;
+  font-size: 14px !important;
+}
+
+.modal.re-captcha .modal-content {
+  width: auto;
+}
+.modal.re-captcha .modal-content-wrapper {
+  min-height: 183px;
 }
 
 .home-content {
