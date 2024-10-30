@@ -1,4 +1,4 @@
-const CACHE_NAME = 'my-site-cache-v5'
+const CACHE_NAME = 'my-site-cache-v6'
 const urlsToCache = [
   '/',
 
@@ -43,6 +43,30 @@ self.addEventListener('activate', event => {
   )
 })
 
+// Function to add a timestamp to the cache
+function addToCacheWithTimestamp(cache, request, response) {
+  const clonedResponse = response.clone()
+  const headers = new Headers(clonedResponse.headers)
+  headers.append('sw-cache-timestamp', Date.now().toString())
+
+  const responseWithTimestamp = new Response(clonedResponse.body, {
+    status: clonedResponse.status,
+    statusText: clonedResponse.statusText,
+    headers: headers
+  })
+
+  return cache.put(request, responseWithTimestamp)
+}
+
+// Function to check if the cached response is still valid
+function isResponseFresh(response, maxAge) {
+  const timestamp = response.headers.get('sw-cache-timestamp')
+  if (!timestamp) return false
+
+  const age = (Date.now() - parseInt(timestamp, 10)) / 1000
+  return age < maxAge
+}
+
 // Fetch event - serve cached content
 self.addEventListener('fetch', event => {
   const url = new URL(event.request.url)
@@ -66,20 +90,38 @@ self.addEventListener('fetch', event => {
   }
 
   event.respondWith(
-    caches.match(event.request)
-      .then(cachedResponse => {
-        if (cachedResponse) return cachedResponse
+    caches.open(CACHE_NAME).then(cache => {
+      return cache.match(event.request).then(cachedResponse => {
+        if (cachedResponse && isResponseFresh(cachedResponse, 600)) { // 600 seconds = 10 minutes
+          return cachedResponse
+        }
 
         return fetch(event.request).then(fetchResponse => {
           if (fetchResponse.ok) {
-            return caches.open(CACHE_NAME).then(cache => {
-              cache.put(event.request, fetchResponse.clone())
-              return fetchResponse
-            })
+            addToCacheWithTimestamp(cache, event.request, fetchResponse)
           }
           return fetchResponse
         })
       })
-      .catch(error => console.error('Fetch failed:', error))
+    }).catch(error => console.error('Fetch failed:', error))
   )
 })
+
+//   event.respondWith(
+//     caches.match(event.request)
+//       .then(cachedResponse => {
+//         if (cachedResponse) return cachedResponse
+
+//         return fetch(event.request).then(fetchResponse => {
+//           if (fetchResponse.ok) {
+//             return caches.open(CACHE_NAME).then(cache => {
+//               cache.put(event.request, fetchResponse.clone())
+//               return fetchResponse
+//             })
+//           }
+//           return fetchResponse
+//         })
+//       })
+//       .catch(error => console.error('Fetch failed:', error))
+//   )
+// })
