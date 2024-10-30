@@ -30,7 +30,7 @@ const VideoContainer = ({ src, className }) => {
                 //   height="682"  "315"
                 src={src}
                 title="Embedded Video"
-                sandbox="allow-scripts allow-same-origin"
+                // sandbox="allow-scripts allow-same-origin"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
                 loading="lazy"
