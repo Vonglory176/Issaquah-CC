@@ -1,3 +1,13 @@
+// The appropriate cache TTL (Time To Live) for your service worker depends on the specific needs of your application and how frequently the cached resources are expected to change. Here are some general guidelines:
+
+// 1. Static Assets (e.g., images, CSS, JS): If these assets don't change often, you can set a longer TTL, such as 30 days or more. This reduces the need for users to re-download unchanged assets, improving load times.
+
+// 2. Dynamic Content (e.g., API responses): For content that changes frequently, a shorter TTL, such as 5 to 10 minutes, might be more appropriate to ensure users receive the most up-to-date information.
+
+// 3. HTML Pages: If your HTML content changes frequently, consider a TTL of 1 hour to 1 day, depending on how critical it is for users to see the latest version.
+
+// In your current setup, you have a TTL of 600 seconds (10 minutes) for cached responses. This is a reasonable default for dynamic content. If you want to adjust this, you can modify the maxAge parameter in the isResponseFresh function:
+
 const CACHE_NAME = 'my-site-cache-v6'
 const urlsToCache = [
   '/',
