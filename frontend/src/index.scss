@@ -13,9 +13,11 @@
 @import './components/videoContainer/_videoContainer.scss';
 @import './components/spinner/_spinner.scss';
 @import './components/banner/_banner.scss';
-
-@import './components/calendarEvent/_calendarEvent.scss';
 @import './components/bigCalendar/_bigCalendar.scss';
+
+// Modals
+@import './modals/calendarEvent/_calendarEvent.scss';
+@import './modals/reCaptchaModal/_reCaptchaModal.scss';
 
 
 // Pages
