@@ -26,16 +26,22 @@ import Teens from "./pages/connect/teens/Teens";
 import PrayerRequests from "./pages/connect/prayerRequests/PrayerRequests";
 import WomensSignUp from "./pages/eventInfo/womensSignUp/WomensSignUp";
 import Calendar from "./pages/eventInfo/calendar/Calendar";
+import { useSiteContext } from "./context/SiteContext";
 
 function App() {
-  return (
-    <div className="App relative">
+  const { modal } = useSiteContext()
 
-      <Header />
+  return (
+    <div className={`App relative ${modal ? 'overflow-y-scroll' : ''}`}>
+
+      <Header className={modal ? 'fixed overflow-y-scroll' : 'sticky'} />
 
       <main>
 
-        <Routes>
+        {modal} {/* MODAL DISPLAY */}
+
+        <Routes>  {/* PAGE DISPLAY */}
+
           <Route path="/" element={<Home />} />
 
           {/* About Us */}
@@ -72,7 +78,7 @@ function App() {
           <Route path="/connect/haiti" element={<Haiti />} />
           <Route path="/connect/recommended-bible-apps" element={<BibleApps />} />
           <Route path="/connect/employment" element={<Employment />} />
-          
+
           {/* Contact */}
           <Route path="/contact" element={<Contact />} />
 
@@ -86,7 +92,7 @@ function App() {
       </main>
 
       <Footer />
-      
+
     </div>
   )
 }
@@ -103,15 +109,15 @@ export default App;
     - Calendar
     - Forms
 
-  Create 'email sent' modal after form submission
+  Re-Add CSP ?
 
-  Finish email formatting
+  Get ACTUAL ReCaptcha keys
 
   Look at proxies to mesh with CSP better?
 
   Nonce generation? ( use in script-src + "strict-dynamic" )
 
-  Implement ReCaptcha for Forms (PrayerRequests/WomensSignUp) (ADD TO EMAILJS)
+  Implement ReCaptcha for Forms (WomensSignUp) (ADD TO EMAILJS)
 
   Clean/Hook up form-submission
 
