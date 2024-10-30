@@ -6,7 +6,7 @@ import { Link, NavLink, useLocation } from 'react-router-dom'
 import HamburgerMenu from '../hamburgerMenu/HamburgerMenu'
 import Dropdown from '../dropdown/Dropdown'
 
-const Header = () => {
+const Header = ({ className }) => {
   const [isOpen, setIsOpen] = useState(false)
   const [openDropdown, setOpenDropdown] = useState(null)
   const location = useLocation()
@@ -35,7 +35,7 @@ const Header = () => {
   // }, [openDropdown])
 
   return (
-    <header className='header h-[var(--header-height)] sticky mb-[-60px] top-0 left-0 right-0 z-50 shadow-lg'>
+    <header className={`header h-[var(--header-height)] mb-[-60px] top-0 left-0 right-0 z-50 shadow-lg ${className}`}>
 
       <div className="header-wrapper relative flex items-center justify-between h-full px-8 xl:px-[8vw]">
 
