@@ -2,11 +2,15 @@ import React, { useEffect, useRef, useState } from 'react'
 import PageWrapper from '../../../components/pageWrapper/PageWrapper'
 import autosize from 'autosize'
 import emailjs from 'emailjs-com'
+import { useSiteContext } from '../../../context/SiteContext'
+import ReCaptchaModal from '../../../modals/reCaptchaModal/ReCaptchaModal'
 
 import guyPraying from '../../../assets/images/backgrounds/guy-praying.webp'
 import guyPrayingSmall from '../../../assets/images/backgrounds/guy-praying-small.webp'
+import OutcomeModal from '../../../modals/outcomeModal/OutcomeModal'
 
 const PrayerRequests = () => {
+    const { showModal } = useSiteContext()
 
     const [formData, setFormData] = useState()
     const [formErrors, setFormErrors] = useState()
@@ -101,33 +105,54 @@ const PrayerRequests = () => {
         })
     }
 
-    // Handle form submission
-    const handleSubmit = (e) => {
+    const handleReCaptchaSubmission = (e) => {
+        console.log('ReCaptcha submission')
         e.preventDefault()
 
+        showModal(<ReCaptchaModal submissionCallback={handleSubmitForm} />)
+    }
+
+    // Handle form submission
+    const handleSubmitForm = (recaptchaResponse) => {
+        // e.preventDefault()
+
         setFormSuccess(false)
+
+        if (!recaptchaResponse) {
+            alert('Something went wrong, please try again later')
+            return
+        }
 
         if (validateForm()) {
 
             console.log('Form is valid')
 
+            const transformObject = (obj) => {
+                return Object.keys(obj).reduce((acc, key) => {
+                    acc[key] = obj[key] ? 'True' : ''
+                    return acc
+                }, {})
+            }
+
             const templateParams = {
                 // to_name: 'ICC Office',
                 // to_email: process.env.REACT_APP_EMAIL,
+
+                'g-recaptcha-response': recaptchaResponse,
 
                 firstName: formData.firstName,
                 lastName: formData.lastName,
                 email: formData.email,
                 phone: formData.phone,
 
-                attendance: formData.attendance,
-                referrer: JSON.stringify(formData.referrer, null, 2), // Pretty print JSON
-                contact: JSON.stringify(formData.contact, null, 2),
-                service: JSON.stringify(formData.service, null, 2),
+                attendance: formData.attendance ? formData.attendance : 'N/A',
+                referrer: transformObject(formData.referrer),
+                contact: transformObject(formData.contact),
+                service: transformObject(formData.service),
 
                 message: formData.message,
 
-                privacy: JSON.stringify(formData.privacy, null, 2)
+                privacy: transformObject(formData.privacy)
             }
 
             emailjs.send(
@@ -138,11 +163,19 @@ const PrayerRequests = () => {
             )
                 .then((response) => {
                     console.log('SUCCESS!', response.status, response.text)
-                    setFormData({ email: '', subject: '', message: '' })
-                    setFormSuccess("Message sent successfully, thank you for contacting me!")
+                    // setFormData({ email: '', subject: '', message: '' })
+                    resetForm()
+                    showModal(<OutcomeModal title="Prayer Request Sent" message="Thank you for reaching out with your Prayer Request. If you have any questions, please contact us directly at office@issaquah.cc." />)
+                    // showModal(<OutcomeModal success={true} message="Message sent successfully, we'll be in touch soon!" />)
+                    
+                    // setFormSuccess("Message sent successfully, thank you for contacting me!")
+                    
                 }, (error) => {
                     console.log('FAILED...', error)
-                    setFormErrors({ ...formErrors, general: "Something went wrong, please try again later", errorExists: true })
+                    showModal(<OutcomeModal title="Something Went Wrong" message="We were unable to send your prayer request. Please try again later or contact us directly at office@issaquah.cc." />)
+                    // showModal(<OutcomeModal success={false} message="Something went wrong, your email was not sent. Please try again later" />)
+
+                    // setFormErrors({ ...formErrors, general: "Something went wrong, please try again later", errorExists: true })
                 })
 
             setFormSuccess(true)
@@ -155,18 +188,18 @@ const PrayerRequests = () => {
 
     // For form validation
     const validateForm = () => {
-        const { email, subject, message } = formData
-        console.log(email, subject, message)
+        // const { email, subject, message } = formData
+        // console.log(email, subject, message)
 
         const firstNameValid = Boolean(formData.firstName.trim())
         const lastNameValid = Boolean(formData.lastName.trim())
-        const emailValid = Boolean(email.trim())
+        const emailValid = Boolean(formData.email.trim())
         const phoneValid = Boolean(formData.phone.trim())
         // const attendanceValid = Boolean(formData.attendance)
         // const referrerValid = Boolean(formData.referrer)
         // const contactValid = Boolean(formData.contact)
         // const serveValid = Boolean(formData.serve)
-        const messageValid = Boolean(message.trim())
+        const messageValid = Boolean(formData.message.trim())
         const errorCheck = firstNameValid && lastNameValid && emailValid && phoneValid && messageValid // && attendanceValid && referrerValid && messageValid // && contactValid && serveValid
 
         console.log(errorCheck)
@@ -212,7 +245,7 @@ const PrayerRequests = () => {
 
             <hr className='border border-[var(--border-color-3)]  my-8' />
 
-            <form action="" onSubmit={handleSubmit} className='bg-[#f7f7f7] p-6 rounded-lg shadow-lg'>
+            <form action="" onSubmit={handleReCaptchaSubmission} className='bg-[#f7f7f7] p-6 rounded-lg shadow-lg'>
 
                 <h3 className='text-xl font-bold text-center mb-8'>Prayer Request Form</h3>
 
