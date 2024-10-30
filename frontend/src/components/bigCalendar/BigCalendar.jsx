@@ -3,16 +3,21 @@ import { Calendar, momentLocalizer } from 'react-big-calendar'
 import moment from 'moment'
 import 'react-big-calendar/lib/css/react-big-calendar.css'
 import { getCalendarEventsHook } from '../../hooks/calendarHooks'
-import CalendarEvent from '../calendarEvent/CalendarEvent'
+import CalendarEvent from '../../modals/calendarEvent/CalendarEvent'
+// import CalendarEvent from '../calendarEvent/CalendarEvent'
 import Spinner from '../spinner/Spinner'
+import { useSiteContext } from '../../context/SiteContext'
 
 const localizer = momentLocalizer(moment)
 
 const BigCalendar = () => {
+    const { showModal } = useSiteContext()
+
     const [events, setEvents] = useState([])
     const [currentDate, setCurrentDate] = useState(new Date())
-    const [selectedEvent, setSelectedEvent] = useState(null)
+    // const [selectedEvent, setSelectedEvent] = useState(null)
     const [isLoading, setIsLoading] = useState(true)
+    
     const fetchEvents = async (startDate, endDate) => {
         try {
             setEvents([])
@@ -78,12 +83,13 @@ const BigCalendar = () => {
     }, [currentDate])
 
     const handleSelectEvent = (event) => {
-        setSelectedEvent(event)
+        // setSelectedEvent(event)        
+        showModal(<CalendarEvent event={event} />)
     }
 
-    const closeModal = () => {
-        setSelectedEvent(null)
-    }
+    // const closeModal = () => {
+    //     setSelectedEvent(null)
+    // }
 
     return (
         <div style={{ height: 600 }} className='big-calendar'>
@@ -100,7 +106,7 @@ const BigCalendar = () => {
                 onSelectEvent={handleSelectEvent}
             />
 
-            <CalendarEvent event={selectedEvent} onClose={closeModal} />
+            {/* <CalendarEvent event={selectedEvent} onClose={closeModal} /> */}
         </div>
     )
 }
