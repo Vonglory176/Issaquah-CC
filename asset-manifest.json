@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.5d963c5e.css",
-    "main.js": "/static/js/main.8e45f69e.js",
+    "main.css": "/static/css/main.1e6a77f3.css",
+    "main.js": "/static/js/main.57b3ee7c.js",
     "static/media/guyTime.webp": "/static/media/guyTime.1188a251010e87d09d53.webp",
     "static/media/mens-group.webp": "/static/media/mens-group.5fe752cbd93a3fa9630e.webp",
     "static/media/whale.webp": "/static/media/whale.3eafcd14c868d49e368d.webp",
@@ -38,11 +38,11 @@
     "static/media/calendar-small.webp": "/static/media/calendar-small.28e7b9be4c5fdc287a0d.webp",
     "static/media/guy-praying-small.webp": "/static/media/guy-praying-small.8b824aa30c2a84356522.webp",
     "static/media/wheat-field-small.webp": "/static/media/wheat-field-small.1d51c8952bdf77820eae.webp",
-    "main.5d963c5e.css.map": "/static/css/main.5d963c5e.css.map",
-    "main.8e45f69e.js.map": "/static/js/main.8e45f69e.js.map"
+    "main.1e6a77f3.css.map": "/static/css/main.1e6a77f3.css.map",
+    "main.57b3ee7c.js.map": "/static/js/main.57b3ee7c.js.map"
   },
   "entrypoints": [
-    "static/css/main.5d963c5e.css",
-    "static/js/main.8e45f69e.js"
+    "static/css/main.1e6a77f3.css",
+    "static/js/main.57b3ee7c.js"
   ]
 }
