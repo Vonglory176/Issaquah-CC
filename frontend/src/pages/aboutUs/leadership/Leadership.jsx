@@ -63,7 +63,7 @@ const Leadership = () => {
                 {leadershipData.map((person, index) => (
 
 
-                    <div key={index} className='staff-member flex flex-col items-center mt-8 gap-2 max-w-[320px] mx-auto'> {/*  md:h-[304px]  border-b border-[var(--border-color-3)] */}
+                    <div key={index} className='staff-member flex flex-col items-center mt-8 gap-2 mx-auto max-w-[320px] md:max-w-[400px]'> {/*  md:h-[304px]  border-b border-[var(--border-color-3)] */}
 
                         {/* Top */}
                         <div className="staff-member-image flex justify-center items-center gap-2 min-h-[120px]">
@@ -92,9 +92,23 @@ const Leadership = () => {
 
 
                             <div className='text-center flex flex-col gap-2'>
-                                <p className='italic text-[var(--font-color-4)] text-sm md:text-base'>{person.quote}</p>
-                                <p className='text-left'>{person.description}</p>
-                                <a href={`mailto:${person.email}`} className='text-sm md:text-base text-[var(--font-active-color-1)]' rel='noopener noreferrer' target='_blank' aria-label={`Send an Email to ${person.name}`} title={`Send an Email to ${person.name}`}>{person.email}</a>
+
+                                <p className={`italic text-[var(--font-color-4)] text-sm md:text-base`}>{person.quote || '(No quote available)'}</p>
+
+
+
+                                {person.description ?
+                                    <p className='lg:text-lg'>{person.description}</p>
+                                    :
+                                    <p className='italic text-[var(--font-color-4)] text-sm md:text-base'>(No description available)</p>
+                                }
+
+
+                                {person.email ?
+                                    <a href={`mailto:${person.email}`} className='text-sm md:text-base text-[var(--font-active-color-1)]' rel='noopener noreferrer' target='_blank' aria-label={`Send an Email to ${person.name}`} title={`Send an Email to ${person.name}`}>{person.email}</a>
+                                    :
+                                    <p className='italic text-sm md:text-base text-[var(--font-color-4)]'>(No email available)</p>
+                                }
                             </div>
 
 
@@ -102,7 +116,7 @@ const Leadership = () => {
 
                         </div>
 
-                        <hr className='border border-[var(--border-color-3)] w-[320px] mt-6' />
+                        {index < leadershipData.length - 1 && <hr className='border border-[var(--border-color-3)] w-[320px] mt-6' />}
 
 
                     </div>
