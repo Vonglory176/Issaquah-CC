@@ -139,6 +139,9 @@ const PrayerRequests = () => {
                 // to_email: process.env.REACT_APP_EMAIL,
 
                 'g-recaptcha-response': recaptchaResponse,
+                
+                templateIsPrayerRequest: true,
+                formType: "Prayer Request",
 
                 firstName: formData.firstName,
                 lastName: formData.lastName,
