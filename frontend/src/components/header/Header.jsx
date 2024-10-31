@@ -37,10 +37,10 @@ const Header = ({ className }) => {
   return (
     <header className={`header h-[var(--header-height)] mb-[-60px] top-0 left-0 right-0 z-50 shadow-lg ${className}`}>
 
-      <div className="header-wrapper relative flex items-center justify-between h-full px-8 xl:px-[8vw]">
+      <div className="header-wrapper relative flex items-center justify-end h-full px-8 xl:px-[8vw]">
 
         {/* Logo */}
-        <Link to={'/'} className='h-full' aria-label='Return to home page' title='Return to home page'>
+        <Link to={'/'} className='h-full absolute left-8 top-0' aria-label='Return to home page' title='Return to home page'>
           <ProgressiveImage src={logo} placeholder={''}>
             {(src, loading) => (
               <img
