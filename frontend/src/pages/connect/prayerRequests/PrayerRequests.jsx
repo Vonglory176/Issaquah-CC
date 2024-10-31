@@ -223,7 +223,7 @@ const PrayerRequests = () => {
         return errorCheck
     }
 
-    return formData && (
+    return (
         <PageWrapper name='prayer-requests' className='flex flex-col gap-8' maxWidth='max-w-[800px]' bannerSettings={{
             image: {
                 large: guyPraying,
@@ -248,7 +248,7 @@ const PrayerRequests = () => {
 
             <hr className='border border-[var(--border-color-3)]  my-8' />
 
-            <form action="" onSubmit={handleReCaptchaSubmission} className='bg-[#f7f7f7] p-6 rounded-lg shadow-lg'>
+            {formData && <form action="" onSubmit={handleReCaptchaSubmission} className='bg-[#f7f7f7] p-6 rounded-lg shadow-lg'>
 
                 <h3 className='text-xl font-bold text-center mb-8'>Prayer Request Form</h3>
 
@@ -476,7 +476,7 @@ const PrayerRequests = () => {
 
                 </div>
 
-            </form>
+            </form>}
 
         </PageWrapper>
     )

@@ -193,7 +193,7 @@ const WomensSignUp = () => {
         return errorCheck
     }
 
-    return formData && (
+    return (
         <PageWrapper name='womens-sign-up' className='flex flex-col gap-8' maxWidth='max-w-[800px]' bannerSettings={{
             image: {
                 large: forestInFall,
@@ -214,7 +214,7 @@ const WomensSignUp = () => {
 
             <hr className='border border-[var(--border-color-3)]  my-8' />
 
-            <form action="" onSubmit={handleReCaptchaSubmission} className='bg-[#f7f7f7] p-6 rounded-lg shadow-lg w-full'>
+            {formData && <form action="" onSubmit={handleReCaptchaSubmission} className='bg-[#f7f7f7] p-6 rounded-lg shadow-lg w-full'>
 
                 <h3 className='text-xl font-bold text-center mb-8'>Womens Retreat Sign Up Form</h3>
 
@@ -447,7 +447,7 @@ const WomensSignUp = () => {
 
                 </div>
 
-            </form>
+            </form>}
 
         </PageWrapper>
     )
