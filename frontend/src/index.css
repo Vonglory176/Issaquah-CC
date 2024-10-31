@@ -59,7 +59,6 @@
   height: 60px;
   background-color: var(--background-color-2);
   z-index: -1;
-  border-bottom: 2px solid var(--border-color-2);
 }
 .header nav.open {
   max-height: var(--page-height);
@@ -147,6 +146,9 @@
   }
 }
 @media (min-width: 1024px) {
+  .header-wrapper::before {
+    border-bottom: 2px solid var(--border-color-2);
+  }
   .header .nav-menu > ul > li .dropdown-toggle, .header .nav-menu > ul > li .nav-link {
     height: 58px;
     padding: 20px 10px 10px 10px;
