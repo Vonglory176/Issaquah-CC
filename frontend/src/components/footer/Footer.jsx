@@ -49,9 +49,9 @@ const Footer = () => {
                 href={process.env.REACT_APP_ADDRESS_URL}
                 target='_blank'
                 rel='noopener noreferrer'
-                className='flex items-center gap-2'
+                className='flex gap-2'
               >
-                <FaMapMarkerAlt size={18} />
+                <FaMapMarkerAlt size={18} className='mt-[2px]' />
                 <p>{process.env.REACT_APP_ADDRESS}</p>
               </a>
             </li>
