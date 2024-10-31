@@ -100,47 +100,42 @@ function App() {
 export default App;
 
 
-/* TODO ---------------------------------------
+/* TODO ////////////////////////////////////////////////////////////////
+
 
   UPDATE SERVICE WORKER NAME BEFORE DEPLOYMENT !!!!!!
 
-  Complicated features:
-    - Sermon Player
-    - Calendar
-    - Forms
 
-  Re-Add CSP ?
+  // Important ---------------------------------------
+
 
   Get ACTUAL ReCaptcha keys
+  
+  Re-Add CSP ?
 
   Look at proxies to mesh with CSP better?
 
-  Nonce generation? ( use in script-src + "strict-dynamic" )
+  CSP Nonce generation? ( use in script-src + "strict-dynamic" )
 
-  Implement ReCaptcha for Forms (WomensSignUp) (ADD TO EMAILJS)
+  ERROR: Weird issue with Canva video ui when scrolling in mobile view (Has to do with browser UI growing/shrinking)
 
-  Clean/Hook up form-submission
 
-  Weird issue with Canva video ui when scrolling in mobile view (Has to do with browser UI growing/shrinking)
+  // Moderate ----------------------------------------
 
-  ---------------------------------------
+  
+  Research "Animated banners" for pages  
+  
+  Clean up theme.scss
+  
+  
+  // Minor -------------------------------------------
 
   Hamburger animation is kinda jank
 
   Margin issue in teens slideshow (?)
 
-  Move resize event listener (in Dropdown.jsx) to Context
-
-  Research "Animated banners" for pages
-
-  Figure out what to do for Leadership page
-
   Look into centered content with larger text for certain pages
-
-  Clean up theme.scss
-
-  Move event listener (in Banner.jsx) to Context
-
+  
   Tinker with line-height
 
 */
