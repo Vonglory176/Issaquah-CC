@@ -1,19 +1,12 @@
 // frontend/src/components/Dropdown.jsx
 import React, { useEffect, useState } from 'react'
 import { FaCaretDown } from 'react-icons/fa'
+import { useSiteContext } from '../../context/SiteContext'
 
 const Dropdown = ({ children, title, openDropdown, toggleDropdown }) => {
-    const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 1024)
+    const { screenWidth } = useSiteContext()
 
-    // Move to Context later !!! (Currently running for EVERY dropdown)
-    useEffect(() => {
-        const handleResize = () => {
-            setIsDesktop(window.innerWidth >= 1024)
-        }
-
-        window.addEventListener('resize', handleResize)
-        return () => window.removeEventListener('resize', handleResize)
-    }, [])
+    const isDesktop = screenWidth >= 1024
 
     const isOpen = openDropdown === title
 

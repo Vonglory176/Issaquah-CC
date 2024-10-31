@@ -3,6 +3,7 @@ import ProgressiveImage from 'react-progressive-graceful-image'
 
 import wheatField from '../../assets/images/backgrounds/wheat-field.webp'
 import wheatFieldSmall from '../../assets/images/backgrounds/wheat-field-small.webp'
+import { useSiteContext } from '../../context/SiteContext'
 
 
 const Banner = ({ bannerSettings = {
@@ -17,28 +18,32 @@ const Banner = ({ bannerSettings = {
         className: ''
     }
 } }) => {
+    const { screenWidth, screenScrollY } = useSiteContext()
 
-    const [scrollY, setScrollY] = useState(0)
-    const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 1024)
+    // const [scrollY, setScrollY] = useState(0)
+    // const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 1024)
 
-    useEffect(() => {
-        const handleScroll = () => {
-            setScrollY(window.scrollY)
-        }
+    const isDesktop = screenWidth >= 1024
 
-        window.addEventListener('scroll', handleScroll)
-        return () => window.removeEventListener('scroll', handleScroll)
-    }, [])
+
+    // useEffect(() => {
+    //     const handleScroll = () => {
+    //         setScrollY(window.scrollY)
+    //     }
+
+    //     window.addEventListener('scroll', handleScroll)
+    //     return () => window.removeEventListener('scroll', handleScroll)
+    // }, [])
 
     // Move to Context later !!! (Currently running for EVERY dropdown)
-    useEffect(() => {
-        const handleResize = () => {
-            setIsDesktop(window.innerWidth >= 1024)
-        }
+    // useEffect(() => {
+    //     const handleResize = () => {
+    //         setIsDesktop(window.innerWidth >= 1024)
+    //     }
 
-        window.addEventListener('resize', handleResize)
-        return () => window.removeEventListener('resize', handleResize)
-    }, [])
+    //     window.addEventListener('resize', handleResize)
+    //     return () => window.removeEventListener('resize', handleResize)
+    // }, [])
 
     return (
 
@@ -51,7 +56,7 @@ const Banner = ({ bannerSettings = {
                         src={src}
                         alt={''}
                         className={`banner-image ${bannerSettings.image?.className || 'object-top h-[100svh]'} ${loading ? 'blur-sm' : 'blur-0'}`}
-                        style={isDesktop ? { transform: `translate3d(0, ${scrollY * 0.5}px, 0)` } : {}}
+                        style={isDesktop ? { transform: `translate3d(0, ${screenScrollY * 0.5}px, 0)` } : {}}
                     />
                 )}
             </ProgressiveImage>
