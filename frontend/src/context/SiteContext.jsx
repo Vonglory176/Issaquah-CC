@@ -6,7 +6,32 @@ const SiteContext = createContext()
 // Create the provider component
 const SiteProvider = ({ children }) => {
     const [modal, setModal] = useState(null)
-    const [currentSection, setCurrentSection] = useState(null)
+    const [screenWidth, setScreenWidth] = useState(window.innerWidth)
+    const [screenScrollY, setScreenScrollY] = useState(0)
+    
+    // SCREEN STUFF ---------------------------------------
+
+    // Screen Scroll Y
+    useEffect(() => {
+        const handleScroll = () => {
+            setScreenScrollY(window.scrollY)
+        }
+
+        window.addEventListener('scroll', handleScroll)
+        return () => window.removeEventListener('scroll', handleScroll)
+    }, [])
+
+    // Screen Width
+    useEffect(() => {
+        const handleResize = () => {
+            setScreenWidth(window.innerWidth)
+        }
+
+        window.addEventListener('resize', handleResize)
+        return () => window.removeEventListener('resize', handleResize)
+    }, [])
+
+    // MODAL STUFF ---------------------------------------------
 
     const showModal = (newModal) => setModal(newModal)
     const hideModal = () => setModal(null)
@@ -25,6 +50,9 @@ const SiteProvider = ({ children }) => {
 
     return (
         <SiteContext.Provider value={{
+            screenScrollY,
+            screenWidth,
+
             modal,
             showModal,
             hideModal,
