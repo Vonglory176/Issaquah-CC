@@ -19,18 +19,18 @@ const WomensSignUp = () => {
     // Initialize form data
     const resetForm = () => {
         setFormData({
-            firstName: 'Jane',
-            lastName: 'Smith',
-            email: 'jane.smith@example.com',
-            streetAddress: '123 Main Street',
-            cityState: 'Issaquah, WA',
-            zipCode: '98027',
-            emergencyContactName: 'John Smith',
-            emergencyContactPhone: '123-456-7890',
-            allergies: 'None',
-            seatingPreference: 'No preference',
-            attendance: 'Both Days',
-            paymentMethod: 'Credit Card',
+            firstName: '', // 'Jane',
+            lastName: '', // 'Smith',
+            email: '', // 'jane.smith@example.com',
+            streetAddress: '', // '123 Main Street',
+            cityState: '', // 'Issaquah, WA',
+            zipCode: '', // '98027',
+            emergencyContactName: '', // 'John Smith',
+            emergencyContactPhone: '', // '123-456-7890',
+            allergies: '', // 'None',
+            seatingPreference: '', // 'No preference',
+            attendance: '', // 'Both Days',
+            paymentMethod: '', // 'Credit Card',
         })
 
         setFormErrors({
