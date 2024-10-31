@@ -422,6 +422,14 @@
   min-height: 183px;
 }
 
+.modal.outcome .modal-content {
+  width: 404px;
+  max-width: 100%;
+}
+.modal.outcome .modal-content-wrapper {
+  min-height: 183px;
+}
+
 .home-content {
   padding: 0px;
   width: 100%;
