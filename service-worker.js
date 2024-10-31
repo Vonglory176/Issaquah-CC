@@ -8,7 +8,7 @@
 
 // In your current setup, you have a TTL of 600 seconds (10 minutes) for cached responses. This is a reasonable default for dynamic content. If you want to adjust this, you can modify the maxAge parameter in the isResponseFresh function:
 
-const CACHE_NAME = 'my-site-cache-v8'
+const CACHE_NAME = 'my-site-cache-v9'
 const urlsToCache = [
   '/',
 
