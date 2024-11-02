@@ -6,18 +6,18 @@ import wheatFieldSmall from '../../assets/images/backgrounds/wheat-field-small.w
 import { useSiteContext } from '../../context/SiteContext'
 
 
-const Banner = ({ bannerSettings = {
-    image: {
+const Banner = ({
+    image = {
         large: wheatField,
         small: wheatFieldSmall,
         className: 'object-top h-[100svh]'
     },
-    text: {
+    text = {
         heading: '', // 'Prayer Requests',
         subheading: '', // 'Please enter your information and requests below. If the form does not work or you are having trouble filling it out, please email us directly at office@issaquah.cc.',
         className: ''
     }
-} }) => {
+}) => {
     const { screenWidth, screenScrollY } = useSiteContext()
 
     // const [scrollY, setScrollY] = useState(0)
@@ -50,12 +50,12 @@ const Banner = ({ bannerSettings = {
         <div className="banner min-h-[300px] bg-[#FA8072] px-4 py-[80px] overflow-hidden relative flex justify-center items-center text-center border-b-2 border-[var(--border-color-2)]"> {/* shadow-[0_-10px_10px_-5px_rgba(0,0,0,0.3)] */}
 
             {/* Banner - Background Image */}
-            <ProgressiveImage src={bannerSettings.image?.large || wheatField} placeholder={bannerSettings.image?.small || wheatFieldSmall}>
+            <ProgressiveImage src={image?.large || wheatField} placeholder={image?.small || wheatFieldSmall}>
                 {(src, loading) => (
                     <img
                         src={src}
                         alt={''}
-                        className={`banner-image ${bannerSettings.image?.className || 'object-top h-[100svh]'} ${loading ? 'blur-sm' : 'blur-0'}`}
+                        className={`banner-image ${image?.className || 'object-top h-[100svh]'} ${loading ? 'blur-sm' : 'blur-0'}`}
                         style={isDesktop ? { transform: `translate3d(0, ${screenScrollY * 0.5}px, 0)` } : {}}
                     />
                 )}
@@ -65,8 +65,8 @@ const Banner = ({ bannerSettings = {
 
             {/* Banner - Text */}
             <div className="banner-text relative z-10 text-[var(--font-color-3)]">
-                <h1 className="text-4xl md:text-5xl font-bold mb-4">{bannerSettings.text.heading}</h1>
-                <p className="text-2xl">{bannerSettings.text.subheading}</p>
+                <h1 className="text-4xl md:text-5xl font-bold mb-4">{text.heading}</h1>
+                <p className="text-2xl">{text.subheading}</p>
             </div>
 
         </div>
