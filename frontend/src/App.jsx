@@ -109,6 +109,13 @@ export default App;
   // Important ---------------------------------------
 
 
+  UPDATE SEO STUFF 
+    - https://johnsweetaccessibility.com/2020/05/accessibility-in-spas-part-2/
+    - https://www.freecodecamp.org/news/how-to-make-seo-friendly-react-apps/ --> Especially for server stuff
+    - https://synodus.com/blog/web-development/single-page-application-seo/
+
+  Use proxy to get by 3rd part cookie/link blocking?
+
   Get ACTUAL ReCaptcha keys
   
   Re-Add CSP ?
@@ -122,6 +129,8 @@ export default App;
 
   // Moderate ----------------------------------------
 
+
+  Change routes to match h1 header for SEO ?
   
   Research "Animated banners" for pages  
   
@@ -129,6 +138,10 @@ export default App;
   
   
   // Minor -------------------------------------------
+
+  Compress images with --> https://tinypng.com/
+
+  Lazy load all iframes
 
   Hamburger animation is kinda jank
 
@@ -138,4 +151,34 @@ export default App;
   
   Tinker with line-height
 
+*/
+
+/*
+Using a 404.html file for redirection in GitHub Pages to handle routing for a Single Page Application (SPA) can have some implications for SEO. Here's how it might impact your site's SEO:
+
+1. Crawlability and Indexing:
+
+  When using a 404.html file to redirect all unknown routes to index.html, search engines might not be able to distinguish between valid and invalid URLs. This can lead to issues with crawlability and indexing, as search engines may not correctly interpret the structure of your site.
+
+  To mitigate this, ensure that your SPA uses the History API to manage URLs, which allows for clean URLs without hash fragments. This can help search engines understand the different views as separate pages.
+
+2. Soft 404 Errors:
+
+  Redirecting all requests to index.html can result in soft 404 errors, where a page that doesn't exist returns a 200 status code instead of a 404. This can confuse search engines and affect your site's SEO negatively.
+
+  To address this, you can implement client-side logic to detect non-existent routes and display a custom 404 message, while also using JavaScript to set a noindex meta tag for these pages.
+
+3. Content and Metadata:
+
+  Ensure that each view in your SPA has unique titles, meta descriptions, and structured data. This helps search engines understand the content of each view and improves the chances of your pages being indexed correctly.
+
+4. Server-Side Rendering (SSR) or Pre-rendering:
+
+  Consider using SSR or pre-rendering techniques to generate static HTML versions of your pages. This can significantly improve SEO by providing search engines with content that is easier to crawl and index.
+
+5. Analytics and Tracking:
+
+  Ensure that your analytics setup is configured to track page views correctly in an SPA environment. This often involves using tools like Google Tag Manager to fire events on route changes.
+  
+  By carefully managing these aspects, you can minimize the negative SEO impacts of using a 404.html file for SPA routing on GitHub Pages. For more detailed guidance, you might want to explore resources like the spa-github-pages repository, which provides a comprehensive solution for deploying SPAs on GitHub Pages.
 */
