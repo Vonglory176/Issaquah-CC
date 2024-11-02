@@ -89,10 +89,12 @@ const Footer = () => {
       <hr className='col-span-2' />
 
       {/* Copyright Container ------------------------------ */}
-      <div className="footer-copyright flex flex-wrap justify-center items-center col-span-2]">
+      <div className="footer-copyright flex flex-wrap justify-center items-center">
         <p>&copy; {new Date().getFullYear()} Issaquah Christian Church. </p>
         &nbsp;
         <p>All rights reserved.</p>
+        &nbsp;
+        <p>Website built by <a href="https://www.skylergconley.com/" target='_blank' rel='noopener noreferrer' aria-label="Visit Skyler's website" title="Visit Skyler's website">Skyler Conley</a>.</p>
       </div>
     </footer>
   )
