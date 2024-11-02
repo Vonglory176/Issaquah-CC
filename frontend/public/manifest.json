@@ -12,5 +12,9 @@
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#7D1E2C",
-  "background_color": "#f7f7f7"
+  "background_color": "#f7f7f7",
+  "lang": "en-US",
+  "scope": "/",
+  "orientation": "portrait",
+  "categories": ["religion", "education", "community", "non-profit", "life-style"]
 }
