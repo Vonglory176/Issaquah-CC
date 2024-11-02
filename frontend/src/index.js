@@ -4,6 +4,7 @@ import { BrowserRouter } from 'react-router-dom'
 import App from './App'
 import './index.css'
 import { SiteProvider } from './context/SiteContext'
+import { HelmetProvider } from 'react-helmet-async'
 
 // import reportWebVitals from './reportWebVitals'
 
@@ -35,11 +36,13 @@ if ('serviceWorker' in navigator) {
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
-  <BrowserRouter>
-    <SiteProvider>
-      <App />
-    </SiteProvider>
-  </BrowserRouter>
+  <HelmetProvider>
+    <BrowserRouter>
+      <SiteProvider>
+        <App />
+      </SiteProvider>
+    </BrowserRouter>
+  </HelmetProvider>
 )
 
 // If you want to start measuring performance in your app, pass a function
