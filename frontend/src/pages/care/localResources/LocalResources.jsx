@@ -5,12 +5,17 @@ import logo from '../../../assets/images/logos/logo8.webp'
 
 const LocalResources = () => {
     return (
-        <PageWrapper name='local-resources' className='flex flex-col gap-12 mx-auto' maxWidth='' bannerSettings={{
-            text: {
-                heading: "Local Resources",
-                // subheading: ""
-            }
-        }}>
+        <PageWrapper name='local-resources' className='flex flex-col gap-12 mx-auto' maxWidth=''
+            metaSettings={{
+                title: 'Local Resources',
+                description: 'Issaquah Christian Church is here to help our community during this time of need.'
+            }}
+            bannerSettings={{
+                text: {
+                    heading: "Local Resources",
+                    // subheading: ""
+                }
+            }}>
 
 
             <div className="logo-image-container mx-4">

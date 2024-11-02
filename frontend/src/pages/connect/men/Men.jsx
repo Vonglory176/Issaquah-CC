@@ -7,16 +7,21 @@ import guyTime from '../../../assets/images/guyTime.webp'
 
 const Men = () => {
     return (
-        <PageWrapper name='men' className='flex flex-col gap-8 text-center' maxWidth='max-w-[800px]' bannerSettings={{
-            image: {
-                large: mensGroup,
-                small: mensGroupSmall,
-                className: 'object-[0%_60%] h-full'
-            },
-            text: {
-                heading: "Men's Ministry"
-            }
-        }}>
+        <PageWrapper name='men' className='flex flex-col gap-8 text-center' maxWidth='max-w-[800px]'
+            metaSettings={{
+                title: "Men's Ministry",
+                description: "We are excited to partner with Impact Players for monthly Breakfasts and weekly cohorts for men."
+            }}
+            bannerSettings={{
+                image: {
+                    large: mensGroup,
+                    small: mensGroupSmall,
+                    className: 'object-[0%_60%] h-full'
+                },
+                text: {
+                    heading: "Men's Ministry"
+                }
+            }}>
 
             <h2 className='font-bold'>Welcome to The ICC Men's Ministry</h2>
 

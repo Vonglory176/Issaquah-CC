@@ -5,11 +5,16 @@ import VideoContainer from '../../../components/videoContainer/VideoContainer'
 
 const Outreach = () => {
     return (
-        <PageWrapper name='outreach' className='flex flex-col gap-12' bannerSettings={{
-            text: {
-                heading: "Outreach"
-            }
-        }}>
+        <PageWrapper name='outreach' className='flex flex-col gap-12'
+            metaSettings={{
+                title: 'Outreach',
+                description: 'In addition to our regular, ongoing efforts to share the gospel through the services and ministries of Issaquah Christian Church, we are also involved in various missions that operate both locally and abroad.'
+            }}
+            bannerSettings={{
+                text: {
+                    heading: "Outreach"
+                }
+            }}>
 
             <section>
 

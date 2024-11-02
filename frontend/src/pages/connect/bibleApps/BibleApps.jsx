@@ -4,12 +4,17 @@ import { FaAndroid, FaApple } from 'react-icons/fa'
 
 const BibleApps = () => {
     return (
-        <PageWrapper name='bible-apps' className='flex flex-col gap-8' bannerSettings={{
-            text: {
-                heading: "Reccomended Bible Apps",
-                // subheading: "Download a mobile Bible app for following along during the sermon. Both use the same login information as your Faithlife account (what you use to sign into our church website)."
-            }
-        }}>
+        <PageWrapper name='bible-apps' className='flex flex-col gap-8'
+            metaSettings={{
+                title: 'Recommended Bible Apps',
+                description: 'Download a mobile Bible app for following along during the sermon. Both use the same login information as your Faithlife account (what you use to sign into our church website).'
+            }}
+            bannerSettings={{
+                text: {
+                    heading: "Reccomended Bible Apps",
+                    // subheading: "Download a mobile Bible app for following along during the sermon. Both use the same login information as your Faithlife account (what you use to sign into our church website)."
+                }
+            }}>
 
             <section>
 

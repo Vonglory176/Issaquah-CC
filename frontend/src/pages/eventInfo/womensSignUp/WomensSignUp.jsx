@@ -194,18 +194,23 @@ const WomensSignUp = () => {
     }
 
     return (
-        <PageWrapper name='womens-sign-up' className='flex flex-col gap-8' maxWidth='max-w-[800px]' bannerSettings={{
-            image: {
-                large: forestInFall,
-                small: forestInFallSmall,
-                className: ''
-            },
-            text: {
-                heading: 'Women\'s Retreat Sign Up',
-                // subheading: 'Please enter your information and requests below. If the form does not work or you are having trouble filling it out, please email us directly at office@issaquah.cc.',
-                // className: ''
-            }
-        }}>
+        <PageWrapper name='womens-sign-up' className='flex flex-col gap-8' maxWidth='max-w-[800px]'
+            metaSettings={{
+                title: 'Women\'s Retreat Sign Up',
+                description: 'Please enter your information and requests below. If the form does not work or you are having trouble filling it out, please email us directly at office@issaquah.cc.'
+            }}
+            bannerSettings={{
+                image: {
+                    large: forestInFall,
+                    small: forestInFallSmall,
+                    className: ''
+                },
+                text: {
+                    heading: 'Women\'s Retreat Sign Up',
+                    // subheading: 'Please enter your information and requests below. If the form does not work or you are having trouble filling it out, please email us directly at office@issaquah.cc.',
+                    // className: ''
+                }
+            }}>
 
             <div className='flex flex-col gap-4 text-center'>
                 <h2 className='font-bold'>Please enter your information below</h2>
@@ -307,7 +312,7 @@ const WomensSignUp = () => {
                     </div>
 
                     <div className="form-row flex flex-col gap-4 md:flex-row">
-                        
+
                         {/* City State */}
                         <div className={`form-group form-group-text-input  ${formData.cityState ? 'is-active' : ''} ${formErrors.cityState ? 'has-error' : ''}`}>
                             <input

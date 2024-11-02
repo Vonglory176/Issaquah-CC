@@ -12,12 +12,17 @@ const Teens = () => {
     const [slideshowLoaded, setSlideshowLoaded] = useState(false)
 
     return (
-        <PageWrapper name='teens' className='flex flex-col gap-8 text-center' maxWidth='max-w-[800px]' bannerSettings={{
-            text: {
-                heading: 'Youth Group',
-                // className: ''
-            }
-        }}>
+        <PageWrapper name='teens' className='flex flex-col gap-8 text-center' maxWidth='max-w-[800px]'
+            metaSettings={{
+                title: 'Youth Group',
+                description: 'Grades 6-12 meet on Wednesday Night at 7pm at Pastor Aaron\'s House. We eat dinner together and study the Bible together.'
+            }}
+            bannerSettings={{
+                text: {
+                    heading: 'Youth Group',
+                    // className: ''
+                }
+            }}>
 
             {/* <section>
 

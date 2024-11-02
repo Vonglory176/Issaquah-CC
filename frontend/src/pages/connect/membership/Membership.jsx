@@ -3,12 +3,17 @@ import PageWrapper from '../../../components/pageWrapper/PageWrapper'
 
 const Membership = () => {
     return (
-        <PageWrapper name='membership' className='flex flex-col gap-8' bannerSettings={{
-            text: {
-                heading: 'Becoming a Member',
-                // className: ''
-            }
-        }}>
+        <PageWrapper name='membership' className='flex flex-col gap-8'
+            metaSettings={{
+                title: 'Membership',
+                description: 'We have a three step process to become a member at Issaquah Christian Church.'
+            }}
+            bannerSettings={{
+                text: {
+                    heading: 'Becoming a Member',
+                    // className: ''
+                }
+            }}>
 
             {/* <section>
 

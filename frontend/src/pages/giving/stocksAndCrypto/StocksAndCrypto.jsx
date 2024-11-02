@@ -4,13 +4,18 @@ import VideoContainer from '../../../components/videoContainer/VideoContainer'
 
 const StocksAndCrypto = () => {
     return (
-        <PageWrapper name='stocks-and-crypto' className='flex flex-col gap-8' bannerSettings={{
-            text: {
-                heading: 'Alternate Ways To Be Generous',
-                subheading: 'When you need a Tax Break',
-                // className: ''
-            }
-        }}>
+        <PageWrapper name='stocks-and-crypto' className='flex flex-col gap-8'
+            metaSettings={{
+                title: 'Stocks and Crypto',
+                description: 'Consider using Daffy to send ICC some of your stocks with a high Cost Basis or CryptoCurrency you don\'t want to pay the high tax rate on.'
+            }}
+            bannerSettings={{
+                text: {
+                    heading: 'Alternate Ways To Be Generous',
+                    subheading: 'When you need a Tax Break',
+                    // className: ''
+                }
+            }}>
 
             {/* <section className='flex flex-col gap-4 text-center'>
 

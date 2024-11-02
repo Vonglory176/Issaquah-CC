@@ -11,9 +11,14 @@ import youtubeChannel from '../../assets/images/youtubeChannel.webp'
 const Sermons = () => {
     const [playerLoaded, setPlayerLoaded] = useState(false);
     return (
-        <PageWrapper name='sermons' className='flex flex-col gap-8' bannerSettings={{
-            text: {
-                heading: 'Sermons',
+        <PageWrapper name='sermons' className='flex flex-col gap-8'
+            metaSettings={{
+                title: 'Sermons',
+                description: 'View our sermons here on our website or on our podcasting platforms.'
+            }}
+            bannerSettings={{
+                text: {
+                    heading: 'Sermons',
                 // className: ''
             }
         }}>

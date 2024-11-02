@@ -4,17 +4,22 @@ import VideoContainer from '../../../components/videoContainer/VideoContainer'
 
 const Vision = () => {
     return (
-        <PageWrapper name='vision' className='flex flex-col gap-8' bannerSettings={{
-            // image: {
-            //     large: '',
-            //     small: '',
-            //     className: 'object-top h-[100svh]'
-            // },
-            text: {
-                heading: 'Vision, Values, and Mission',
-                // className: ''
-            }
-        }}>
+        <PageWrapper name='vision' className='flex flex-col gap-8'
+            metaSettings={{
+                title: 'Vision, Values, and Mission',
+                description: 'Issaquah Christian Church exists to Love God and Love our Neighbor. Our Mission is to help others Follow Jesus in the everyday stuff of life through our Gatherings and Groups.'
+            }}
+            bannerSettings={{
+                // image: {
+                //     large: '',
+                //     small: '',
+                //     className: 'object-top h-[100svh]'
+                // },
+                text: {
+                    heading: 'Vision, Values, and Mission',
+                    // className: ''
+                }
+            }}>
 
             <section>
 

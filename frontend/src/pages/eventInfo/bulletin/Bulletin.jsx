@@ -4,12 +4,17 @@ import VideoContainer from '../../../components/videoContainer/VideoContainer'
 
 const Bulletin = () => {
   return (
-    <PageWrapper name='bulletin' className='flex flex-col gap-8' bannerSettings={{
-      text: {
-        heading: 'Church Bulletin',
-        // className: ''
-      }
-    }}>
+    <PageWrapper name='bulletin' className='flex flex-col gap-8'
+      metaSettings={{
+        title: 'Bulletin',
+        description: 'All of our bulletins are stored here at Faithlife and include sermon slides along with all other presentation content from each week we gather.'
+      }}
+      bannerSettings={{
+        text: {
+          heading: 'Church Bulletin',
+          // className: ''
+        }
+      }}>
 
       {/* <section className='flex flex-col gap-4'>
 
@@ -41,7 +46,7 @@ const Bulletin = () => {
       <div className='max-w-[650px] text-center mx-auto flex flex-col items-center gap-4 text-lg'>
         <p>All of our bulletins are stored here at Faithlife and include sermon slides along with all other presentation content from each week we gather.</p>
 
-        <a 
+        <a
           href="https://faithlife.com/issaquahcc/bulletins"
           target='_blank'
           rel='noopener noreferrer'

@@ -6,12 +6,17 @@ import pestle from '../../../assets/images/pestle.webp'
 
 const Elder = () => {
     return (
-        <PageWrapper name='elder' className='flex flex-col gap-8' bannerSettings={{
-            text: {
-                heading: 'Elder Nominations',
-                // className: ''
-            }
-        }}>
+        <PageWrapper name='elder' className='flex flex-col gap-8'
+            metaSettings={{
+                title: 'Elder Nominations',
+                description: 'Issaquah Christian Church is currently accepting nominations for elders. If you are interested in serving as an elder, please contact the church office.'
+            }}
+            bannerSettings={{
+                text: {
+                    heading: 'Elder Nominations',
+                    // className: ''
+                }
+            }}>
 
             {/* <section className=''>
 

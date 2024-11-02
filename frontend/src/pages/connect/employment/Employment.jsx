@@ -3,12 +3,17 @@ import PageWrapper from '../../../components/pageWrapper/PageWrapper'
 
 const Employment = () => {
     return (
-        <PageWrapper name='women' className='flex flex-col gap-8' bannerSettings={{
-            text: {
-                heading: "Employment Opportunities",
-                // subheading: ""
-            }
-        }}>
+        <PageWrapper name='employment' className='flex flex-col gap-8'
+            metaSettings={{
+                title: 'Employment',
+                description: 'Do you love Jesus and his church? Do you align with our beliefs? Join the staff team at ICC. We have energetic teams already in place to support you in your new position.'
+            }}
+            bannerSettings={{
+                text: {
+                    heading: "Employment Opportunities",
+                    // subheading: ""
+                }
+            }}>
 
             <section>
 

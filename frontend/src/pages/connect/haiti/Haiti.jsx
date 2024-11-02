@@ -5,11 +5,16 @@ import sponsor from '../../../assets/images/sponsor.webp'
 
 const Haiti = () => {
     return (
-        <PageWrapper name='men' className='flex flex-col gap-8 text-center' bannerSettings={{
-            text: {
-                heading: "Haiti"
-            }
-        }}>
+        <PageWrapper name='haiti' className='flex flex-col gap-8 text-center'
+            metaSettings={{
+                title: 'Haiti',
+                description: 'Be Part Of The Solution'
+            }}
+            bannerSettings={{
+                text: {
+                    heading: "Haiti"
+                }
+            }}>
 
             <section className='justify-center text-center'>
 

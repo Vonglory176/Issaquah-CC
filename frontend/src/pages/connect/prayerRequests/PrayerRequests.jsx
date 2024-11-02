@@ -139,7 +139,7 @@ const PrayerRequests = () => {
                 // to_email: process.env.REACT_APP_EMAIL,
 
                 'g-recaptcha-response': recaptchaResponse,
-                
+
                 templateIsPrayerRequest: true,
                 formType: "Prayer Request",
 
@@ -170,9 +170,9 @@ const PrayerRequests = () => {
                     resetForm()
                     showModal(<OutcomeModal title="Prayer Request Sent" message="Thank you for reaching out with your Prayer Request. If you have any questions, please contact us directly at office@issaquah.cc." />)
                     // showModal(<OutcomeModal success={true} message="Message sent successfully, we'll be in touch soon!" />)
-                    
+
                     // setFormSuccess("Message sent successfully, thank you for contacting me!")
-                    
+
                 }, (error) => {
                     console.log('FAILED...', error)
                     showModal(<OutcomeModal title="Something Went Wrong" message="We were unable to send your prayer request. Please try again later or contact us directly at office@issaquah.cc." />)
@@ -224,18 +224,23 @@ const PrayerRequests = () => {
     }
 
     return (
-        <PageWrapper name='prayer-requests' className='flex flex-col gap-8' maxWidth='max-w-[800px]' bannerSettings={{
-            image: {
-                large: guyPraying,
-                small: guyPrayingSmall,
-                className: 'object-center h-full'
-            },
-            text: {
-                heading: 'Prayer Requests',
-                // subheading: 'Please enter your information and requests below. If the form does not work or you are having trouble filling it out, please email us directly at office@issaquah.cc.',
-                // className: ''
-            }
-        }}>
+        <PageWrapper name='prayer-requests' className='flex flex-col gap-8' maxWidth='max-w-[800px]'
+            metaSettings={{
+                title: 'Prayer Requests',
+                description: 'Please enter your information and requests below. If the form does not work or you are having trouble filling it out, please email us directly at office@issaquah.cc.'
+            }}
+            bannerSettings={{
+                image: {
+                    large: guyPraying,
+                    small: guyPrayingSmall,
+                    className: 'object-center h-full'
+                },
+                text: {
+                    heading: 'Prayer Requests',
+                    // subheading: 'Please enter your information and requests below. If the form does not work or you are having trouble filling it out, please email us directly at office@issaquah.cc.',
+                    // className: ''
+                }
+            }}>
 
             {/* <h1 className='text-3xl font-bold flex gap-2 flex-wrap'>Prayer Requests</h1>
 

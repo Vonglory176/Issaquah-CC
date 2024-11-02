@@ -47,12 +47,17 @@ const leadershipData = [
 
 const Leadership = () => {
     return (
-        <PageWrapper name='leadership' className='flex flex-col' bannerSettings={{
-            text: {
-                heading: 'Meet Our Leadership',
-                // className: ''
-            }
-        }}>
+        <PageWrapper name='leadership' className='flex flex-col'
+            metaSettings={{
+                title: 'Meet Our Leadership',
+                description: 'Meet the leadership team at Issaquah Christian Church. Our pastors and elders are dedicated to serving the community and sharing the love of Jesus Christ.'
+            }}
+            bannerSettings={{
+                text: {
+                    heading: 'Meet Our Leadership',
+                    // className: ''
+                }
+            }}>
 
             {/* <h1 className='text-3xl font-bold text-center'>Meet Our Leadership</h1> */}
             {/* <hr className='border border-[var(--border-color-3)] w-full mt-8' /> */}

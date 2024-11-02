@@ -5,18 +5,23 @@ import wheatFieldSmall from '../../../assets/images/backgrounds/wheat-field-smal
 
 const WhatToExpect = () => {
     return (
-        <PageWrapper name='what-to-expect' className='flex flex-col gap-8' bannerSettings={{
-            image: {
-                large: wheatField,
-                small: wheatFieldSmall,
-                className: 'object-top h-[100svh]'
-            },
-            text: {
-                heading: 'What to Expect on Sunday Mornings',
-                subheading: '',
-                // className: ''
-            }
-        }}>
+        <PageWrapper name='what-to-expect' className='flex flex-col gap-8'
+            metaSettings={{
+                title: 'What to Expect',
+                description: 'Issaquah Christian Church meets every Sunday Morning at 10:30am for our main service at 10328 Issaquah-Hobart Rd SE, Issaquah, 98027. We know meeting someone for the first time can be intimidating, and going to a new church for the first time can make folks a bit anxious. We want to help make your first experience at Issaquah Christian Church a great one!'
+            }}
+            bannerSettings={{
+                image: {
+                    large: wheatField,
+                    small: wheatFieldSmall,
+                    className: 'object-top h-[100svh]'
+                },
+                text: {
+                    heading: 'What to Expect on Sunday Mornings',
+                    subheading: '',
+                    // className: ''
+                }
+            }}>
 
             <section>
 

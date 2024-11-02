@@ -5,12 +5,17 @@ import whale from '../../../assets/images/whale.webp'
 
 const Kids = () => {
     return (
-        <PageWrapper name='kids' className='flex flex-col gap-8 text-center' maxWidth="max-w-[800px]" bannerSettings={{
-            text: {
-                heading: "Kid's Ministry",
-                // className: ''
-            }
-        }}>
+        <PageWrapper name='kids' className='flex flex-col gap-8 text-center' maxWidth="max-w-[800px]"
+            metaSettings={{
+                title: "Kid's Ministry",
+                description: "Welcome to The ICC Kids Ministry"
+            }}
+            bannerSettings={{
+                text: {
+                    heading: "Kid's Ministry",
+                    // className: ''
+                }
+            }}>
 
             <h2 className='font-bold flex gap-1 flex-wrap mx-auto'>Welcome to The ICC Kids Ministry</h2>
 

@@ -7,7 +7,12 @@ import VideoContainer from '../../components/videoContainer/VideoContainer'
 
 const Home = () => {
     return (
-        <PageWrapper name='home' className='' >
+        <PageWrapper name='home' className=''
+            metaSettings={{
+                title: 'Home',
+                // description: 'Teaching Biblical life applications as you learn to follow Jesus.'
+            }}
+        >
 
             {/* Landing Section */}
             <section className="landing relative p-4">

@@ -6,12 +6,17 @@ import { Link } from 'react-router-dom'
 
 const HelpfulResources = () => {
     return (
-        <PageWrapper name='helpful-resources' className='flex flex-col gap-12 mx-auto text-center' maxWidth='max-w-[800px]' bannerSettings={{
-            text: {
-                heading: "Helpful Resources",
-                // subheading: ""
-            }
-        }}>
+        <PageWrapper name='helpful-resources' className='flex flex-col gap-12 mx-auto text-center' maxWidth='max-w-[800px]'
+            metaSettings={{
+                title: 'Helpful Resources',
+                description: 'As the church, we are uniquely equipped to bring the light of Jesus to those around us.'
+            }}
+            bannerSettings={{
+                text: {
+                    heading: "Helpful Resources",
+                    // subheading: ""
+                }
+            }}>
 
 
             {/* <hr className='border border-[var(--border-color-3)]' /> */}
