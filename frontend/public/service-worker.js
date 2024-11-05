@@ -8,7 +8,7 @@
 
 // In your current setup, you have a TTL of 600 seconds (10 minutes) for cached responses. This is a reasonable default for dynamic content. If you want to adjust this, you can modify the maxAge parameter in the isResponseFresh function:
 
-const CACHE_NAME = 'my-site-cache-v12'
+const CACHE_NAME = 'my-site-cache-v14'
 const urlsToCache = [
   '/',
 
@@ -20,7 +20,7 @@ const urlsToCache = [
   '../src/index.css',
   '../src/index.js',
 
-  '../src/assets/images/logos/logo9.webp',
+  // '../src/assets/images/logos/logo9.webp',
 
   // Add other assets you want to cache
 ]
@@ -101,6 +101,7 @@ self.addEventListener('fetch', event => {
 
   // Determine TTL based on file type
   let maxAge
+  console.log(url.pathname)
   if (url.pathname.endsWith('.html')) {
     maxAge = 3600 // 1 hour for HTML pages
   } else if (url.pathname.endsWith('.css') || url.pathname.endsWith('.js')) {
