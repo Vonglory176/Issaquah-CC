@@ -27,6 +27,7 @@ import PrayerRequests from "./pages/connect/prayerRequests/PrayerRequests";
 import WomensSignUp from "./pages/eventInfo/womensSignUp/WomensSignUp";
 import Calendar from "./pages/eventInfo/calendar/Calendar";
 import { useSiteContext } from "./context/SiteContext";
+import NotFound from "./pages/notFound/NotFound";
 
 function App() {
   const { modal } = useSiteContext()
@@ -86,6 +87,9 @@ function App() {
           <Route path="/care" element={<Navigate to="/" />} />
           <Route path="/care/helpful-resources" element={<HelpfulResources />} />
           <Route path="/care/local-resources" element={<LocalResources />} />
+
+          {/* 404 Page */}
+          <Route path="*" element={<NotFound />} />
 
         </Routes>
 
