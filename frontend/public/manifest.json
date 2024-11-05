@@ -4,7 +4,7 @@
   "description": "Welcome to Issaquah Christian Church. Teaching Biblical life applications as you learn to follow Jesus.",
   "icons": [
     {
-      "src": "fav-icon2.webp",
+      "src": "/static/media/fav-icon2.webp",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     }
