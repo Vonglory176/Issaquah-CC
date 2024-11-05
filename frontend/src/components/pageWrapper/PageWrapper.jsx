@@ -6,7 +6,7 @@ import SEO from '../seo/SEO'
 const PageWrapper = ({ children, name = '', className = '', maxWidth = 'max-w-[1090px]', bannerSettings, metaSettings, backgroundSettings, }) => {
 
   return (
-    <div className={`page-wrapper ${name}-wrapper`}>
+    <div className={`page-wrapper ${name}-wrapper relative`}>
 
       {/* Meta */}
       <SEO {...metaSettings} />
