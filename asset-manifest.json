@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.3f2d6284.css",
-    "main.js": "/static/js/main.2e71ba6d.js",
+    "main.js": "/static/js/main.acc71ad9.js",
     "static/media/guyTime.webp": "/static/media/guyTime.1188a251010e87d09d53.webp",
     "static/media/mens-group.webp": "/static/media/mens-group.5fe752cbd93a3fa9630e.webp",
     "static/media/whale.webp": "/static/media/whale.3eafcd14c868d49e368d.webp",
@@ -20,6 +20,7 @@
     "static/media/logo8.webp": "/static/media/logo8.e40ce094c88902064cb2.webp",
     "static/media/calendar.webp": "/static/media/calendar.0f3800b43ac88e34a22f.webp",
     "static/media/NIOBRG.TTF": "/static/media/NIOBRG.3cc940999c2ca9618815.TTF",
+    "static/media/logo.webp": "/static/media/logo.2ebc2216f6514e8f52f8.webp",
     "static/media/patrick.webp": "/static/media/patrick.56dd1b865dc8c4108fda.webp",
     "static/media/helpingHand.webp": "/static/media/helpingHand.516525083b1212ce52bc.webp",
     "static/media/logo9.webp": "/static/media/logo9.e7eb170829909d770e07.webp",
@@ -39,10 +40,10 @@
     "static/media/guy-praying-small.webp": "/static/media/guy-praying-small.8b824aa30c2a84356522.webp",
     "static/media/wheat-field-small.webp": "/static/media/wheat-field-small.1d51c8952bdf77820eae.webp",
     "main.3f2d6284.css.map": "/static/css/main.3f2d6284.css.map",
-    "main.2e71ba6d.js.map": "/static/js/main.2e71ba6d.js.map"
+    "main.acc71ad9.js.map": "/static/js/main.acc71ad9.js.map"
   },
   "entrypoints": [
     "static/css/main.3f2d6284.css",
-    "static/js/main.2e71ba6d.js"
+    "static/js/main.acc71ad9.js"
   ]
 }
