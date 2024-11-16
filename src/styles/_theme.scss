@@ -1,0 +1,74 @@
+/* "We have two brand colors that we use. The red fat more than the salmon" 
+    Red = #7D1E2C
+    Salmon = #34A388
+
+    "The font we use for our logo is: NIOBIUM"  
+*/
+
+// COLORS
+:root {
+
+    // TEXT
+    --font-color-1: #333333; // Text on page
+
+    --font-color-2: #D9D9D9; // Text on header and footer
+    --font-color-3: #F7F7F7; // Text on header and footer
+
+    --font-color-4: #6B7280; // Text on page
+    --font-color-5: #9CA3AF; // Text on page
+    --font-color-6: #7D1E2C; // Page h2
+
+    // LINKS
+    --font-active-color-1: #3F51B5; // #337ab7; // #c9a848; // #b08d57; // #FA8072; // #D4AF37; // #C62828; // Button and link background
+    --font-active-color-2: #FA8072; // Colors in header and footer
+
+    // BACKGROUND
+    --background-color-1: #F7F7F7; // Page background
+    --background-color-2: #6A1B2A; // #7D1E2C; // Header and footer background
+
+    --dropdown-background-color: #7D1E2C;
+
+    // BORDERS
+    --border-color-1: #C62828; // #FA8072; // #D4AF37; // Border in page
+    --border-color-2: #C62828; // Border on header and footer
+    --border-color-3: #D9D9D9; // #A5D6A7; // Border for content
+
+    // --background-color-3: #D4AF37; // Button and link background
+
+    // BUTTONS
+    --button-background-color: #3F51B5; // #337ab7; // #D4AF37; // #34A388; // #7D1E2C; // #FFB2B2;
+    --button-text-color: #F7F7F7;
+    --button-hover-background-color: rgb(20, 83, 137); // #b4942e; //#34A388; // #A5D6A7;
+
+    // SCROLLBAR
+    --scrollbar-width: 12px;
+    --scrollbar-bg: #7D1E2C;
+    --scrollbar-thumb: #D9D9D9;
+
+    // FONTS
+    --font-family-1: 'Open Sans', sans-serif; // Regular
+    --font-family-2: 'Niobium', 'Open Sans', sans-serif; // Logo / H1
+    --font-family-3: 'Oswald', sans-serif; // H2
+}
+
+@font-face {
+    font-family: 'Niobium';
+    src: url('../assets/fonts/niobium/NIOBRG.TTF') format('truetype');
+    // src: url('./assets/fonts/NIOBBL.TTF') format('truetype');
+}
+@font-face {
+    font-family: 'Impact';
+    src: url('../assets/fonts/impact/impact.ttf') format('truetype');
+    // src: url('./assets/fonts/NIOBBL.TTF') format('truetype');
+}
+@font-face {
+    font-family: 'Oswald';
+    src: url('../assets/fonts/oswald/Oswald-VariableFont_wght.ttf') format('truetype');
+    // src: url('./assets/fonts/NIOBBL.TTF') format('truetype');
+}
+
+// Page #F7F7F7
+// Header / Footer [#7D1E2C, #6A1B2A]
+// Button / Link [ #D4AF37, #C62828]
+// Text #333333
+// Accent #A5D6A7

@@ -1,0 +1,25 @@
+.home-content {
+    padding: 0px;
+    width: 100%;
+    max-width: none;
+
+    .landing {
+        height: var(--page-height); // Negating the height of the header
+
+        // &-content {
+        //     max-width: 608px;
+        // }
+
+        &-welcome-text {
+            z-index: 1;
+            color: #333333;
+            border-color: var(--border-color-1);
+            
+            // Use for top-right positioning
+            // position: absolute;
+            // top: 5%;
+            // right: 5%;
+            // text-align: right;
+        }
+    }
+}

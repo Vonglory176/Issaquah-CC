@@ -1,0 +1,54 @@
+.home-content {
+    padding: 0px;
+    width: 100%;
+    max-width: none;
+
+    .landing {
+        height: var(--page-height); // Negating the height of the header
+
+        // &-content {
+        //     max-width: 608px;
+        // }
+
+        &-welcome-text {
+            z-index: 1;
+            color: #333333;
+            border-color: var(--border-color-1);
+            
+            // Use for top-right positioning
+            // position: absolute;
+            // top: 5%;
+            // right: 5%;
+            // text-align: right;
+        }
+
+        // .video-container {
+        //     position: relative;
+        //     border-color: var(--border-color-1);
+
+        //     // max-width: 608px;
+        //     width: 100%;
+        //     // max-width: 602px;
+        //     // margin: 0 auto;
+
+        //     aspect-ratio: 16/9; // 16/10;
+        //     // padding-top: 56.25%; /* 16:9 Aspect Ratio */
+        //     overflow: hidden;
+
+        //     iframe {
+        //         position: absolute;
+        //         top: 0;
+        //         left: 0;
+        //         bottom: 0;
+        //         right: 0;
+        //         width: 100%;
+        //         height: 100%;
+        //         border: none;
+        //     }
+        // }
+
+        // &-background-image {
+        //     height: calc(100svh - 60px); // Negating the height of the header
+        // }
+    }
+}
