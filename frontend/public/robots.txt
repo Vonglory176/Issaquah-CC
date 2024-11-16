@@ -1,5 +1,0 @@
-# https://www.robotstxt.org/robotstxt.html
-User-agent: *
-Disallow: /404.html
-Disallow: /service-worker.js
-Disallow: /notFound/
